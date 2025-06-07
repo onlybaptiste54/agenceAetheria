@@ -52,7 +52,7 @@ const handleNavClick = (href) => {
   className="flex items-center cursor-pointer"
 >
           <img
-            src="/logoAetheriaaNoBg.png"
+            src="/LogoAetheriaaNoBg.png"
             alt="Logo"
             className="h-24 w-auto sm:h-2_"
           />
