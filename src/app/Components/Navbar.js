@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import DarkComponent from './DarkComponent';
-import { useRouter } from 'next/navigation'; // Ajoute ceci en haut
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,20 +22,16 @@ export default function Navbar() {
     ['/newsletter', 'Newsletter'],
   ];
 
+  const router = useRouter();
 
-// ...
-
-const router = useRouter();
-
-const handleNavClick = (href) => {
-  if (href.startsWith('#')) {
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-  } else {
-    router.push(href);
-  }
-  setMobileMenuOpen(false);
-};
-
+  const handleNavClick = (href) => {
+    if (href.startsWith('#')) {
+      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      router.push(href);
+    }
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header
@@ -45,47 +41,41 @@ const handleNavClick = (href) => {
           : 'bg-[var(--color-bg)]'
       }`}
     >
-      <nav className="max-w-6xl mx-auto h-full flex items-center justify-between px-4">
-        {/* LOGO + TEXTE */}
-<div
-  onClick={() => router.push('/')}
-  className="flex items-center cursor-pointer"
->
+      <nav className=" mx-auto h-full flex items-center justify-between px-4">
+        {/* LOGO + TEXTE ALIGNÉS À GAUCHE */}
+        <div
+          onClick={() => router.push('/')}
+          className="flex justify-self-start items-center space-x-2 min-w-[220px] cursor-pointer"
+        >
           <img
             src="/LogoAetheriaaNoBg.png"
             alt="Logo"
-            className="h-24 w-auto sm:h-2_"
+            className="h-20 w-auto"
           />
-          <span className="text-cyan-700 dark:text-cyan-300 text-3xl font-bold tracking-tight mb-2.5">
+          <span className="text-cyan-700 dark:text-cyan-300 text-3xl font-bold tracking-tight">
             AetherIA
-          </span> 
+          </span>
         </div>
 
-        {/* MENU NAVIGATION - Desktop */}
-        <ul className="hidden md:flex space-x-6 text-sm font-medium">
-          {navItems.map(([href, label]) => (
-            <li key={label}>
-              <button
-                onClick={() => handleNavClick(href)}
-                className="button"
-              >
-                {label}
-              </button>
-            </li>
-          ))}
-        </ul>
-
-        {/* Dark mode toggle */}
-        <div className="flex items-center space-x-2 mb-1.5">
-          <DarkComponent className="h-6 w-6" /> {/* Ajout de la classe h-6 w-6 */}
-          {/* Burger menu button - Mobile only */}
+        {/* NAVIGATION + DARK MODE + BURGER ALIGNÉS */}
+        <div className="flex items-center space-x-2">
+          <ul className="hidden md:flex space-x-6 text-sm text-cyan-700 font-medium mt-3">
+            {navItems.map(([href, label]) => (
+              <li key={label}>
+                <button onClick={() => handleNavClick(href)} className="button">
+                  {label}
+                </button>
+              </li>
+            ))}
+          </ul>
+          <DarkComponent className="h-6 w-6" />
           <button
-            className="md:hidden focus:outline-none"
+            className="md:hidden focus:outline-none "
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6"
+              className="w-6 h-6 mb-2"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"

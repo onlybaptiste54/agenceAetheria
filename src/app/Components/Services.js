@@ -9,7 +9,7 @@ export default function Services() {
       icon: (
         <img
           src="/e-mail.png"
-          alt="Icone Chatbot"
+          alt="Icone E-mail"
           className="h-8 w-8"
         />
       ),
@@ -41,7 +41,7 @@ export default function Services() {
       description: 'Recevez nos actus santé numérique et IA chaque mois.',
       icon: (
         <img
-          src="/newsletter.png"
+          src="/e-mail.png"
           alt="Icone Newsletter"
           className="h-8 w-8"
         />

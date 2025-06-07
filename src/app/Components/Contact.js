@@ -39,7 +39,7 @@ export default function Contact() {
         id="contact"
         className="min-h-screen flex items-center justify-center bg-[--color-bg] text-[--color-text] px-4 py-20"
       >
-        <div className="w-full max-w-2xl p-10 rounded-2xl shadow-xl border border-[--color-border] bg-gradient-to-br from-white/60 to-cyan-700">
+        <div className="w-full max-w-2xl p-10 rounded-2xl shadow-xl border border-[--color-border] bg-gradient-to-br from-white via-white/70 to-cyan-100/70 ">
           <div className="text-center mb-10">
             <h1 className="text-4xl font-bold text-[--color-text] mb-3">Contactez-nous</h1>
             <p className="text-[--color-text]/70">
