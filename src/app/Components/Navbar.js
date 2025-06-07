@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import DarkComponent from './DarkComponent';
+import { useRouter } from 'next/navigation'; // Ajoute ceci en haut
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -15,16 +16,26 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    ['#accueil', 'Accueil'],
-    ['#a-propos', 'À propos'],
     ['#services', 'Services'],
+    ['#a-propos', 'À propos'],
     ['#contact', 'Contact'],
+    ['/newsletter', 'Newsletter'],
   ];
 
-  const handleNavClick = (href) => {
+
+// ...
+
+const router = useRouter();
+
+const handleNavClick = (href) => {
+  if (href.startsWith('#')) {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-    setMobileMenuOpen(false);
-  };
+  } else {
+    router.push(href);
+  }
+  setMobileMenuOpen(false);
+};
+
 
   return (
     <header
@@ -36,15 +47,18 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto h-full flex items-center justify-between px-4">
         {/* LOGO + TEXTE */}
-        <div className="flex items-center ">
+<div
+  onClick={() => router.push('/')}
+  className="flex items-center cursor-pointer"
+>
           <img
-            src="/logoAetherNoBg.png"
+            src="/logoAetheriaaNoBg.png"
             alt="Logo"
-            className="h-24 w-auto sm:h-32"
+            className="h-24 w-auto sm:h-2_"
           />
           <span className="text-cyan-700 dark:text-cyan-300 text-3xl font-bold tracking-tight mb-2.5">
             AetherIA
-          </span>
+          </span> 
         </div>
 
         {/* MENU NAVIGATION - Desktop */}
