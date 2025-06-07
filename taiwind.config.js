@@ -1,11 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './src/**/*.{js,jsx,ts,tsx}', // Ajuste selon ton arborescence
-  ],
-  darkMode: 'class', // Utilise la classe `dark` pour les utilitaires dark:
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './app/**/*.{js,ts,jsx,tsx}'], // ajuste si t’utilises /app
+  darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+                sans: ['Space Grotesk', 'sans-serif'],
+
+      },
+    },
   },
   plugins: [],
-};
+}

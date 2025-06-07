@@ -16,7 +16,7 @@ className="min-h-screen flex items-center justify-center text-neutral-700 border
           <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
             Bienvenue chez{" "}
             <span className="bg-gradient-to-r from-cyan-700 to-cyan-200 bg-clip-text text-transparent ">
-              AetherIa
+              AetherIA
             </span>
           </h1>
 
@@ -24,7 +24,7 @@ className="min-h-screen flex items-center justify-center text-neutral-700 border
             Spécialistes en <span><TextChange  /></span>
           </h2>
 
-       <p className="text-lg text-neutral-700 md:text-xl max-w-2xl mb-8 animate-fade-in-delay">
+       <p className=" font-roboto text-lg text-neutral-700 md:text-xl max-w-2xl mb-8 animate-fade-in-delay">
   Réinventez votre <span className="text-cyan-700 font-semibold">productivité</span> grâce à l{"'"}intelligence artificielle
 
   Optimisez vos processus avec une automatisation intelligente, conçue spécialement pour vous.
@@ -32,7 +32,7 @@ className="min-h-screen flex items-center justify-center text-neutral-700 border
 
         
           <div className="mt-10">
-            <a href="#contact" className="button">
+            <a href="https://calendly.com/agenceaetheria/30min" className="button">
               Prendre rendez-vous
             </a>
           </div>
