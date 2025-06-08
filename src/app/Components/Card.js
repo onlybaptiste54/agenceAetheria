@@ -1,6 +1,6 @@
 export default function Card({ title, description, icon }) {
   return (
-<div className="bg-gradient-to-br from-gray-50 to-cyan-400 dark:from-gray-900 dark:to-cyan-900 backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-lg text-black dark:text-[--color-text] p-5 rounded-xl hover:scale-[1.02] transition-transform duration-300">
+<div className="bg-gradient-to-br from-gray-100 to-cyan-100 dark:from-[#14444d] dark:to-[#2aa4b8] backdrop-blur-md border border-gray-200 dark:border-cyan-600 shadow-lg text-black dark:text-[--color-text] p-5 rounded-xl hover:scale-[1.02] transition-transform duration-300">
       <div className="flex items-center justify-center mb-4">
         <div className="w-14 h-14 flex items-center justify-center rounded-lg bg-white dark:bg-slate-700 shadow border border-gray-200 dark:border-gray-600">
           {icon}
