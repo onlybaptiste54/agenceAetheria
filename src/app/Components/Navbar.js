@@ -35,7 +35,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full h-24 z-50 border-b border-[var(--color-border)] transition-all duration-300 ${
+      className={`fixed top-0 w-full h-18 z-50 border-b border-[var(--color-border)] transition-all duration-300 ${
         scrolled
           ? 'bg-[var(--color-bg)]/70 backdrop-blur-md shadow-sm'
           : 'bg-[var(--color-bg)]'
@@ -50,7 +50,7 @@ export default function Navbar() {
           <img
             src="/LogoAetheriaaNoBg.png"
             alt="Logo"
-            className="h-20 w-auto"
+            className="h-18 w-auto"
           />
           <span className="text-cyan-700 dark:text-cyan-300 text-3xl font-bold tracking-tight">
             AetherIA
@@ -59,7 +59,7 @@ export default function Navbar() {
 
         {/* NAVIGATION + DARK MODE + BURGER ALIGNÉS */}
         <div className="flex items-center space-x-2">
-          <ul className="hidden md:flex space-x-6 text-sm text-cyan-700 font-medium mt-3">
+          <ul className="hidden md:flex space-x-2 text-sm text-cyan-700 font-medium mt-3">
             {navItems.map(([href, label]) => (
               <li key={label}>
                 <button onClick={() => handleNavClick(href)} className="button">

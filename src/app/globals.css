@@ -40,10 +40,51 @@ body {
   
 }
 
-/* --- STYLES GLOBAUX AVEC TAILWIND --- */
+/* Enhanced h1 styles */
 h1 {
-  @apply text-4xl md:text-6xl font-bold;
+  @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+  font-family: var(--font-sans); /* Space Grotesk */
   color: var(--color-text);
+  position: relative;
+  padding-bottom: 0.5rem; /* Space for optional underline or divider */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dark mode adjustments */
+:root[data-theme="dark"] h1 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for contrast */
+}
+
+/* Hover effect */
+h1:hover {
+  @apply scale-105; /* Subtle scale-up on hover */
+  color: var(--color-hover); /* Matches your hover color */
+}
+
+/* Optional animated underline (similar to your 'a' styles) */
+h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-link-underline);
+  transition: width 0.3s ease-in-out;
+}
+
+h1:hover::after {
+  width: 100%;
+}
+
+/* Optional floating animation for dynamic effect */
+h1.animate-floating {
+  animation: floating 4s ease-in-out infinite;
+}
+
+/* Optional title-divider integration */
+h1 + .title-divider {
+  margin-top: 1rem; /* Reduced margin for better spacing */
 }
 
 h2 {

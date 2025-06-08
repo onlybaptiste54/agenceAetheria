@@ -1,16 +1,13 @@
-import { Code, Settings, Briefcase } from 'lucide-react';
-
-
 export default function Card({ title, description, icon }) {
   return (
-    <div className="bg-gradient-to-br from-white via-white/70 to-cyan-100/70 backdrop-blur-md border border-white/40 shadow-xl text-black p-6 rounded-2xl hover:scale-[1.02] transition-transform duration-300">
-      <div className="flex items-center justify-center mb-5">
-        <div className="w-16 h-16 flex items-center justify-center rounded-xl bg-white shadow-md border border-gray-200">
+<div className="bg-gradient-to-br from-white to-cyan-300 dark:from-gray-900 dark:to-cyan-900 backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-lg text-black dark:text-gray-100 p-5 rounded-xl hover:scale-[1.02] transition-transform duration-300">
+      <div className="flex items-center justify-center mb-4">
+        <div className="w-14 h-14 flex items-center justify-center rounded-lg bg-white dark:bg-slate-700 shadow border border-gray-200 dark:border-gray-600">
           {icon}
         </div>
       </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-sm text-gray-700">{description}</p>
+      <h3 className="text-base font-semibold mb-1">{title}</h3>
+      <p className="text-sm text-gray-700 dark:text-gray-300">{description}</p>
     </div>
   );
 }

@@ -22,7 +22,7 @@ export default function Newsletter() {
   return (
     <section
       id="newsletter"
-      className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]  border-[var(--color-border)] py-20 px-4 flex items-center justify-center"
+      className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]  border-[var(--color-border)] py-10 px-4 flex items-center justify-center"
     >
       <div className="max-w-2xl w-full">
         <h1 className="text-4xl md:text-5xl font-bold text-cyan-700 dark:text-cyan-300 mb-4">

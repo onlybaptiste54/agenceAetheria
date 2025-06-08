@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr" className={spaceGrotesk.variable}>
+  <html lang="fr" className={`dark ${spaceGrotesk.variable}`}>
       <body className="bg-[var(--color-bg)] text-[var(--color-text)] font-space-grotesk">
         <Navbar />
         <main className="pt-20">{children}</main>

@@ -55,7 +55,7 @@ export default function Services() {
       <div className="section-divider" />
       <section
         id="services"
-        className="min-h-screen flex flex-col items-center justify-center bg-[--background] text-[--foreground] py-12 sm:py-16 md:py-20"
+        className="min-h-screen flex flex-col items-center justify-center bg-[--background] text-[--foreground] py-4 sm:py-8 md:py-10"
       >
         <div className="max-w-7xl mx-auto text-center px-4 sm:px-6 md:px-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-8 sm:mb-12">
