@@ -1,7 +1,8 @@
 import React from "react";
 import { TextChange } from "./TextChange";
 import Image from "next/image";
-
+import { Pointer } from "lucide-react";
+import {PointerHighlightDemo} from "./AcernityComponents/PointerAcernity";
 export default function Accueil() {
   return (
     <>
@@ -28,11 +29,8 @@ export default function Accueil() {
             </p>
 
 
-            <div className="mt-10">
-              <a href="https://calendly.com/agenceaetheria/30min" className="button">
-                Prendre rendez-vous
-              </a>
-            </div>
+           
+  <PointerHighlightDemo />
           </div>
 
           {/* Image à droite */}
