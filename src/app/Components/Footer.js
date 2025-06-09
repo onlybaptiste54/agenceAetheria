@@ -43,7 +43,7 @@ export default function Footer() {
       <div className="mt-6 text-start text-sm text-gray-500 dark:text-gray-400 select-none space-y-1">
         <p>&copy; {new Date().getFullYear()} AetherIA. Tous droits réservés.</p>
         <p>Baptiste Beroual – Micro-entreprise – SIREN : 945 284 271</p>
-        <p>34 rue du Général Leclerc</p>
+        <p>34 rue du Général Leclerc 54140 Jarville-la-Malgrange</p>
         <p>Contact : agenceaetheria@gmail.com — 06 58 21 48 19</p>
       </div>
     </footer>
