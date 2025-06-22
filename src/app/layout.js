@@ -12,7 +12,7 @@ export const metadata = {
   openGraph: {
     title: 'AetherIA.com – Agents IA & Automatisation',
     description: "Solutions sur-mesure d'automatisation avec agents IA, WhatsApp bots, intégrations API & plus.",
-    url: 'https://agenceaetheria.com',
+    url: 'https://wwww.agenceaetheria.com',
     type: 'website',
   },
 };
