@@ -46,7 +46,6 @@ export default function Services() {
           className="h-8 w-8"
         />
       ),
-      link: '/newsletter',
     },
   ];
 
