@@ -85,8 +85,7 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="w-full py-3 rounded-xl bg-[--color-text] text-white font-semibold hover:bg-black transition-colors shadow-md"
-            >
+className="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-cyan-700 text-white font-semibold hover:from-cyan-600 hover:to-cyan-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"            >
               Envoyer
             </button>
 

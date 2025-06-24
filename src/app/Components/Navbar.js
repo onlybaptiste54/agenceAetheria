@@ -19,7 +19,6 @@ export default function Navbar() {
     ['#services', 'Services'],
     ['#a-propos', 'À propos'],
     ['#contact', 'Contact'],
-    ['/newsletter', 'Newsletter'],
   ];
 
   const router = useRouter();
@@ -52,7 +51,7 @@ export default function Navbar() {
             alt="Logo"
             className="h-18 w-auto"
           />
-          <span className="text-cyan-700 dark:text-cyan-300 text-3xl font-bold tracking-tight">
+          <span className="text-cyan-700  text-3xl font-bold tracking-tight">
             AetherIA
           </span>
         </div>

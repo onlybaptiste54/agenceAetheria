@@ -94,7 +94,7 @@ h2 {
   color: #9ca3af; /* gray-400 */
 }
 ul {
-  @apply list-none pl-6 space-y-2 text-sm sm:text-base;
+  @apply  pl-6 space-y-2 text-sm sm:text-base;
   color: #1f2937; /* gray-800 */
 }
 :root[data-theme="dark"] ul {
@@ -102,7 +102,6 @@ ul {
 }
 p {
   @apply text-lg md:text-xl;
-  color: #374151; /* neutral-700 */
 }
 :root[data-theme="dark"] p {
   color: #d1d5db; /* gray-300 */
