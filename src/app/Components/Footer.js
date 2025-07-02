@@ -23,7 +23,7 @@ export default function Footer() {
           </Link>
           {' | '}
           <Link href="/utilisation">
-            Conditions d'utilisation
+            Conditions d{"'"}utilisation
           </Link>
         </p>
       </div>
