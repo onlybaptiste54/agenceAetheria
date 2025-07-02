@@ -12,19 +12,19 @@ export default function Privacy() {
           Politique de confidentialité
         </h1>
         <p className="text-gray-600 dark:text-gray-300 mb-4">
-          <strong>AetherIA</strong> (&quot;nous&quot;, &quot;notre&quot;) respecte votre vie privée et s&apos;engage à protéger les données personnelles que nous collectons via notre application d&apos;automatisation basée sur n8n. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez notre application.
+          <strong>AetherIA</strong> ({"\"nous\""}, {"\"notre\""}) respecte votre vie privée et s{"'"}engage à protéger les données personnelles que nous collectons via notre application d{"'"}automatisation basée sur n8n. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez notre application.
         </p>
 
         <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">1. Collecte des données</h2>
         <ul className="list-disc pl-6 mb-4 text-gray-600 dark:text-gray-300">
           <li>Les informations que vous fournissez en vous connectant via Google OAuth (comme votre nom, adresse e-mail et informations de profil).</li>
-          <li>Les données nécessaires pour exécuter les automatisations, telles que les fichiers ou e-mails que vous autorisez l&apos;application à accéder via les scopes OAuth.</li>
+          <li>Les données nécessaires pour exécuter les automatisations, telles que les fichiers ou e-mails que vous autorisez l{"'"}application à accéder via les scopes OAuth.</li>
         </ul>
 
         <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">2. Utilisation des données</h2>
         <ul className="list-disc pl-6 mb-4 text-gray-600 dark:text-gray-300">
-          <li>Fournir les fonctionnalités d&apos;automatisation de l&apos;application (par exemple, gestion de fichiers ou envoi d&apos;e-mails).</li>
-          <li>Améliorer les performances de l&apos;application pour nos utilisateurs internes.</li>
+          <li>Fournir les fonctionnalités d{"'"}automatisation de l{"'"}application (par exemple, gestion de fichiers ou envoi d{"'"}e-mails).</li>
+          <li>Améliorer les performances de l{"'"}application pour nos utilisateurs internes.</li>
         </ul>
         <p className="text-gray-600 dark:text-gray-300 mb-4">
           Nous ne partageons pas vos données avec des tiers, sauf si requis par la loi ou avec votre consentement explicite.
@@ -32,14 +32,14 @@ export default function Privacy() {
 
         <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">3. Sécurité des données</h2>
         <p className="text-gray-600 dark:text-gray-300 mb-4">
-          Nous mettons en place des mesures de sécurité techniques et organisationnelles pour protéger vos données contre tout accès non autorisé, perte ou altération. Cependant, aucune transmission de données sur Internet n&apos;est totalement sécurisée, et nous ne pouvons garantir une sécurité absolue.
+          Nous mettons en place des mesures de sécurité techniques et organisationnelles pour protéger vos données contre tout accès non autorisé, perte ou altération. Cependant, aucune transmission de données sur Internet n{"'"}est totalement sécurisée, et nous ne pouvons garantir une sécurité absolue.
         </p>
 
         <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">4. Vos droits</h2>
         <ul className="list-disc pl-6 mb-4 text-gray-600 dark:text-gray-300">
-          <li>Demander l&apos;accès aux données que nous détenons sur vous.</li>
+          <li>Demander l{"'"}accès aux données que nous détenons sur vous.</li>
           <li>Demander la correction ou la suppression de vos données.</li>
-          <li>Révoquer l&apos;accès à vos données via les paramètres de votre compte Google.</li>
+          <li>Révoquer l{"'"}accès à vos données via les paramètres de votre compte Google.</li>
         </ul>
         <p className="text-gray-600 dark:text-gray-300 mb-4">
           Pour exercer ces droits, contactez-nous à <a href="mailto:agenceaetheria@gmail.com" className="text-blue-500 hover:underline">agenceaetheria@gmail.com</a>.
