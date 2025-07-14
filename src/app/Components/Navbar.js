@@ -51,7 +51,7 @@ export default function Navbar() {
             alt="Logo"
             className="h-18 w-auto"
           />
-        <span className="text-cyan-700 text-3xl font-bold tracking-tight -ml-4">
+        <span className="text-cyan-700 text-3xl font-bold tracking-tight -ml-4 mt-2">
   etherIA
 </span>
 

@@ -8,9 +8,9 @@ const services = [
     title: 'Automatisation',
     description:
       'Automatisez emails, rappels ou tâches récurrentes avec n8n ou Python.',
-    icon: '/e-mail.png',
+    icon: '/automation.png',
     color: 'border-blue-500',
-    bgColor: 'bg-blue-50',
+    bgColor: 'bg-blue-50 dark:bg-blue-950',
   },
   {
     title: 'Agents IA',
@@ -18,7 +18,7 @@ const services = [
       'Bots intelligents pour répondre, planifier et prospecter sur WhatsApp, LinkedIn, etc.',
     icon: '/chatbot.png',
     color: 'border-purple-500',
-    bgColor: 'bg-purple-50',
+    bgColor: 'bg-purple-50 dark:bg-purple-950',
   },
   {
     title: 'Intégrations',
@@ -26,7 +26,7 @@ const services = [
       'Connexion à vos outils (CRM, ERP, APIs) pour automatiser vos flux.',
     icon: '/integration.png',
     color: 'border-green-500',
-    bgColor: 'bg-green-50',
+    bgColor: 'bg-green-50 dark:bg-green-950',
   },
   {
     title: 'Newsletter',
@@ -34,7 +34,7 @@ const services = [
       'Contenus automatisés et personnalisés, connectés à vos données métier.',
     icon: '/e-mail.png',
     color: 'border-yellow-500',
-    bgColor: 'bg-yellow-50',
+    bgColor: 'bg-yellow-50 dark:bg-yellow-900',
   },
 ];
 
@@ -50,11 +50,11 @@ export default function Services() {
     <section
       id="services"
       ref={ref}
-      className="relative py-20 px-4 bg-gradient-to-b from-gray-50 to-white text-gray-900"
+      className="relative py-20 px-4 bg-[var(--color-bg)] text-[var(--color-text)]"
     >
       {/* Titre */}
       <motion.h1
-        className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-blue-600"
+        className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-center"
         initial={{ opacity: 0, y: -20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
@@ -69,11 +69,24 @@ export default function Services() {
         animate={inView ? { opacity: 1, scale: 1 } : {}}
         transition={{ duration: 0.5 }}
       >
-        <img src="/chatbot.png" alt="Agent IA" className="w-20 h-20" />
+        <img src="/chatbot.png" alt="Agent IA" className="w-20 h-20 animate-floating" />
       </motion.div>
 
+      {/* Flèches SVG */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 top-[260px] z-0 hidden md:block">
+        <svg width="500" height="120" viewBox="0 0 500 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M250 0 C250 40, 150 40, 130 80" stroke="var(--color-border)" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)"/>
+          <path d="M250 0 C250 40, 350 40, 370 80" stroke="var(--color-border)" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)"/>
+          <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="var(--color-border)" />
+            </marker>
+          </defs>
+        </svg>
+      </div>
+
       {/* Cards alignées */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16 z-10 relative">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -84,10 +97,11 @@ export default function Services() {
             whileHover={{ scale: 1.03 }}
           >
             <div className="flex items-center gap-2 mb-2">
-              <img src={service.icon} alt={service.title} className="w-5 h-5" />
-              <h3 className="text-sm font-semibold text-gray-800">{service.title}</h3>
-            </div>
-            <p className="text-sm text-gray-600 leading-snug">{service.description}</p>
+  <img src={service.icon} alt={service.title} className="w-5 h-5" />
+  <span className=" custom-badge text-sm font-semibold text-theme">{service.title}</span>
+</div>
+<span className="custom-badge text-sm leading-snug ">{service.description}</span>
+
           </motion.div>
         ))}
       </div>
@@ -101,7 +115,7 @@ export default function Services() {
       >
         <a
           href="#contact"
-          className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-medium rounded-lg hover:bg-gradient-to-l transition-all duration-300 text-base"
+          className="inline-block px-6 py-3 text-white font-medium rounded-lg transition-all duration-300 text-base button"
         >
           Prendre rendez-vous
         </a>

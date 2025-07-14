@@ -104,7 +104,22 @@ p {
   @apply text-lg md:text-xl;
 }
 :root[data-theme="dark"] p {
-  color: #d1d5db; /* gray-300 */
+  color: #ffffff; /* gray-300 */
+}
+
+/* globals.css */
+:root {
+  --badge-text: #1f2937; /* Gris foncé pour le texte en mode clair */
+}
+
+:root[data-theme="dark"] {
+  --badge-text: #005764; /* Cyan vif pour le texte en mode sombre */
+}
+
+.custom-badge {
+  background-color: transparent; /* Fond transparent */
+  color: var(--badge-text);
+  transition: color 0.3s ease;
 }
 
 /* --- LIENS --- */

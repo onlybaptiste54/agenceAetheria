@@ -36,7 +36,7 @@ export default function Contact() {
     <>
       <div className="section-divider" />
       <section
-        id="contact"
+        id="Contact"
         className="min-h-screen flex items-center justify-center bg-[--color-bg] text-[--color-text] px-4 py-20"
       >
  <div
