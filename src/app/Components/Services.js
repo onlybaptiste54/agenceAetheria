@@ -107,7 +107,6 @@ export default function Services() {
           href="https://calendly.com/agenceaetheria/30min"
           className="inline-block px-6 py-3 text-white font-medium rounded-lg transition-all duration-300 text-base button"
         >
-          Prendre rendez-vous
        
           <span>Prendre rendez-vous</span>
         </a>
