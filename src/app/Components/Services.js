@@ -73,17 +73,7 @@ export default function Services() {
       </motion.div>
 
       {/* Flèches SVG */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 top-[260px] z-0 hidden md:block">
-        <svg width="500" height="120" viewBox="0 0 500 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M250 0 C250 40, 150 40, 130 80" stroke="var(--color-border)" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)"/>
-          <path d="M250 0 C250 40, 350 40, 370 80" stroke="var(--color-border)" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)"/>
-          <defs>
-            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-              <polygon points="0 0, 10 3.5, 0 7" fill="var(--color-border)" />
-            </marker>
-          </defs>
-        </svg>
-      </div>
+     
 
       {/* Cards alignées */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16 z-10 relative">
@@ -114,10 +104,12 @@ export default function Services() {
         transition={{ delay: 0.6, duration: 0.5 }}
       >
         <a
-          href="#contact"
+          href="https://calendly.com/agenceaetheria/30min"
           className="inline-block px-6 py-3 text-white font-medium rounded-lg transition-all duration-300 text-base button"
         >
           Prendre rendez-vous
+       
+          <span>Prendre rendez-vous</span>
         </a>
       </motion.div>
     </section>
