@@ -16,9 +16,9 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    ['#services', 'Services'],
-    ['#a-propos', 'À propos'],
-    ['#contact', 'Contact'],
+    ['#Audit', 'Audit'],
+    ['#Services', 'Services'],
+    ['#Contact', 'Contact'],
   ];
 
   const router = useRouter();
@@ -44,16 +44,17 @@ export default function Navbar() {
         {/* LOGO + TEXTE ALIGNÉS À GAUCHE */}
         <div
           onClick={() => router.push('/')}
-          className="flex justify-self-start items-center space-x-2 min-w-[220px] cursor-pointer"
+          className="flex justify-self-start items-center space-x-0 min-w-[220px] cursor-pointer"
         >
           <img
             src="/LogoAetheriaaNoBg.png"
             alt="Logo"
             className="h-18 w-auto"
           />
-          <span className="text-cyan-700  text-3xl font-bold tracking-tight">
-            AetherIA
-          </span>
+        <span className="text-cyan-700 text-3xl font-bold tracking-tight -ml-4">
+  etherIA
+</span>
+
         </div>
 
         {/* NAVIGATION + DARK MODE + BURGER ALIGNÉS */}
