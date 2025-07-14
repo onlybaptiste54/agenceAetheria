@@ -37,17 +37,12 @@ export default function Contact() {
       <div className="section-divider" />
       <section
         id="Contact"
-        className="min-h-screen flex items-center justify-center bg-[--color-bg] text-[--color-text] px-4 py-20"
+        className="min-h-screen flex items-center justify-center bg-[var(--color-bg)] text-[var(--color-text)] px-4 py-20"
       >
- <div
-    className="w-full max-w-2xl p-10 rounded-xl shadow-lg border border-gray-200 dark:border-cyan-600
-      bg-gradient-to-br from-gray-100 to-cyan-100 dark:from-[#14444d] dark:to-[#2aa4b8]
-      backdrop-blur-md text-black dark:text-[--color-text] transition-transform duration-300"
-  >
-
-          <div className="text-center mb-10">
-            <h1 className="text-4xl font-bold text-[--color-text] mb-3">Contactez-nous</h1>
-            <p className="text-[--color-text]/70">
+        <div className="form-container w-full max-w-2xl p-8 rounded-lg border">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-[var(--color-text)] mb-3">Contactez-nous</h1>
+            <p className="text-[var(--color-text)]/70">
               Une idée, un projet ? Envoyez-nous un message, nous vous répondrons rapidement.
             </p>
           </div>
@@ -55,7 +50,7 @@ export default function Contact() {
           <form onSubmit={handleSubmit} className="space-y-6">
             {['name', 'email'].map((field) => (
               <div key={field}>
-                <label className="block text-sm font-medium text-[--color-text] mb-1 capitalize">
+                <label className="block text-sm font-medium text-[var(--color-text)] mb-1 capitalize">
                   {field === 'name' ? 'Nom' : 'Email'}
                 </label>
                 <input
@@ -64,36 +59,35 @@ export default function Contact() {
                   value={formData[field]}
                   onChange={handleChange}
                   placeholder={`Votre ${field === 'name' ? 'nom' : 'email'}`}
-                  className="w-full px-4 py-3 rounded-xl border border-[--color-border] bg-white text-black shadow-sm focus:ring-2 focus:ring-[--color-accent] focus:outline-none transition"
+                  className="form-input w-full px-4 py-3 rounded-lg border"
                   required
                 />
               </div>
             ))}
 
             <div>
-              <label className="block text-sm font-medium text-[--color-text] mb-1">Message</label>
+              <label className="block text-sm font-medium text-[var(--color-text)] mb-1">Message</label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Votre message"
                 rows={5}
-                className="w-full px-4 py-3 rounded-xl border border-[--color-border] bg-white text-black shadow-sm focus:ring-2 focus:ring-[--color-accent] focus:outline-none transition resize-none"
+                className="form-textarea w-full px-4 py-3 rounded-lg border resize-none"
                 required
               />
             </div>
 
             <button
               type="submit"
-className="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-cyan-700 text-white font-semibold hover:from-cyan-600 hover:to-cyan-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"            >
+              className="form-button w-full py-3 rounded-lg font-semibold"
+            >
               Envoyer
             </button>
 
             {status && (
-              <div className={`mt-4 px-4 py-3 rounded-xl text-center shadow-sm ${
-                status.includes('Erreur')
-                  ? 'bg-red-100 text-red-700 border border-red-300'
-                  : 'bg-green-100 text-green-700 border border-green-300'
+              <div className={`mt-4 px-4 py-3 rounded-lg text-center ${
+                status.includes('Erreur') ? 'form-status-error' : 'form-status-success'
               }`}>
                 {status}
               </div>

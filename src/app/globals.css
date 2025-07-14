@@ -25,7 +25,67 @@
   --color-link-underline: #06b6d4; /* Cyan pour les liens */
   --gray-dark: #e2e8f0; /* Gris clair pour remplacer le gris foncé */
 }
+/* Ajout dans :root[data-theme="dark"] */
+:root[data-theme="dark"] {
+  --form-bg: #2d3748; /* Gris-700 pour le fond du formulaire en mode sombre */
+}
+:root {
+  --form-bg: #ffffff; /* Blanc en mode clair */
+  --form-border: #d1d5db; /* Gris-300 */
+  --input-bg: #ffffff; /* Blanc pour les champs */
+  --button-bg: #06b6d4; /* Cyan pour le bouton */
+  --button-text: #ffffff; /* Texte blanc */
+}
 
+:root[data-theme="dark"] {
+  --form-bg: #2d3748; /* Gris-700 en mode sombre */
+  --form-border: #4b5563; /* Gris-600 */
+  --input-bg: #374151; /* Gris-800 pour les champs */
+  --button-bg: #0ea5e9; /* Cyan clair pour le bouton */
+  --button-text: #ffffff;
+}
+
+.form-container {
+  background-color: var(--form-bg);
+  border-color: var(--form-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.form-input,
+.form-textarea {
+  background-color: var(--input-bg);
+  border-color: var(--color-border);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  @apply ring-2 ring-[--color-link-underline];
+  outline: none;
+}
+
+.form-button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: var(--color-hover);
+}
+
+.form-status-success {
+  background-color: #dcfce7; /* Vert clair */
+  color: #15803d; /* Vert foncé */
+  border-color: #86efac; /* Vert moyen */
+}
+
+.form-status-error {
+  background-color: #fee2e2; /* Rouge clair */
+  color: #b91c1c; /* Rouge foncé */
+  border-color: #f87171; /* Rouge moyen */
+}
 /* --- RESET GÉNÉRAL --- */
 * {
   box-sizing: border-box;
