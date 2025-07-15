@@ -10,7 +10,7 @@ const services = [
       'Automatisez emails, rappels ou tâches récurrentes avec n8n ou Python.',
     icon: '/automation.png',
     color: 'border-blue-500',
-    bgColor: 'bg-blue-50 dark:bg-blue-950',
+    bgColor: 'bg-blue-50 ',
   },
   {
     title: 'Agents IA',
@@ -18,7 +18,7 @@ const services = [
       'Bots intelligents pour répondre, planifier et prospecter sur WhatsApp, LinkedIn, etc.',
     icon: '/chatbot.png',
     color: 'border-purple-500',
-    bgColor: 'bg-purple-50 dark:bg-purple-950',
+    bgColor: 'bg-purple-50 ',
   },
   {
     title: 'Intégrations',
@@ -26,7 +26,7 @@ const services = [
       'Connexion à vos outils (CRM, ERP, APIs) pour automatiser vos flux.',
     icon: '/integration.png',
     color: 'border-green-500',
-    bgColor: 'bg-green-50 dark:bg-green-950',
+    bgColor: 'bg-green-50 ',
   },
   {
     title: 'Newsletter',
@@ -34,7 +34,7 @@ const services = [
       'Contenus automatisés et personnalisés, connectés à vos données métier.',
     icon: '/e-mail.png',
     color: 'border-yellow-500',
-    bgColor: 'bg-yellow-50 dark:bg-yellow-900',
+    bgColor: 'bg-yellow-50',
   },
 ];
 
