@@ -4,7 +4,7 @@ export default function Audit() {
   return (
     <section
       id="Audit"
-      className="min-h-screen bg-[--color-bg] text-[--color-text] flex items-center justify-center border-t border-black py-16 px-4"
+      className="min-h-screen bg-[--color-bg] text-[--color-text] flex items-center justify-center  border-black py-16 px-4"
     >
       <div className="max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-center gap-12">
         {/* Image centrée */}

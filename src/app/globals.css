@@ -228,26 +228,7 @@ a:hover::after {
 }
 
 /* Diviseurs */
-.section-divider {
-  position: relative;
-  height: 2px;
-  width: 100%;
-  background-color: transparent;
-  overflow: hidden;
-  margin: 4rem auto;
-}
 
-.section-divider::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0%;
-  background-color: var(--color-border);
-  animation: grow-bar 2s ease-out infinite;
-  will-change: width, opacity;
-}
 
 .title-divider {
   position: relative;
