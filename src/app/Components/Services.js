@@ -5,38 +5,39 @@ import { useEffect, useState } from 'react';
 
 const services = [
   {
-    title: 'Automatisation',
+    title: 'Assistant IA Multi-Canal',
     description:
-      'Automatisez emails, rappels ou tâches récurrentes avec n8n ou Python.',
-    icon: '/automation.png',
-    color: 'border-blue-500',
-    bgColor: 'bg-blue-50 ',
-  },
-  {
-    title: 'Agents IA',
-    description:
-      'Bots intelligents pour répondre, planifier et prospecter sur WhatsApp, LinkedIn, etc.',
+      'Un agent intelligent qui répond 24/7 sur WhatsApp, site web ou email, filtre les demandes, qualifie les prospects, planifie des RDV et transfère au bon moment.',
     icon: '/chatbot.png',
     color: 'border-purple-500',
-    bgColor: 'bg-purple-50 ',
+    bgColor: 'bg-purple-50',
   },
   {
-    title: 'Intégrations',
+    title: 'Automatisation & Organisation',
     description:
-      'Connexion à vos outils (CRM, ERP, APIs) pour automatiser vos flux.',
+      'Relances automatiques, réponses aux emails, rappels, suivi des RDV, comptes-rendus, frais kilométriques, exports comptables… Tout se fait tout seul.',
+    icon: '/automation.png',
+    color: 'border-blue-500',
+    bgColor: 'bg-blue-50',
+  },
+  {
+    title: 'Outils connectés',
+    description:
+      'Connexion à vos logiciels (CRM, Notion, facturation…) pour centraliser les données, éviter les doubles saisies et garder un système toujours à jour.',
     icon: '/integration.png',
     color: 'border-green-500',
-    bgColor: 'bg-green-50 ',
+    bgColor: 'bg-green-50',
   },
   {
-    title: 'Newsletter',
+    title: 'Veille & infos personnalisées',
     description:
-      'Contenus automatisés et personnalisés, connectés à vos données métier.',
+      'Envoi régulier de contenus utiles (législation, fiscalité, administratif…) adaptés à votre activité et à vos clients, sans rien faire.',
     icon: '/e-mail.png',
     color: 'border-yellow-500',
     bgColor: 'bg-yellow-50',
   },
 ];
+
 
 export default function Services() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
