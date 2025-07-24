@@ -6,20 +6,82 @@ export default function Contact() {
     name: '',
     email: '',
     message: '',
+    honeypot: '', // Champ honeypot pour détecter les bots
   });
   const [status, setStatus] = useState('');
 
+  // Fonction pour vérifier/gérer la limitation de taux
+  const checkRateLimit = () => {
+    const submissionKey = 'formSubmissions';
+    const maxSubmissions = 3;
+    const timeWindow = 24 * 60 * 60 * 1000; // 24 heures en millisecondes
+
+    const submissions = JSON.parse(localStorage.getItem(submissionKey) || '[]');
+    const now = Date.now();
+
+    // Filtrer les soumissions dans la fenêtre de temps
+    const recentSubmissions = submissions.filter(
+      (submission) => now - submission.timestamp < timeWindow
+    );
+
+    if (recentSubmissions.length >= maxSubmissions) {
+      return false; // Limite atteinte
+    }
+
+    // Ajouter la nouvelle soumission
+    recentSubmissions.push({ timestamp: now });
+    localStorage.setItem(submissionKey, JSON.stringify(recentSubmissions));
+    return true;
+  };
+
+  // Validation des entrées
+  const validateForm = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (formData.honeypot !== '') {
+      return 'Bot détecté. Veuillez réessayer.';
+    }
+    if (formData.name.length > 50) {
+      return 'Le nom est trop long (50 caractères maximum).';
+    }
+    if (!emailRegex.test(formData.email)) {
+      return 'Veuillez entrer une adresse e-mail valide.';
+    }
+    if (formData.message.length > 500) {
+      return 'Le message est trop long (500 caractères maximum).';
+    }
+    return null;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus('');
+
+    // Vérification du honeypot et validation des champs
+    const validationError = validateForm();
+    if (validationError) {
+      setStatus(validationError);
+      return;
+    }
+
+    // Vérification de la limitation de taux
+    if (!checkRateLimit()) {
+      setStatus('Vous avez atteint la limite de 3 soumissions par jour.');
+      return;
+    }
+
     try {
       const response = await fetch('https://agenceaetheria.com/webhook/contact-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
       });
       if (response.ok) {
         setStatus('Formulaire envoyé !');
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '', message: '', honeypot: '' });
       } else {
         setStatus("Erreur lors de l’envoi.");
       }
@@ -48,6 +110,17 @@ export default function Contact() {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Champ honeypot caché */}
+            <input
+              type="text"
+              name="honeypot"
+              value={formData.honeypot}
+              onChange={handleChange}
+              style={{ display: 'none' }}
+              tabIndex="-1"
+              autoComplete="off"
+            />
+
             {['name', 'email'].map((field) => (
               <div key={field}>
                 <label className="block text-sm font-medium text-[var(--color-text)] mb-1 capitalize">
@@ -86,9 +159,13 @@ export default function Contact() {
             </button>
 
             {status && (
-              <div className={`mt-4 px-4 py-3 rounded-lg text-center ${
-                status.includes('Erreur') ? 'form-status-error' : 'form-status-success'
-              }`}>
+              <div
+                className={`mt-4 px-4 py-3 rounded-lg text-center ${
+                  status.includes('Erreur') || status.includes('limite') || status.includes('Bot')
+                    ? 'form-status-error'
+                    : 'form-status-success'
+                }`}
+              >
                 {status}
               </div>
             )}
