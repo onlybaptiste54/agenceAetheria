@@ -12,7 +12,7 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://wwww.agenceaetheria.com/webhook-test/54678454-647f-44a5-b0d1-629a9a247848', {
+      const response = await fetch('https://agenceaetheria.com/webhook/contact-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
