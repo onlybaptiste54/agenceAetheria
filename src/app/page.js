@@ -16,9 +16,9 @@ export default function Home() {
       <Accueil />
       <Audit />
       <Services />
-      <Partenaire/>
       <FAQComponents />
       <Contact/>
+      <Partenaire/>
 
       <Footer />
     </div>
