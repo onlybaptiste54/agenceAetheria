@@ -10,7 +10,7 @@ export default function Demo() {
       key: 'crm',
       label: 'Mini CRM/Dashboard',
       description:
-        "Ajoutez un prospect, changez son statut et voyez le tableau évoluer.",
+        "Dashboards et CRM sur‑mesure pour centraliser, automatiser et suivre vos données — avec agents IA intégrés.",
       component: CrmDemo,
     },
     {
