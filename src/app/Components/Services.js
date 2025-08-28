@@ -5,34 +5,34 @@ import { useEffect, useState } from 'react';
 
 const services = [
   {
-    title: 'Assistant IA Multi-Canal',
+    title: 'Chatbot IA Multi-Canal',
     description:
-      'Un agent intelligent qui répond 24/7 sur WhatsApp, site web ou email, filtre les demandes, qualifie les prospects, planifie des RDV et transfère au bon moment.',
+      "WhatsApp, site, e-mail. Support 24/7, FAQ dynamique, préqualification et routage intelligent.",
     icon: '/chatbot.png',
     color: 'border-purple-500',
     bgColor: 'bg-purple-50',
   },
   {
-    title: 'Automatisation & Organisation',
+    title: 'Gestion des e-mails & automatisation',
     description:
-      'Relances automatiques, réponses aux emails, rappels, suivi des RDV, comptes-rendus, frais kilométriques, exports comptables… Tout se fait tout seul.',
-    icon: '/automation.png',
+      "Réponses IA, tri/catégorisation, détection d'intention, suivi auto et relances programmées.",
+    icon: '/e-mail.png',
     color: 'border-blue-500',
     bgColor: 'bg-blue-50',
   },
   {
-    title: 'Outils connectés',
+    title: 'Intégrations CRM',
     description:
-      'Connexion à vos logiciels (CRM, Notion, facturation…) pour centraliser les données, éviter les doubles saisies et garder un système toujours à jour.',
+      "Connecté à vos outils (CRM, facturation, Notion). Données centralisées, sans doubles saisies.",
     icon: '/integration.png',
     color: 'border-green-500',
     bgColor: 'bg-green-50',
   },
   {
-    title: 'Veille & infos personnalisées',
+    title: 'Prise de RDV automatisée',
     description:
-      'Envoi régulier de contenus utiles (législation, fiscalité, administratif…) adaptés à votre activité et à vos clients, sans rien faire.',
-    icon: '/e-mail.png',
+      "Réservation via WhatsApp/e-mail, synchro Google Calendar, invitations et rappels automatiques.",
+    icon: '/automation.png',
     color: 'border-yellow-500',
     bgColor: 'bg-yellow-50',
   },
@@ -72,9 +72,6 @@ export default function Services() {
       >
         <img src="/chatbot.png" alt="Agent IA" className="w-20 h-20 animate-floating" />
       </motion.div>
-
-      {/* Flèches SVG */}
-     
 
       {/* Cards alignées */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16 z-10 relative">

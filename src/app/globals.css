@@ -16,41 +16,21 @@
 }
 /* --- VARIABLES CSS --- */
 :root {
-  --color-bg: #ffffff;
-  --color-text: #333333;
-  --color-border: #000000;
-  --color-hover: #000000;
-  --color-link-underline: #000000;
-  --gray-dark: #222222;
+  /* Dark palette applied globally */
+  --color-bg: #222222; /* Gray-900 */
+  --color-text: #e2e8f0; /* Gray-200 */
+  --color-border: #4b5563; /* Gray-600 */
+  --color-hover: #4b5563; /* Hover gray */
+  --color-link-underline: #06b6d4; /* Cyan */
+  --gray-dark: #e2e8f0;
 
-  --font-sans: var(--font-space-grotesk); /* Associe --font-sans à Space_Grotesk */ ;
-}
+  --font-sans: var(--font-sora, var(--font-space-grotesk));
 
-:root[data-theme="dark"] {
-  --color-bg: #222222; /* Gris foncé (gray-900) */
-  --color-text: #e2e8f0; /* Gris clair (gray-200) */
-  --color-border: #4b5563; /* Gris moyen (gray-600) */
-  --color-hover: #4b5563; /* Gris moyen pour hover */
-  --color-link-underline: #06b6d4; /* Cyan pour les liens */
-  --gray-dark: #e2e8f0; /* Gris clair pour remplacer le gris foncé */
-}
-/* Ajout dans :root[data-theme="dark"] */
-:root[data-theme="dark"] {
-  --form-bg: #2d3748; /* Gris-700 pour le fond du formulaire en mode sombre */
-}
-:root {
-  --form-bg: #ffffff; /* Blanc en mode clair */
-  --form-border: #d1d5db; /* Gris-300 */
-  --input-bg: #ffffff; /* Blanc pour les champs */
-  --button-bg: #06b6d4; /* Cyan pour le bouton */
-  --button-text: #ffffff; /* Texte blanc */
-}
-
-:root[data-theme="dark"] {
-  --form-bg: #2d3748; /* Gris-700 en mode sombre */
-  --form-border: #4b5563; /* Gris-600 */
-  --input-bg: #374151; /* Gris-800 pour les champs */
-  --button-bg: #0ea5e9; /* Cyan clair pour le bouton */
+  /* Forms - dark defaults */
+  --form-bg: #2d3748; /* Gray-700 */
+  --form-border: #4b5563; /* Gray-600 */
+  --input-bg: #374151; /* Gray-800 */
+  --button-bg: #0ea5e9; /* Cyan light */
   --button-text: #ffffff;
 }
 
@@ -85,15 +65,15 @@
 }
 
 .form-status-success {
-  background-color: #dcfce7; /* Vert clair */
-  color: #15803d; /* Vert foncé */
-  border-color: #86efac; /* Vert moyen */
+  background-color: #dcfce7;
+  color: #15803d;
+  border-color: #86efac;
 }
 
 .form-status-error {
-  background-color: #fee2e2; /* Rouge clair */
-  color: #b91c1c; /* Rouge foncé */
-  border-color: #f87171; /* Rouge moyen */
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border-color: #f87171;
 }
 /* --- RESET GÉNÉRAL --- */
 * {
@@ -105,97 +85,62 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   scroll-behavior: smooth;
-
+  font-family: var(--font-sans);
 }
 
-/* Enhanced h1 styles */
+/* Enhanced h1 styles (ultra-subtle hover) */
 h1 {
   @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
-  font-family: var(--font-sans); /* Space Grotesk */
+  font-family: var(--font-sans);
   color: var(--color-text);
   position: relative;
-  padding-bottom: 0.5rem; /* Space for optional underline or divider */
-  transition: all 0.3s ease-in-out;
+  padding-bottom: 0.5rem;
+  transition: color 180ms ease;
 }
 
-/* Dark mode adjustments */
-:root[data-theme="dark"] h1 {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for contrast */
+:root h1 {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
 }
 
-/* Hover effect */
+/* No zoom, only underline reveal */
 h1:hover {
-  @apply scale-105; /* Subtle scale-up on hover */
-  color: var(--color-hover); /* Matches your hover color */
+  color: var(--color-text);
 }
 
-/* Optional animated underline (similar to your 'a' styles) */
 h1::after {
   content: '';
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 0;
+  width: 100%;
   height: 2px;
   background-color: var(--color-link-underline);
-  transition: width 0.3s ease-in-out;
+  transform-origin: left center;
+  transform: scaleX(0);
+  opacity: 0.6;
+  transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms ease;
 }
 
 h1:hover::after {
-  width: 100%;
+  transform: scaleX(1);
+  opacity: 1;
 }
 
-/* Optional floating animation for dynamic effect */
-h1.animate-floating {
-  animation: floating 4s ease-in-out infinite;
-}
+h1.animate-floating { animation: floating 4s ease-in-out infinite; }
 
-/* Optional title-divider integration */
-h1 + .title-divider {
-  margin-top: 1rem; /* Reduced margin for better spacing */
-}
+h1 + .title-divider { margin-top: 1rem; }
 
-h2 {
-  @apply text-2xl italic;
-  color: #6b7280; /* gray-500 */
-}
-:root[data-theme="dark"] h2 {
-  color: #9ca3af; /* gray-400 */
-}
-ul {
-  @apply  pl-6 space-y-2 text-sm sm:text-base;
-  color: #1f2937; /* gray-800 */
-}
-:root[data-theme="dark"] ul {
-  color: #e5e7eb; /* gray-200 */
-}
-p {
-  @apply text-lg md:text-xl;
-}
-:root[data-theme="dark"] p {
-  color: #ffffff; /* gray-300 */
-}
+h2 { @apply text-2xl italic; color: #9ca3af; }
+:root ul { color: #e5e7eb; }
+p { @apply text-lg md:text-xl; }
+:root p { color: #ffffff; }
 
-/* globals.css */
-:root {
-  --badge-text: #1f2937; /* Gris foncé pour le texte en mode clair */
-}
+:root { --badge-text: #005764; }
 
-:root[data-theme="dark"] {
-  --badge-text: #005764; /* Cyan vif pour le texte en mode sombre */
-}
-
-.custom-badge {
-  background-color: transparent; /* Fond transparent */
-  color: var(--badge-text);
-  transition: color 0.3s ease;
-}
+.custom-badge { background-color: transparent; color: var(--badge-text); transition: color 0.3s ease; }
 
 /* --- LIENS --- */
-a {
-  @apply relative inline-block transition duration-200 no-underline;
-  color: var(--color-text);
-}
+a { @apply relative inline-block transition duration-200 no-underline; color: var(--color-text); }
 
 .button {
   @apply font-medium px-6 py-2 transition duration-300 ease-in-out;
@@ -203,24 +148,11 @@ a {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(135deg, #06b6d4, #3b82f6);
-}
-
-.button:hover {
-  transform: scale(1.03);
-  background-image: linear-gradient(135deg, #22d3ee, #60a5fa);
-}
-
-/* Mode sombre avec data-theme */
-:root[data-theme="dark"] .button {
   background-image: linear-gradient(135deg, #0e7490, #1e3a8a);
 }
 
-:root[data-theme="dark"] .button:hover {
-  background-image: linear-gradient(135deg, #0ea5e9, #2563eb);
-}
+.button:hover { transform: scale(1.03); background-image: linear-gradient(135deg, #0ea5e9, #2563eb); }
 
-/* Animation des liens */
 a::after {
   content: '';
   position: absolute;
@@ -232,62 +164,16 @@ a::after {
   transition: width 0.3s ease-in-out;
 }
 
-a:hover::after {
-  width: 100%;
-}
+a:hover::after { width: 100%; }
 
-/* Diviseurs */
+.title-divider { position: relative; height: 2px; width: 100%; background-color: transparent; overflow: hidden; margin: 4rem auto; }
 
+.title-divider::before { content: ''; position: absolute; top: 0; left: 0; height: 100%; width: 0%; background-color: var(--color-border); animation: title-bar 4s ease-out forwards; will-change: width, opacity; }
 
-.title-divider {
-  position: relative;
-  height: 2px;
-  width: 100%;
-  background-color: transparent;
-  overflow: hidden;
-  margin: 4rem auto;
-}
+@keyframes grow-bar { 0% { width: 0%; opacity: 0; } 10% { opacity: 1; } 90% { width: 100%; opacity: 1; } 100% { width: 100%; opacity: 0; } }
 
-.title-divider::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0%;
-  background-color: var(--color-border);
-  animation: title-bar 4s ease-out forwards;
-  will-change: width, opacity;
-}
+@keyframes floating { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
 
-/* Animations */
-@keyframes grow-bar {
-  0% {
-    width: 0%;
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    width: 100%;
-    opacity: 1;
-  }
-  100% {
-    width: 100%;
-    opacity: 0;
-  }
-}
+.animate-floating { animation: floating 4s ease-in-out infinite; }
 
-@keyframes floating {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-floating {
-  animation: floating 4s ease-in-out infinite;
-}
+@media (prefers-reduced-motion: reduce) { h1, h1::after { transition: none; } .animate-floating { animation: none; } }

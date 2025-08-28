@@ -1,6 +1,5 @@
 'use client';
 import { useEffect, useState } from 'react';
-import DarkComponent from './DarkComponent';
 import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
@@ -18,6 +17,7 @@ export default function Navbar() {
   const navItems = [
     ['#Audit', 'Audit'],
     ['#Services', 'Services'],
+    ['#Demo', 'Démo'],
     ['#Contact', 'Contact'],
   ];
 
@@ -57,18 +57,21 @@ export default function Navbar() {
 
         </div>
 
-        {/* NAVIGATION + DARK MODE + BURGER ALIGNÉS */}
+        {/* NAVIGATION + BURGER ALIGNÉS */}
         <div className="flex items-center space-x-2">
-          <ul className="hidden md:flex space-x-2 text-sm text-cyan-700 font-medium mt-3">
+          <ul className="hidden md:flex space-x-1 text-sm font-medium mt-3">
             {navItems.map(([href, label]) => (
               <li key={label}>
-                <button onClick={() => handleNavClick(href)} className="button">
+                <button
+                  onClick={() => handleNavClick(href)}
+                  className="px-3 py-2 rounded-md text-cyan-700 hover:text-cyan-800 hover:bg-cyan-50/50 transition-colors"
+                  aria-label={label}
+                >
                   {label}
                 </button>
               </li>
             ))}
           </ul>
-          <DarkComponent className="h-6 w-6" />
           <button
             className="md:hidden focus:outline-none "
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -94,12 +97,13 @@ export default function Navbar() {
 
       {/* MENU MOBILE */}
       {mobileMenuOpen && (
-        <ul className="md:hidden absolute top-20 left-0 w-full bg-[var(--color-bg)] border-t border-[var(--color-border)] flex flex-col items-center space-y-4 py-4 z-40">
+        <ul className="md:hidden absolute top-20 left-0 w-full bg-[var(--color-bg)] border-t border-[var(--color-border)] flex flex-col items-center space-y-2 py-4 z-40">
           {navItems.map(([href, label]) => (
             <li key={label}>
               <button
                 onClick={() => handleNavClick(href)}
-                className="text-sm font-medium"
+                className="px-3 py-2 rounded-md text-cyan-700 hover:text-cyan-800 hover:bg-cyan-50/50 transition-colors"
+                aria-label={label}
               >
                 {label}
               </button>

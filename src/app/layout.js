@@ -1,9 +1,9 @@
 import './globals.css';
 import Navbar from './Components/Navbar';
-import { Space_Grotesk } from 'next/font/google';
+import { Sora } from 'next/font/google';
 
 
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] })
+const sora = Sora({ subsets: ['latin'], variable: '--font-sora' })
 
 export const metadata = {
   title: 'AetherIA.com – Agents IA & Automatisation',
@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-  <html lang="fr" className={`dark ${spaceGrotesk.variable}`}>
+  <html lang="fr" className={`dark ${sora.variable}`}>
         <head>
         <meta name="facebook-domain-verification" content="myrkk6l9u3fxv275rtimcpjfd14hmd" />
       </head>
