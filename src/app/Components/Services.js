@@ -13,6 +13,14 @@ const services = [
     bgColor: 'bg-purple-50',
   },
   {
+    title: 'Dashboard & CRM sur‑mesure',
+    description:
+      "Centralisez et automatisez vos données. Suivi/KPI, workflows et agents IA intégrés.",
+    icon: '/VisualDataHome.svg',
+    color: 'border-cyan-500',
+    bgColor: 'bg-cyan-50',
+  },
+  {
     title: 'Gestion des e-mails & automatisation',
     description:
       "Réponses IA, tri/catégorisation, détection d'intention, suivi auto et relances programmées.",
@@ -74,7 +82,7 @@ export default function Services() {
       </motion.div>
 
       {/* Cards alignées */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16 z-10 relative">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto mb-16 z-10 relative">
         {services.map((service, index) => (
           <motion.div
             key={index}
