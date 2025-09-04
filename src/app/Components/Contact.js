@@ -5,6 +5,9 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    objectif: '',
+    outils: '',
+    volumetrie: '',
     message: '',
     honeypot: '', // Champ honeypot pour détecter les bots
   });
@@ -76,12 +79,15 @@ export default function Contact() {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
+          objectif: formData.objectif,
+          outils: formData.outils,
+          volumetrie: formData.volumetrie,
           message: formData.message,
         }),
       });
       if (response.ok) {
         setStatus('Formulaire envoyé !');
-        setFormData({ name: '', email: '', message: '', honeypot: '' });
+        setFormData({ name: '', email: '', objectif: '', outils: '', volumetrie: '', message: '', honeypot: '' });
       } else {
         setStatus("Erreur lors de l’envoi.");
       }
@@ -137,6 +143,52 @@ export default function Contact() {
                 />
               </div>
             ))}
+
+            <div>
+              <label className="block text-sm font-medium text-[var(--color-text)] mb-1">Objectif principal</label>
+              <select
+                name="objectif"
+                value={formData.objectif}
+                onChange={handleChange}
+                className="form-input w-full px-4 py-3 rounded-lg border"
+                required
+              >
+                <option value="">Sélectionnez…</option>
+                <option value="rdv">Augmenter les RDV qualifiés</option>
+                <option value="support">Automatiser le support (WhatsApp/Email)</option>
+                <option value="ops">Gagner du temps sur les opérations</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-[var(--color-text)] mb-1">Outils actuels</label>
+              <input
+                type="text"
+                name="outils"
+                value={formData.outils}
+                onChange={handleChange}
+                placeholder="CRM, WhatsApp, Email, Agenda, n8n, Make…"
+                className="form-input w-full px-4 py-3 rounded-lg border"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-[var(--color-text)] mb-1">Volumétrie (approx.)</label>
+              <select
+                name="volumetrie"
+                value={formData.volumetrie}
+                onChange={handleChange}
+                className="form-input w-full px-4 py-3 rounded-lg border"
+                required
+              >
+                <option value="">Sélectionnez…</option>
+                <option value="<50">Moins de 50 leads/mois</option>
+                <option value="50-200">50 à 200 leads/mois</option>
+                <option value=">200">Plus de 200 leads/mois</option>
+              </select>
+            </div>
 
             <div>
               <label className="block text-sm font-medium text-[var(--color-text)] mb-1">Message</label>

@@ -8,7 +8,7 @@ export function PointerHighlightDemo() {
           className="button inline-block"
           style={{ maxWidth: "fit-content" }}
         >
-          <span>Prendre rendez-vous</span>
+          <span>Réservez ma démo</span>
         </a>
       </PointerHighlight>
     </div>
