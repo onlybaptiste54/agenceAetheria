@@ -11,7 +11,7 @@ export default function Accueil() {
         id="accueil"
         className="min-h-screen flex items-center justify-center bg-[var(--color-bg)] text-[var(--color-text)] border-black z-10 relative overflow-hidden px-4"
       >
-        <div className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-10">
+        <div className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between ">
           
           {/* Texte à gauche */}
           <div className="w-full md:w-1/2 text-center md:text-left">
