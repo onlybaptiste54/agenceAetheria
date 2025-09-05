@@ -22,12 +22,13 @@ export default function Accueil() {
               </span>
             </h1>
 
-           <h2 className="text-2xl text-gray-500 italic mb-6 flex flex-wrap md:flex-nowrap items-center gap-2">
-  L’IA qui{" "}
-  <span className="inline-block min-w-[180px] whitespace-nowrap text-cyan-700 font-semibold">
+         <h2 className="text-2xl text-gray-500 italic mb-6 flex flex-col md:flex-row items-center justify-center gap-2 text-center md:text-left">
+  <span>L’IA qui</span>
+  <span className="text-cyan-700 font-semibold whitespace-nowrap">
     <TextChange />
   </span>
 </h2>
+
 
             <p className="font-roboto text-lg md:text-xl max-w-2xl mb-8 leading-relaxed text-[var(--color-text)]/80 animate-fade-in-delay">
               Automatisez vos <span className="text-cyan-700 font-semibold">emails, WhatsApp, agenda et CRM</span> avec un seul agent IA multi‑canal. Tout communique enfin ensemble, sans effort. Moins de tâches répétitives, plus de clients.
