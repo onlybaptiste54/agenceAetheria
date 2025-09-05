@@ -36,14 +36,23 @@ function WorkflowDemoBase() {
   }, []);
 
   return (
-    <div className="rounded-xl border border-[var(--color-border)] p-5 bg-[var(--form-bg)]" role="region" aria-label="Démonstration Workflow">
-      {/* Tagline only (schema text removed) */}
-      <p className="text-sm mb-3 opacity-80">Avec AetherIA, optimiser vos processus devient simple.</p>
+    <div
+      className="relative rounded-2xl border border-[var(--color-border)] bg-[var(--form-bg)] p-6 md:p-8 overflow-hidden"
+      role="region"
+      aria-label="Démonstration Workflow"
+    >
+      <p className="text-sm mb-4 opacity-80">Optimisez vos processus simplement avec AetherIA.</p>
 
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-5">
-        <span className="text-sm opacity-70">Parcours en 5 étapes, ~30 secondes</span>
+        <span className="text-sm opacity-70">Parcours en 6 étapes, ~5–10 s</span>
         <div className="flex gap-2">
-          <button onClick={start} disabled={running} className="form-button px-4 py-2 rounded-md disabled:opacity-50 inline-flex items-center gap-2" aria-busy={running} aria-live="polite">
+          <button
+            onClick={start}
+            disabled={running}
+            className="px-4 py-2 rounded-md border bg-transparent hover:bg-white/5 transition-colors disabled:opacity-50 inline-flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--form-bg)]"
+            aria-busy={running}
+            aria-live="polite"
+          >
             {running && (
               <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" aria-hidden="true">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
@@ -52,13 +61,18 @@ function WorkflowDemoBase() {
             )}
             {running ? 'En cours…' : 'Démarrer'}
           </button>
-          <button onClick={reset} className="px-4 py-2 rounded-md border">Réinitialiser</button>
+          <button
+            onClick={reset}
+            className="px-4 py-2 rounded-md border bg-transparent hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--form-bg)]"
+          >
+            Réinitialiser
+          </button>
         </div>
       </div>
 
-      <div className="hidden md:flex items-center justify-between gap-3" role="list">
+      <div className="hidden md:flex items-center justify-between gap-3" role="list" aria-label="Étapes du workflow">
         {STEPS.map((s, i) => (
-          <div key={s.key} className="flex-1 flex items-center" role="listitem" aria-current={i === idx}>
+          <div key={s.key} className="flex-1 flex items-center" role="listitem" aria-current={i === idx ? 'step' : undefined}>
             <motion.div
               initial={false}
               animate={{ backgroundColor: i <= idx ? 'rgba(8,145,178,0.12)' : 'transparent' }}
@@ -74,9 +88,14 @@ function WorkflowDemoBase() {
         ))}
       </div>
 
-      <div className="md:hidden grid grid-cols-1 gap-3" role="list">
+      <div className="md:hidden grid grid-cols-1 gap-3" role="list" aria-label="Étapes du workflow (mobile)">
         {STEPS.map((s, i) => (
-          <div key={s.key} className={`px-3 py-2 rounded-lg border ${i <= idx ? 'bg-cyan-600/10 border-cyan-500 text-cyan-200' : 'bg-transparent'}`} role="listitem" aria-current={i === idx}>
+          <div
+            key={s.key}
+            className={`px-3 py-2 rounded-lg border ${i <= idx ? 'bg-cyan-600/10 border-cyan-500 text-cyan-200' : 'bg-transparent'}`}
+            role="listitem"
+            aria-current={i === idx ? 'step' : undefined}
+          >
             <div className="flex items-center gap-2">
               <div className={`h-3 w-3 rounded-full ${i <= idx ? 'bg-cyan-400' : 'bg-gray-400/50'}`} />
               <span className="text-sm font-medium">{s.label}</span>
@@ -85,11 +104,22 @@ function WorkflowDemoBase() {
         ))}
       </div>
 
-      <motion.div className="mt-5 p-4 rounded-lg border bg-[var(--color-bg)]/40" initial={false} animate={{ opacity: 1, y: 0 }} transition={{ type: 'spring', stiffness: 140, damping: 16 }}>
+      <motion.div
+        className="mt-5 p-4 rounded-lg border bg-[var(--color-bg)]/40"
+        initial={false}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: 'spring', stiffness: 140, damping: 16 }}
+        role="status"
+        aria-live="polite"
+      >
         <p className="text-sm opacity-80">{idx >= 0 ? STEPS[idx].label : 'Prêt à démarrer'}</p>
-        <p className="text-base font-semibold">{idx >= 0 ? STEPS[idx].detail : 'Cliquez sur Démarrer pour lancer le workflow'}</p>
+        <p className="text-base font-semibold">
+          {idx >= 0 ? STEPS[idx].detail : 'Cliquez sur Démarrer pour lancer le workflow'}
+        </p>
         {finished && (
-          <p className="mt-2 text-sm text-emerald-400">Processus terminé: l’IA a analysé et traité les données puis mis à jour le CRM.</p>
+          <p className="mt-2 text-sm text-emerald-400">
+            Processus terminé : l’IA a analysé et traité les données puis mis à jour le CRM.
+          </p>
         )}
       </motion.div>
     </div>

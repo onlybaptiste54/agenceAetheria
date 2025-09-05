@@ -172,8 +172,16 @@ a:hover::after { width: 100%; }
 
 @keyframes grow-bar { 0% { width: 0%; opacity: 0; } 10% { opacity: 1; } 90% { width: 100%; opacity: 1; } 100% { width: 100%; opacity: 0; } }
 
-@keyframes floating { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+/* --- Image --- */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 
-.animate-floating { animation: floating 4s ease-in-out infinite; }
-
-@media (prefers-reduced-motion: reduce) { h1, h1::after { transition: none; } .animate-floating { animation: none; } }
+.animate-floating {
+  animation: floating 4s ease-in-out infinite;
+}

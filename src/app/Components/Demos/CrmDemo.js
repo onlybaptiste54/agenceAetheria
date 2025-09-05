@@ -2,7 +2,6 @@
 import { memo, useMemo } from 'react';
 
 function CrmDemoBase() {
-  // Static showcase data (premium mock)
   const kpis = [
     { label: 'Clients actifs', value: 28, sub: '+4 ce mois' },
     { label: 'Projets en cours', value: 12, sub: '3 en phase finale' },
@@ -12,7 +11,7 @@ function CrmDemoBase() {
   const chartPoints = useMemo(() => [5, 8, 6, 10, 12, 11, 14, 13, 17, 15, 19, 21], []);
 
   // Build smooth SVG path (bezier smoothing)
-  const width = 820; // wide to fill card
+  const width = 820;
   const height = 180;
   const padding = 8;
   const max = Math.max(...chartPoints);
@@ -34,15 +33,19 @@ function CrmDemoBase() {
     .join(' ');
 
   return (
-    <div className="relative rounded-2xl border border-[var(--color-border)] p-8 overflow-hidden" role="region" aria-label="Dashboard CRM – Maquette">
-      {/* Background gradient */}
+    <div
+      className="relative rounded-2xl border border-[var(--color-border)] bg-[var(--form-bg)] p-6 md:p-8 overflow-hidden"
+      role="region"
+      aria-label="Dashboard CRM – Maquette"
+    >
+      {/* Background gradient tint */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10" />
 
       {/* Header */}
       <div className="relative mb-6 flex items-end justify-between">
         <div>
           <h3 className="text-2xl font-semibold">AetherIA CRM</h3>
-          <p className="text-sm opacity-70">Vue synthétique: clients, projets, devis</p>
+          <p className="text-sm opacity-70">Vue synthétique : clients, projets, devis</p>
         </div>
         <span className="text-xs px-3 py-1 rounded-full border bg-white/5 backdrop-blur-sm">Demo</span>
       </div>
@@ -59,6 +62,7 @@ function CrmDemoBase() {
             </div>
           ))}
         </div>
+
         {/* Chart card spanning 2 cols on large */}
         <div className="lg:col-span-2 rounded-xl border bg-white/5 backdrop-blur-md p-6">
           <div className="flex items-center justify-between mb-3">
@@ -87,7 +91,11 @@ function CrmDemoBase() {
               })}
             </g>
             {/* Area + line with draw animation */}
-            <path d={`${path} L ${width - padding},${height - padding} L ${padding},${height - padding} Z`} fill="url(#area)" clipPath="url(#clip)" />
+            <path
+              d={`${path} L ${width - padding},${height - padding} L ${padding},${height - padding} Z`}
+              fill="url(#area)"
+              clipPath="url(#clip)"
+            />
             <path
               d={path}
               fill="none"
@@ -98,7 +106,10 @@ function CrmDemoBase() {
             />
           </svg>
           <style jsx>{`
-            @keyframes draw { from { stroke-dashoffset: 2000; } to { stroke-dashoffset: 0; } }
+            @keyframes draw {
+              from { stroke-dashoffset: 2000; }
+              to { stroke-dashoffset: 0; }
+            }
           `}</style>
         </div>
       </div>

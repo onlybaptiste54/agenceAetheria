@@ -23,7 +23,7 @@ export default function Accueil() {
             </h1>
 
             <h2 className="text-2xl text-gray-500 italic mb-6">
-              L’IA qui <span><TextChange /></span> pour vous
+              L’IA qui <span><TextChange /></span> 
             </h2>
             <p className="font-roboto text-lg md:text-xl max-w-2xl mb-8 leading-relaxed text-[var(--color-text)]/80 animate-fade-in-delay">
               Automatisez vos <span className="text-cyan-700 font-semibold">emails, WhatsApp, agenda et CRM</span> avec un seul agent IA multi‑canal. Tout communique enfin ensemble, sans effort. Moins de tâches répétitives, plus de clients.
@@ -35,11 +35,11 @@ export default function Accueil() {
           </div>
 
           {/* Image à droite */}
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+          <div className="w-full md:w-3/5  flex justify-center md:justify-end">
             <img
               src="/ArtificialHome.svg"
               alt="Illustration automatisation"
-              className="max-w-full md:max-w-sm h-auto animate-floating"
+              className="max-w-full md:max-w-lg h-auto animate-floating"
             />
           </div>
         </div>
