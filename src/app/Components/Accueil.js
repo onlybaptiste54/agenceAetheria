@@ -21,13 +21,19 @@ export default function Accueil() {
                 AetherIA
               </span>
             </h1>
-
-         <h2 className="text-2xl text-gray-500 italic mb-6 flex flex-col md:flex-row items-center justify-center gap-2 text-center md:text-left">
+<h2
+  className="text-2xl text-gray-500 italic mb-6 
+             flex flex-col md:flex-row 
+             items-center md:items-baseline 
+             gap-2 text-center md:text-left"
+>
   <span>L’IA qui</span>
   <span className="text-cyan-700 font-semibold whitespace-nowrap">
     <TextChange />
   </span>
 </h2>
+
+
 
 
             <p className="font-roboto text-lg md:text-xl max-w-2xl mb-8 leading-relaxed text-[var(--color-text)]/80 animate-fade-in-delay">
