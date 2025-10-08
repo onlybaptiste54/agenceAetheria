@@ -24,7 +24,7 @@ export default function Audit() {
           </div>
           <div className="bg-[var(--form-bg)] p-6 rounded-xl border border-[var(--color-border)]">
             <h3 className="font-bold mb-2 text-cyan-700">Roadmap claire</h3>
-            <p className="text-sm opacity-80">Plan d'action personnalisé</p>
+            <p className="text-sm opacity-80">Plan d&apos;action personnalisé</p>
           </div>
         </div>
 

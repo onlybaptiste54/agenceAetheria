@@ -24,7 +24,7 @@ export default function ProblemesClients() {
     {
       secteur: "E-commerce & Retail",
       probleme: "Commandes non suivies, support client saturé, abandons paniers",
-      impact: "40% d'abandons, mauvaises reviews, CA en baisse",
+      impact: "40% d&apos;abandons, mauvaises reviews, CA en baisse",
       solution: "Système IA multi-canal : WhatsApp + email + relances auto"
     }
   ];

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 const faqs = [
   {
-    question: "Qu'est-ce qu'Aetheria propose concrètement ?",
+    question: "Qu&apos;est-ce qu&apos;Aetheria propose concrètement ?",
     answer:
       "Aetheria propose une solution tout-en-un basée sur une IA avancée pour optimiser votre gestion client et votre organisation : automatisation des interactions via WhatsApp, e-mail et formulaires, gestion intelligente des e-mails, prise de rendez-vous autonome, synchronisation de vos outils (CRM, agenda, facturation), gestion automatisée des données et diffusion d’informations personnalisées pour renforcer votre image professionnelle.",
   },

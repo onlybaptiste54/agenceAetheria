@@ -23,7 +23,7 @@ export default function Accueil() {
             </h1>
             
             <h2 className="text-xl md:text-2xl text-gray-600 mb-8 font-medium">
-              L'IA qui automatise vos tâches répétitives — pas ce qui vous définit
+              L&apos;IA qui automatise vos tâches répétitives — pas ce qui vous définit
             </h2>
 
             <p className="font-roboto text-lg md:text-xl max-w-2xl mb-8 leading-relaxed text-[var(--color-text)]/80 animate-fade-in-delay">
