@@ -32,7 +32,7 @@ export default function Footer() {
           </Link>
           <span className="text-[var(--color-text)]/40">|</span>
           <Link href="/utilisation" className="text-sm text-[var(--color-text)]/80 hover:text-cyan-700 transition-colors">
-            Conditions d'utilisation
+            Conditions d&apos;utilisation
           </Link>
         </div>
       </div>
