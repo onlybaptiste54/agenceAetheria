@@ -36,7 +36,7 @@ export default function ProblemesClients() {
           Ces problèmes métier vous parlent ?
         </h2>
         <p className="text-xl text-center mb-16 max-w-3xl mx-auto opacity-80">
-          Vous n'êtes pas seul. Chaque secteur a ses frustrations. L'IA peut les résoudre.
+          Vous n&apos;êtes pas seul. Chaque secteur a ses frustrations. L&apos;IA peut les résoudre.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -66,10 +66,10 @@ export default function ProblemesClients() {
 
         <div className="text-center mt-16">
           <h2 className="text-2xl font-bold mb-4">
-            Vous vous reconnaissez dans l'un de ces cas ?
+            Vous vous reconnaissez dans l&apos;un de ces cas ?
           </h2>
           <p className="text-lg mb-8 opacity-80">
-            Nous créons des solutions sur mesure, pas du "plug & play". Chaque métier a ses spécificités.
+            Nous créons des solutions sur mesure, pas du &quot;plug &amp; play&quot;. Chaque métier a ses spécificités.
           </p>
           <a 
             href="#cas-clients"

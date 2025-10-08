@@ -73,7 +73,7 @@ export default function Services() {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        Solutions d'Automatisation IA pour Professionnels
+        Solutions d&apos;Automatisation IA pour Professionnels
       </motion.h2>
       
       <motion.p 
@@ -82,7 +82,7 @@ export default function Services() {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        Des outils IA sur mesure qui s'adaptent à votre métier. Assistant IA métier, CRM intelligent, 
+        Des outils IA sur mesure qui s&apos;adaptent à votre métier. Assistant IA métier, CRM intelligent, 
         automatisation WhatsApp. <strong>Gagnez 5h/semaine</strong> sur vos tâches répétitives.
       </motion.p>
 
