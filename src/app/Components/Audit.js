@@ -9,7 +9,7 @@ export default function Audit() {
           Audit gratuit de vos processus métier
         </h2>
         <p className="text-xl mb-12 max-w-2xl mx-auto opacity-80">
-          En 30 minutes, nous identifions vos points de friction et vous proposons une stratégie d'automatisation sur mesure.
+          En 30 minutes, nous identifions vos points de friction et vous proposons une stratégie d{'\''}automatisation sur mesure.
         </p>
 
         {/* Bénéfices simplifiés */}
@@ -24,7 +24,7 @@ export default function Audit() {
           </div>
           <div className="bg-[var(--form-bg)] p-6 rounded-xl border border-[var(--color-border)]">
             <h3 className="font-bold mb-2 text-cyan-700">Roadmap claire</h3>
-            <p className="text-sm opacity-80">Plan d'action personnalisé</p>
+            <p className="text-sm opacity-80">Plan d{'\''}action personnalisé</p>
           </div>
         </div>
 

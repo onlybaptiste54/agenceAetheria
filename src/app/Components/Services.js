@@ -7,7 +7,7 @@ const services = [
   {
     title: 'Assistant IA métier pour avocats et consultants',
     description:
-      "Un assistant qui comprend votre secteur : emails intelligents, conseils personnalisés, automatisation contextuelle. Optimise vos processus métier avec l'IA.",
+      "Un assistant qui comprend votre secteur : emails intelligents, conseils personnalisés, automatisation contextuelle. Optimise vos processus métier avec l{'\''}IA.",
     icon: '/chatbot.png',
     color: 'border-purple-500',
     bgColor: 'bg-purple-50',
@@ -16,7 +16,7 @@ const services = [
   {
     title: 'Dashboard centralisé et CRM intelligent',
     description:
-      "Vue d'ensemble de votre activité : leads, ventes, tâches. Tout en un endroit, mis à jour automatiquement avec analyse IA.",
+      "Vue d{'\''}ensemble de votre activité : leads, ventes, tâches. Tout en un endroit, mis à jour automatiquement avec analyse IA.",
     icon: '/VisualDataHome.svg',
     color: 'border-cyan-500',
     bgColor: 'bg-cyan-50',
