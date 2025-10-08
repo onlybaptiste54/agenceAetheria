@@ -12,7 +12,7 @@ export default function CasClients() {
         "Automatisation mails post-LinkedIn",
         "Gestion automatique frais kilométriques",
         "Génération automatique comptes-rendus visite",
-        "Gain de 6h/semaine sur l&apos;administratif"
+        "Gain de 6h/semaine sur l'administratif"
       ],
       image: "/automation.png"
     },
@@ -32,7 +32,7 @@ export default function CasClients() {
     {
       secteur: "Conseil Patrimonial",
       client: "Conseiller Patrimoine", 
-      probleme: "Besoin d&apos;expertise IA spécialisée dans le conseil patrimonial",
+      probleme: "Besoin d'expertise IA spécialisée dans le conseil patrimonial",
       solution: "Agent IA dédié au conseil patrimonial avec expertise sectorielle",
       resultats: [
         "Assistant IA spécialisé domaine patrimonial",
@@ -51,7 +51,7 @@ export default function CasClients() {
           Solutions IA sur mesure : Immobilier, Commerce, Conseil Patrimonial
         </h2>
         <p className="text-xl text-center mb-16 opacity-80 max-w-3xl mx-auto">
-          Des systèmes d&apos;automatisation IA adaptés à chaque métier. Dashboard personnalisés, 
+          Des systèmes d'automatisation IA adaptés à chaque métier. Dashboard personnalisés, 
           assistants IA spécialisés, gestion automatique des processus.
         </p>
 

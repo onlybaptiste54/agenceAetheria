@@ -116,7 +116,7 @@ export default function Services() {
                 {service.secteur}
               </span>
             </div>
-            <span className="custom-badge text-sm leading-snug">{service.description.replace(/'/g, '&apos;')}</span>
+            <span className="custom-badge text-sm leading-snug">{service.description}</span>
 
           </motion.div>
         ))}
