@@ -10,8 +10,6 @@ export const metadata = {
   description: "Agence spécialisée en automatisation IA pour avocats, consultants et e-commerce. Assistant IA métier, CRM intelligent, WhatsApp bot. Audit gratuit 30min. +5h/semaine économisées.",
   icons: {
     icon: '/LogoAetheria.ico',
-    shortcut: '/LogoAetheria.ico',
-    apple: '/LogoAetheria.ico',
   },
   keywords: [
     'agence automatisation IA', 'assistant IA métier', 'automatisation avocat', 
