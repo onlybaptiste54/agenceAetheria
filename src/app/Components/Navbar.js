@@ -15,10 +15,10 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    ['#Audit', 'Audit'],
+    ['#cas-clients', 'Cas Clients'],
     ['#Services', 'Services'],
-    ['#Demo', 'Démo'],
-    ['#Contact', 'Contact'],
+    ['#audit-gratuit', 'Audit'],
+    ['#FAQ', 'FAQ'],
   ];
 
   const router = useRouter();
@@ -64,7 +64,7 @@ export default function Navbar() {
               <li key={label}>
                 <button
                   onClick={() => handleNavClick(href)}
-                  className="px-4 py-2 rounded-full border border-white/10 text-sm text-gray-300 hover:text-white hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-cyan-600/40 transition-colors"
+                  className="px-4 py-2 rounded-full border border-[var(--color-border)] text-sm text-[var(--color-text)] hover:text-[var(--color-text)] hover:bg-[var(--color-hover)] focus:outline-none focus:ring-2 focus:ring-cyan-600/40 transition-colors"
                   aria-label={label}
                 >
                   {label}
@@ -97,12 +97,12 @@ export default function Navbar() {
 
       {/* MENU MOBILE */}
       {mobileMenuOpen && (
-        <ul className="md:hidden absolute top-20 left-0 w-full bg-[var(--color-bg)] border-t border-[var(--color-border)] flex flex-col items-center space-y-2 py-4 z-40">
+        <ul className="md:hidden absolute top-18 left-0 w-full bg-[var(--color-bg)] border-t border-[var(--color-border)] flex flex-col items-center space-y-2 py-4 z-40">
           {navItems.map(([href, label]) => (
             <li key={label}>
               <button
                 onClick={() => handleNavClick(href)}
-                className="px-4 py-2 rounded-full border border-white/10 text-sm text-gray-300 hover:text-white hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-cyan-600/40 transition-colors"
+                className="px-4 py-2 rounded-full border border-[var(--color-border)] text-sm text-[var(--color-text)] hover:text-[var(--color-text)] hover:bg-[var(--color-hover)] focus:outline-none focus:ring-2 focus:ring-cyan-600/40 transition-colors"
                 aria-label={label}
               >
                 {label}

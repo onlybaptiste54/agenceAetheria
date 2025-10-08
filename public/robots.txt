@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://agenceaetheria.com/sitemap.xml
+Sitemap: https://agenceaetheria.com/sitemap-0.xml
+
+# Optimisations spécifiques
+Crawl-delay: 1
+
+# Blocages (si nécessaire)
+# Disallow: /admin/
+# Disallow: /private/

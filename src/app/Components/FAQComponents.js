@@ -39,6 +39,7 @@ const [openIndex, setOpenIndex] = useState(null);
 
   return (
     <section
+      id="FAQ"
       className="py-20 px-4 max-w-4xl mx-auto"
       style={{ backgroundColor: "var(--color-bg)", color: "var(--color-text)" }}
     >

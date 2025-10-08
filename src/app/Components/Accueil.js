@@ -21,27 +21,28 @@ export default function Accueil() {
                 AetherIA
               </span>
             </h1>
-<h2
-  className="text-2xl text-gray-500 italic mb-6 
-             flex flex-col md:flex-row 
-             items-center md:items-baseline 
-             gap-2 text-center md:text-left"
->
-  <span>L’IA qui</span>
-  <span className="text-cyan-700 font-semibold whitespace-nowrap">
-    <TextChange />
-  </span>
-</h2>
-
-
-
+            
+            <h2 className="text-xl md:text-2xl text-gray-600 mb-8 font-medium">
+              L'IA qui automatise vos tâches répétitives — pas ce qui vous définit
+            </h2>
 
             <p className="font-roboto text-lg md:text-xl max-w-2xl mb-8 leading-relaxed text-[var(--color-text)]/80 animate-fade-in-delay">
-              Automatisez vos <span className="text-cyan-700 font-semibold">emails, WhatsApp, agenda et CRM</span> avec un seul agent IA multi‑canal. Tout communique enfin ensemble, sans effort. Moins de tâches répétitives, plus de clients.
+              <span className="text-cyan-700 font-semibold">Systèmes IA sur mesure</span> qui centralisent vos données et automatisent vos décisions métier.
             </p>
 
-            <div className="mb-4">
-              <PointerHighlightDemo />
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <a 
+                href="#cas-clients"
+                className="button px-8 py-4 rounded-lg bg-cyan-600 hover:bg-cyan-700 text-white font-semibold transition text-center"
+              >
+                Voir nos cas clients
+              </a>
+              <a 
+                href="#audit-gratuit"
+                className="button px-8 py-4 rounded-lg border border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white font-semibold transition text-center"
+              >
+                Audit gratuit (30min)
+              </a>
             </div>
           </div>
 

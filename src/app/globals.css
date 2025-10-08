@@ -16,21 +16,21 @@
 }
 /* --- VARIABLES CSS --- */
 :root {
-  /* Dark palette applied globally */
-  --color-bg: #222222; /* Gray-900 */
-  --color-text: #e2e8f0; /* Gray-200 */
-  --color-border: #4b5563; /* Gray-600 */
-  --color-hover: #4b5563; /* Hover gray */
-  --color-link-underline: #06b6d4; /* Cyan */
-  --gray-dark: #e2e8f0;
+  /* Light palette applied globally */
+  --color-bg: #ffffff; /* White background */
+  --color-text: #1f2937; /* Gray-800 */
+  --color-border: #d1d5db; /* Gray-300 */
+  --color-hover: #f3f4f6; /* Gray-100 */
+  --color-link-underline: #06b6d4; /* Cyan - keeping accent color */
+  --gray-dark: #1f2937;
 
   --font-sans: var(--font-sora, var(--font-space-grotesk));
 
-  /* Forms - dark defaults */
-  --form-bg: #2d3748; /* Gray-700 */
-  --form-border: #4b5563; /* Gray-600 */
-  --input-bg: #374151; /* Gray-800 */
-  --button-bg: #0ea5e9; /* Cyan light */
+  /* Forms - light defaults */
+  --form-bg: #f9fafb; /* Gray-50 */
+  --form-border: #d1d5db; /* Gray-300 */
+  --input-bg: #ffffff; /* White */
+  --button-bg: #0ea5e9; /* Cyan light - keeping accent color */
   --button-text: #ffffff;
 }
 
@@ -99,7 +99,7 @@ h1 {
 }
 
 :root h1 {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* No zoom, only underline reveal */
@@ -130,10 +130,10 @@ h1.animate-floating { animation: floating 4s ease-in-out infinite; }
 
 h1 + .title-divider { margin-top: 1rem; }
 
-h2 { @apply text-2xl italic; color: #9ca3af; }
-:root ul { color: #e5e7eb; }
+h2 { @apply text-2xl italic; color: #6b7280; }
+:root ul { color: #374151; }
 p { @apply text-lg md:text-xl; }
-:root p { color: #ffffff; }
+:root p { color: #1f2937; }
 
 :root { --badge-text: #005764; }
 

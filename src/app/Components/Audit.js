@@ -1,36 +1,46 @@
-import { BarFlowDemo } from "./BarFlow";
-
 export default function Audit() {
   return (
     <section
-      id="Audit"
-      className="min-h-screen bg-[--color-bg] text-[--color-text] flex items-center justify-center  border-black py-16 px-4"
+      id="audit-gratuit"
+      className="py-20 px-4 bg-[var(--color-bg)] text-[var(--color-text)]"
     >
-      <div className="max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-center gap-12">
-        {/* Image centrée */}
-        <div className="w-full md:w-2/5 flex justify-center">
-          <img
-            src="/VisualDataHome.svg"
-            alt="Suivi et audit"
-            className="max-w-md w-full h-auto animate-floating mx-auto"
-          />
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          Audit gratuit de vos processus métier
+        </h2>
+        <p className="text-xl mb-12 max-w-2xl mx-auto opacity-80">
+          En 30 minutes, nous identifions vos points de friction et vous proposons une stratégie d'automatisation sur mesure.
+        </p>
+
+        {/* Bénéfices simplifiés */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="bg-[var(--form-bg)] p-6 rounded-xl border border-[var(--color-border)]">
+            <h3 className="font-bold mb-2 text-cyan-700">Analyse complète</h3>
+            <p className="text-sm opacity-80">Vos processus actuels décortiqués</p>
+          </div>
+          <div className="bg-[var(--form-bg)] p-6 rounded-xl border border-[var(--color-border)]">
+            <h3 className="font-bold mb-2 text-cyan-700">Gains identifiés</h3>
+            <p className="text-sm opacity-80">Estimation temps économisé</p>
+          </div>
+          <div className="bg-[var(--form-bg)] p-6 rounded-xl border border-[var(--color-border)]">
+            <h3 className="font-bold mb-2 text-cyan-700">Roadmap claire</h3>
+            <p className="text-sm opacity-80">Plan d'action personnalisé</p>
+          </div>
         </div>
 
-        {/* Contenu centré avec plus d'espace */}
-        <div className="w-full md:w-3/5 flex flex-col items-center md:items-start justify-center text-center md:text-left">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-cyan-700">
-            Audit & Suivi
-          </h1>
-          <p className="text-lg text-gray-700 mb-8 max-w-xl">
-            Nous vous accompagnons à chaque étape du processus pour assurer un suivi optimal et une mise en place efficace de votre automatisation.
+        {/* CTA simple */}
+        <div className="space-y-6">
+          <p className="text-lg opacity-80">
+            Gratuit • Sans engagement • Résultats concrets
           </p>
-          <ul className="space-y-4 text-gray-800 text-base max-w-xl text-left list-disc pl-6">
-            <li>Analyse des besoins spécifiques</li>
-            <li>Définition des processus automatisables</li>
-            <li>Mise en place technique (No-Code / Low-Code / API)</li>
-            <li>Phase de test & validation</li>
-            <li>Suivi, ajustements & maintenance continue</li>
-          </ul>
+          <a 
+            href="https://calendly.com/agenceaetheria/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-4 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors"
+          >
+            Réserver mon audit gratuit (30min)
+          </a>
         </div>
       </div>
     </section>
