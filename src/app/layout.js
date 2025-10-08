@@ -18,6 +18,7 @@ export const metadata = {
     description: "Agence spécialisée en automatisation IA pour professionnels. Assistant IA métier, CRM intelligent, WhatsApp bot. Audit gratuit 30min.",
     url: 'https://agenceaetheria.com',
     type: 'website',
+    siteName: 'Agence AetherIA',
     images: [
       {
         url: 'https://agenceaetheria.com/LogoAetheriaaNoBg.png',
@@ -31,6 +32,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Agence AetherIA - Automatisation IA & Solutions Digitales',
     description: 'Agence spécialisée en automatisation IA pour professionnels. Audit gratuit 30min.',
+    images: ['https://agenceaetheria.com/LogoAetheriaaNoBg.png'],
   },
   robots: {
     index: true,
@@ -45,6 +47,9 @@ export const metadata = {
   },
   alternates: {
     canonical: 'https://agenceaetheria.com',
+  },
+  other: {
+    'facebook-domain-verification': 'myrkk6l9u3fxv275rtimcpjfd14hmd',
   },
 };
 
