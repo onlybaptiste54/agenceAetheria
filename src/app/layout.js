@@ -21,7 +21,7 @@ export const metadata = {
     siteName: 'Agence AetherIA',
     images: [
       {
-        url: 'https://agenceaetheria.com/LogoAetheriaaNoBg.png',
+        url: '/opengraph-image',
         width: 1200,
         height: 630,
         alt: 'Agence AetherIA - Automatisation IA',
@@ -32,7 +32,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Agence AetherIA - Automatisation IA & Solutions Digitales',
     description: 'Agence spécialisée en automatisation IA pour professionnels. Audit gratuit 30min.',
-    images: ['https://agenceaetheria.com/LogoAetheriaaNoBg.png'],
+    images: ['/opengraph-image'],
   },
   robots: {
     index: true,
