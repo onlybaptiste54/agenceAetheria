@@ -14,9 +14,9 @@ export default function Reassurance() {
       description: "Vos données restent chez vous. Conformité RGPD, hébergement sécurisé, accès contrôlé."
     },
     {
-      icon: "💰",
-      titre: "ROI garanti",
-      description: "Retour sur investissement visible dès le 1er mois. Si pas satisfait, remboursement intégral."
+      icon: "👥",
+      titre: "Accompagnement complet",
+      description: "Formation personnalisée, support technique continu et suivi post-livraison. Nous vous accompagnons jusqu'à l'autonomie."
     },
     {
       icon: "🎯",
