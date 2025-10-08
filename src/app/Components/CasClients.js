@@ -51,7 +51,7 @@ export default function CasClients() {
           Solutions IA sur mesure : Immobilier, Commerce, Conseil Patrimonial
         </h2>
         <p className="text-xl text-center mb-16 opacity-80 max-w-3xl mx-auto">
-          Des systèmes d'automatisation IA adaptés à chaque métier. Dashboard personnalisés, 
+          Des systèmes d&apos;automatisation IA adaptés à chaque métier. Dashboard personnalisés, 
           assistants IA spécialisés, gestion automatique des processus.
         </p>
 

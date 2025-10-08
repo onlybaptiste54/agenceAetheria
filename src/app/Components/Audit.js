@@ -9,7 +9,7 @@ export default function Audit() {
           Audit gratuit de vos processus métier
         </h2>
         <p className="text-xl mb-12 max-w-2xl mx-auto opacity-80">
-          En 30 minutes, nous identifions vos points de friction et vous proposons une stratégie d'automatisation sur mesure.
+          En 30 minutes, nous identifions vos points de friction et vous proposons une stratégie d&apos;automatisation sur mesure.
         </p>
 
         {/* Bénéfices simplifiés */}
