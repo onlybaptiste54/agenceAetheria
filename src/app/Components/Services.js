@@ -7,7 +7,7 @@ const services = [
   {
     title: 'Assistant IA métier pour avocats et consultants',
     description:
-      "Un assistant qui comprend votre secteur : emails intelligents, conseils personnalisés, automatisation contextuelle. Optimise vos processus métier avec l{'\''}IA.",
+      "Un assistant qui comprend votre secteur : emails intelligents, conseils personnalisés, automatisation contextuelle. Optimise vos processus métier avec l'IA.",
     icon: '/chatbot.png',
     color: 'border-purple-500',
     bgColor: 'bg-purple-50',
@@ -16,7 +16,7 @@ const services = [
   {
     title: 'Dashboard centralisé et CRM intelligent',
     description:
-      "Vue d{'\''}ensemble de votre activité : leads, ventes, tâches. Tout en un endroit, mis à jour automatiquement avec analyse IA.",
+      "Vue d'ensemble de votre activité : leads, ventes, tâches. Tout en un endroit, mis à jour automatiquement avec analyse IA.",
     icon: '/VisualDataHome.svg',
     color: 'border-cyan-500',
     bgColor: 'bg-cyan-50',
@@ -73,7 +73,7 @@ export default function Services() {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        Solutions d{'\''}Automatisation IA pour Professionnels
+        Solutions d'Automatisation IA pour Professionnels
       </motion.h2>
       
       <motion.p 
@@ -82,7 +82,7 @@ export default function Services() {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        Des outils IA sur mesure qui s{'\''}adaptent à votre métier. Assistant IA métier, CRM intelligent, 
+        Des outils IA sur mesure qui s'adaptent à votre métier. Assistant IA métier, CRM intelligent, 
         automatisation WhatsApp. <strong>Gagnez 5h/semaine</strong> sur vos tâches répétitives.
       </motion.p>
 

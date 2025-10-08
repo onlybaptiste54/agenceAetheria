@@ -5,7 +5,7 @@ export default function Reassurance() {
   const points = [
     {
       icon: "🔧",
-      titre: "Pas besoin d{'\''}être développeur",
+      titre: "Pas besoin d'être développeur",
       description: "Nos solutions sont conçues pour être utilisées par tous. Interface simple, formation incluse."
     },
     {
