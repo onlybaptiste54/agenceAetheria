@@ -7,7 +7,7 @@ const services = [
   {
     title: 'Assistant IA métier pour avocats et consultants',
     description:
-      "Un assistant qui comprend votre secteur : emails intelligents, conseils personnalisés, automatisation contextuelle. Optimise vos processus métier avec l&apos;IA.",
+      "Un assistant qui comprend votre secteur : emails intelligents, conseils personnalisés, automatisation contextuelle. Optimise vos processus métier avec l'IA.",
     icon: '/chatbot.png',
     color: 'border-purple-500',
     bgColor: 'bg-purple-50',
@@ -116,7 +116,7 @@ export default function Services() {
                 {service.secteur}
               </span>
             </div>
-            <span className="custom-badge text-sm leading-snug">{service.description}</span>
+            <span className="custom-badge text-sm leading-snug">{service.description.replace(/'/g, '&apos;')}</span>
 
           </motion.div>
         ))}
