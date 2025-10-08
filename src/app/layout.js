@@ -8,6 +8,11 @@ const sora = Sora({ subsets: ['latin'], variable: '--font-sora' })
 export const metadata = {
   title: 'Agence AetherIA - Automatisation IA & Solutions Digitales | Audit Gratuit',
   description: "Agence spécialisée en automatisation IA pour avocats, consultants et e-commerce. Assistant IA métier, CRM intelligent, WhatsApp bot. Audit gratuit 30min. +5h/semaine économisées.",
+  icons: {
+    icon: '/LogoAetheriaaNoBg.png',
+    shortcut: '/LogoAetheriaaNoBg.png',
+    apple: '/LogoAetheriaaNoBg.png',
+  },
   keywords: [
     'agence automatisation IA', 'assistant IA métier', 'automatisation avocat', 
     'CRM intelligent', 'WhatsApp bot', 'automatisation consultant', 'agence digitale IA',
