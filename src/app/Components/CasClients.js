@@ -48,11 +48,10 @@ export default function CasClients() {
     <section id="cas-clients" className="py-20 px-4 bg-[var(--color-bg)] text-[var(--color-text)]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Solutions IA sur mesure : Immobilier, Commerce, Conseil Patrimonial...
+Découvrez les entreprises que nous accompagnons déjà.
         </h2>
         <p className="text-xl text-center mb-16 opacity-80 max-w-3xl mx-auto">
-          Des systèmes d'automatisation IA adaptés à chaque métier. Dashboard personnalisés, 
-          assistants IA spécialisés, gestion automatique des processus.
+       Des solutions IA concrètes, adaptées à chaque métier.
         </p>
 
         <div className="space-y-16">
