@@ -39,7 +39,7 @@ export default function Apropos() {
           <div className="relative z-10 p-[2px] rounded-full bg-gradient-to-br from-cyan-400/40 to-blue-500/40 shadow-xl">
             <div className="rounded-full bg-[var(--color-bg)] p-1">
               <Image
-                src="/baptisteImage.png"
+                src="/photoDeMoi.png"
                 alt="Baptiste Beroual"
                 width={400}
                 height={400}
