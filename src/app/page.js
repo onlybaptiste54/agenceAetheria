@@ -8,6 +8,7 @@ import FAQComponents from './Components/FAQComponents';
 import Contact from './Components/Contact';
 import Partenaire from './Components/Partenaire';
 import Footer from './Components/Footer';
+import APropos from './Components/APropos';
 import './globals.css';
 import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
@@ -16,8 +17,9 @@ export default function Home() {
   return (
     <div className={`${inter.className}`}>
       <Accueil />
-      <CasClients />
       <Services />
+      <CasClients />
+      <APropos />
       <Audit />
       <Reassurance />
       <FAQComponents />

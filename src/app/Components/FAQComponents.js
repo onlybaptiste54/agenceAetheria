@@ -44,7 +44,8 @@ const [openIndex, setOpenIndex] = useState(null);
       style={{ backgroundColor: "var(--color-bg)", color: "var(--color-text)" }}
     >
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold mb-4">Foire aux questions</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-wide mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-500 drop-shadow-lg">
+          Foire aux questions</h2>
         <p className="text-lg text-[var(--color-text)]/70">
           Voici les réponses aux questions les plus fréquentes à propos d’Aetheria.
         </p>

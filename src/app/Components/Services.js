@@ -23,15 +23,6 @@ const services = [
     secteur: "Consultants, avocats"
   },
   {
-    title: 'Automatisation WhatsApp et email marketing',
-    description:
-      "WhatsApp + Email + Relances : vos clients reçoivent des réponses instantanées, même la nuit. Bot intelligent 24/7.",
-    icon: '/e-mail.png',
-    color: 'border-blue-500',
-    bgColor: 'bg-blue-50',
-    secteur: "E-commerce, services"
-  },
-  {
     title: 'CRM intelligent avec prédictions IA',
     description:
       "Vos données analysées en temps réel : prix optimaux, prédictions, alertes personnalisées. Optimisation automatique des ventes.",
@@ -68,7 +59,7 @@ export default function Services() {
     >
       {/* Titre */}
       <motion.h2
-        className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-center"
+        className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-wide mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-500 drop-shadow-lg"
         initial={{ opacity: 0, y: -20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
@@ -82,22 +73,21 @@ export default function Services() {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        Des outils IA sur mesure qui s'adaptent à votre métier. Assistant IA métier, CRM intelligent, 
-        automatisation WhatsApp. <strong>Gagnez 5h/semaine</strong> sur vos tâches répétitives.
+       Nous concevons des systèmes IA qui s’intègrent à vos outils existants pour éliminer les tâches chronophages et fiabiliser vos opérations.
       </motion.p>
 
       {/* Image de l’agent IA */}
-      <motion.div
+      {/* <motion.div
         className="flex justify-center mb-12"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={inView ? { opacity: 1, scale: 1 } : {}}
         transition={{ duration: 0.5 }}
       >
         <img src="/chatbot.png" alt="Agent IA" className="w-20 h-20 animate-floating" />
-      </motion.div>
+      </motion.div> */}
 
       {/* Cards alignées */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto mb-16 z-10 relative">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16 z-10 relative">
         {services.map((service, index) => (
           <motion.div
             key={index}

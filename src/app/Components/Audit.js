@@ -5,7 +5,7 @@ export default function Audit() {
       className="py-20 px-4 bg-[var(--color-bg)] text-[var(--color-text)]"
     >
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-wide mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-500 drop-shadow-lg">
           Audit gratuit de vos processus métier
         </h2>
         <p className="text-xl mb-12 max-w-2xl mx-auto opacity-80">
