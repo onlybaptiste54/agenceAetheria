@@ -29,7 +29,7 @@ export default function Image() {
       >
         {/* Logo */}
         <img
-          src="https://agenceaetheria.com/LogoAetheriaaNoBg.png" // à mettre dans /public si besoin
+          src="https://www.agenceaetheria.com/LogoAetheriaaNoBg.png" // à mettre dans /public si besoin
           alt="Logo AetherIA"
           width={160}
           height={160}

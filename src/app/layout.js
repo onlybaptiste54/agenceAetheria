@@ -1,7 +1,6 @@
 import './globals.css';
 import Navbar from './Components/Navbar';
 import { Sora } from 'next/font/google';
-import N8nChat from './N8nChat';
 
 const sora = Sora({ subsets: ['latin'], variable: '--font-sora' });
 
