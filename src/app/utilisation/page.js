@@ -1,58 +1,87 @@
-import Head from 'next/head';
+export const metadata = {
+  title: 'Conditions d utilisation - AetherIA',
+  description: 'Conditions generales d utilisation du site AetherIA.',
+}
 
-export default function Utilisation() {
+export default function UtilisationPage() {
   return (
-    <div className="bg-[var(--color-bg)] text-[var(--color-text)] py-8 px-4">
-      <Head>
-        <title>Conditions d{"'"}utilisation - AetherIA</title>
-        <meta name="description" content="Conditions utilisation AetherIA." />
-      </Head>
-      <main className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6">
-          Conditions d{"'"}utilisation
-        </h1>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
-          En utilisant l{"'"}application d{"'"}automatisation d<strong>{"'"}AetherIA</strong> basée sur n8n ({"\"l'Application\""}), vous acceptez les conditions d{"'"}utilisation suivantes. Si vous n{"'"}acceptez pas ces conditions, veuillez ne pas utiliser l{"'"}Application.
-        </p>
+    <main className="min-h-screen bg-background text-foreground px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-4xl mx-auto space-y-8">
+        <header className="space-y-3">
+          <h1 className="text-3xl sm:text-4xl font-bold">Conditions d utilisation</h1>
+          <p className="text-foreground/70">Derniere mise a jour: 12 fevrier 2026</p>
+        </header>
 
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">1. Utilisation de l{"'"}Application</h2>
-        <ul className="list-disc pl-6 mb-4 text-gray-600 dark:text-gray-300">
-          <li>Utiliser l{"'"}Application conformément aux lois applicables.</li>
-          <li>Ne pas tenter d{"'"}accéder à l{"'"}Application de manière non autorisée.</li>
-          <li>Ne pas utiliser l{"'"}Application pour des activités illégales ou malveillantes.</li>
-        </ul>
+        <section className="space-y-4 text-foreground/85">
+          <p>
+            Les presentes conditions regissent l acces et l usage du site et des services AetherIA.
+            En utilisant le site, vous acceptez ces conditions.
+          </p>
+        </section>
 
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">2. Accès et authentification</h2>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
-          L{"'"}accès à l{"'"}Application peut être restreint aux utilisateurs autorisés par AetherIA. Vous êtes responsable de la confidentialité de vos identifiants d{"'"}accès et de toute activité effectuée sous votre compte.
-        </p>
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">1. Objet</h2>
+          <p className="text-foreground/80">
+            AetherIA propose des services d automatisation et d accompagnement digital.
+            Les informations presentes sur le site sont fournies a titre informatif.
+          </p>
+        </section>
 
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">3. Propriété intellectuelle</h2>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
-          Tout contenu ou matériel fourni par l{"'"}Application (y compris le code, les designs et les configurations) appartient à AetherIA ou à ses partenaires. Vous n{"'"}êtes pas autorisé à copier, modifier ou distribuer ce contenu sans autorisation écrite.
-        </p>
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">2. Acces au site</h2>
+          <p className="text-foreground/80">
+            Le site est accessible 24h/24 et 7j/7, sauf interruption pour maintenance, incident
+            technique ou force majeure.
+          </p>
+        </section>
 
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">4. Limitation de responsabilité</h2>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
-          L{"'"}Application est fournie {"\"telle quelle\""}. AetherIA ne garantit pas que l{"'"}Application sera exempte d{"'"}erreurs ou disponible en permanence. Nous ne sommes pas responsables des dommages indirects ou consécutifs découlant de l{"'"}utilisation de l{"'"}Application.
-        </p>
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">3. Obligations de l utilisateur</h2>
+          <ul className="list-disc pl-6 space-y-1 text-foreground/80">
+            <li>Utiliser le site conformement aux lois et reglementations en vigueur.</li>
+            <li>Ne pas porter atteinte au bon fonctionnement du site.</li>
+            <li>Ne pas extraire ou reutiliser les contenus sans autorisation.</li>
+          </ul>
+        </section>
 
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">5. Modifications des conditions</h2>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
-          Nous pouvons modifier ces conditions d{"'"}utilisation à tout moment. Les modifications seront publiées sur cette page, avec une date de mise à jour indiquée ci-dessous.
-        </p>
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">4. Propriete intellectuelle</h2>
+          <p className="text-foreground/80">
+            Les textes, elements graphiques, marques, logos et contenus du site sont proteges.
+            Toute reproduction, distribution ou exploitation non autorisee est interdite.
+          </p>
+        </section>
 
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">6. Contact</h2>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
-          Pour toute question concernant ces conditions d{"'"}utilisation, contactez-nous à : <br />
-          AetherIA <br />
-          <a href="mailto:Baptiste.beroual@agenceaetheria.com" className="text-blue-500 hover:underline">Baptiste.beroual@agenceaetheria.com</a>
-        </p>
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">5. Limitation de responsabilite</h2>
+          <p className="text-foreground/80">
+            AetherIA ne peut etre tenue responsable des dommages indirects, pertes de donnees,
+            pertes d exploitation ou interruptions de service lies a l usage du site.
+          </p>
+        </section>
 
-        <p className="text-gray-500 dark:text-gray-400 text-sm">
-          <em>Dernière mise à jour : 2 juillet 2025</em>
-        </p>
-      </main>
-    </div>
-  );
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">6. Liens externes</h2>
+          <p className="text-foreground/80">
+            Le site peut contenir des liens vers des sites tiers. AetherIA ne controle pas ces
+            contenus et decline toute responsabilite quant a leur disponibilite ou leur contenu.
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">7. Modification des conditions</h2>
+          <p className="text-foreground/80">
+            AetherIA peut modifier les presentes conditions a tout moment. La version en ligne fait foi.
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">8. Contact</h2>
+          <p className="text-foreground/80">
+            Pour toute question: <a className="text-cyan-400 hover:text-cyan-300" href="mailto:agenceaetheria@gmail.com">agenceaetheria@gmail.com</a>
+          </p>
+        </section>
+      </div>
+    </main>
+  )
 }

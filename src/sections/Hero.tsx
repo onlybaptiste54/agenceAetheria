@@ -73,7 +73,7 @@ export default function Hero() {
               <Button size="lg" onClick={() => scrollToSection('#audit')} className="bg-cyan-500 hover:bg-cyan-400 text-background font-semibold px-9 py-6 text-lg group transition-all duration-300">
                 Audit gratuit (30min)<ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline" onClick={() => scrollToSection('#cas-clients')} className="border-white/20 text-white hover:bg-white/5 px-9 py-6 text-lg transition-all duration-300">Voir nos cas clients</Button>
+              <Button size="lg" variant="outline" onClick={() => scrollToSection('#cas-clients')} className="border-white/20 text-white hover:bg-white px-9 py-6 text-lg transition-all duration-300">Voir nos cas clients</Button>
             </div>
           </div>
 

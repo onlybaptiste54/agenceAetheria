@@ -1,66 +1,90 @@
-import Head from 'next/head';
+export const metadata = {
+  title: 'Politique de confidentialite - AetherIA',
+  description: 'Politique de confidentialite d AetherIA.',
+}
 
-export default function Privacy() {
+export default function PrivacyPage() {
   return (
-    <div className="bg-[var(--color-bg)] text-[var(--color-text)] py-8 px-4">
-      <Head>
-        <title>Politique de confidentialité - AetherIA</title>
-        <meta name="description" content="Politique de confidentialité de l'application AetherIA." />
-      </Head>
-      <main className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6">
-          Politique de confidentialité
-        </h1>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
-          <strong>AetherIA</strong> ({"\"nous\""}, {"\"notre\""}) respecte votre vie privée et s{"'"}engage à protéger les données personnelles que nous collectons via notre application d{"'"}automatisation basée sur n8n. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez notre application.
-        </p>
+    <main className="min-h-screen bg-background text-foreground px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-4xl mx-auto space-y-8">
+        <header className="space-y-3">
+          <h1 className="text-3xl sm:text-4xl font-bold">Politique de confidentialite</h1>
+          <p className="text-foreground/70">
+            Derniere mise a jour: 12 fevrier 2026
+          </p>
+        </header>
 
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">1. Collecte des données</h2>
-        <ul className="list-disc pl-6 mb-4 text-gray-600 dark:text-gray-300">
-          <li>Les informations que vous fournissez en vous connectant via Google OAuth (comme votre nom, adresse e-mail et informations de profil).</li>
-          <li>Les données nécessaires pour exécuter les automatisations, telles que les fichiers ou e-mails que vous autorisez l{"'"}application à accéder via les scopes OAuth.</li>
-        </ul>
+        <section className="space-y-4 text-foreground/85">
+          <p>
+            AetherIA attache une importance particuliere a la protection des donnees personnelles.
+            Cette politique explique quelles donnees nous collectons, pourquoi nous les traitons,
+            et quels sont vos droits.
+          </p>
+        </section>
 
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">2. Utilisation des données</h2>
-        <ul className="list-disc pl-6 mb-4 text-gray-600 dark:text-gray-300">
-          <li>Fournir les fonctionnalités d{"'"}automatisation de l{"'"}application (par exemple, gestion de fichiers ou envoi d{"'"}e-mails).</li>
-          <li>Améliorer les performances de l{"'"}application pour nos utilisateurs internes.</li>
-        </ul>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
-          Nous ne partageons pas vos données avec des tiers, sauf si requis par la loi ou avec votre consentement explicite.
-        </p>
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">1. Responsable du traitement</h2>
+          <p className="text-foreground/80">
+            Responsable: AetherIA
+            <br />
+            Contact: <a className="text-cyan-400 hover:text-cyan-300" href="mailto:agenceaetheria@gmail.com">agenceaetheria@gmail.com</a>
+          </p>
+        </section>
 
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">3. Sécurité des données</h2>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
-          Nous mettons en place des mesures de sécurité techniques et organisationnelles pour protéger vos données contre tout accès non autorisé, perte ou altération. Cependant, aucune transmission de données sur Internet n{"'"}est totalement sécurisée, et nous ne pouvons garantir une sécurité absolue.
-        </p>
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">2. Donnees collectees</h2>
+          <ul className="list-disc pl-6 space-y-1 text-foreground/80">
+            <li>Donnees d identification et de contact (nom, email, telephone si fourni).</li>
+            <li>Donnees techniques (adresse IP, type de navigateur, journaux techniques).</li>
+            <li>Donnees liees aux echanges (messages, demandes de contact, rendez-vous).</li>
+          </ul>
+        </section>
 
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">4. Vos droits</h2>
-        <ul className="list-disc pl-6 mb-4 text-gray-600 dark:text-gray-300">
-          <li>Demander l{"'"}accès aux données que nous détenons sur vous.</li>
-          <li>Demander la correction ou la suppression de vos données.</li>
-          <li>Révoquer l{"'"}accès à vos données via les paramètres de votre compte Google.</li>
-        </ul>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
-          Pour exercer ces droits, contactez-nous à <a href="mailto:agenceaetheria@gmail.com" className="text-blue-500 hover:underline">agenceaetheria@gmail.com</a>.
-        </p>
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">3. Finalites et bases legales</h2>
+          <ul className="list-disc pl-6 space-y-1 text-foreground/80">
+            <li>Repondre a vos demandes et fournir nos services (execution precontractuelle/contractuelle).</li>
+            <li>Ameliorer le site et la qualite de service (interet legitime).</li>
+            <li>Respecter nos obligations legales (obligation legale).</li>
+          </ul>
+        </section>
 
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">5. Modifications de cette politique</h2>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
-          Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Toute modification sera publiée sur cette page, avec une date de mise à jour indiquée ci-dessous.
-        </p>
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">4. Duree de conservation</h2>
+          <p className="text-foreground/80">
+            Les donnees sont conservees pendant la duree necessaire aux finalites visees, puis archivees
+            ou supprimees selon les obligations legales applicables.
+          </p>
+        </section>
 
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">6. Contact</h2>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
-          Pour toute question concernant cette politique de confidentialité, contactez-nous à : <br />
-          AetherIA <br />
-          <a href="mailto:agenceaetheria@gmail.com" className="text-blue-500 hover:underline">agenceaetheria@gmail.com</a>
-        </p>
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">5. Destinataires des donnees</h2>
+          <p className="text-foreground/80">
+            Les donnees sont accessibles uniquement aux personnes habilitees chez AetherIA et, si necessaire,
+            a des sous-traitants techniques dans le cadre strict de leurs missions.
+          </p>
+        </section>
 
-        <p className="text-gray-500 dark:text-gray-400 text-sm">
-          <em>Dernière mise à jour : 2 juillet 2025</em>
-        </p>
-      </main>
-    </div>
-  );
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">6. Vos droits</h2>
+          <p className="text-foreground/80">
+            Vous disposez des droits d acces, rectification, effacement, limitation, opposition et portabilite
+            de vos donnees, selon la reglementation applicable.
+          </p>
+          <p className="text-foreground/80">
+            Pour exercer vos droits: <a className="text-cyan-400 hover:text-cyan-300" href="mailto:agenceaetheria@gmail.com">agenceaetheria@gmail.com</a>
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">7. Cookies</h2>
+          <p className="text-foreground/80">
+            Le site peut utiliser des cookies techniques necessaires a son fonctionnement.
+            Les cookies de mesure d audience ou marketing, s ils sont actives, font l objet
+            d une information specifique.
+          </p>
+        </section>
+      </div>
+    </main>
+  )
 }

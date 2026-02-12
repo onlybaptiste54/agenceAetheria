@@ -2,6 +2,7 @@
 
 import { Mail, Linkedin, ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const navLinks = [
   { label: 'Services', href: '#services' },
@@ -33,7 +34,9 @@ export default function Footer() {
                 <Image src="/LogoAetheriaaNoBg.png" alt="AetherIA logo" width={40} height={40} className="w-10 h-10 object-contain" />
                 <span className="text-xl font-semibold text-white">ether<span className="text-cyan-400">IA</span></span>
               </a>
-              <p className="text-white/60 max-w-md mb-6">L’IA qui automatise vos tâches répétitives — pas ce qui vous définit. Solutions sur mesure pour indépendants et PME.</p>
+              <p className="text-white/60 max-w-md mb-6">
+                L&apos;IA qui automatise vos taches repetitives - pas ce qui vous definit. Solutions sur mesure pour independants et PME.
+              </p>
               <div className="flex items-center gap-4">
                 <a href="mailto:agenceaetheria@gmail.com" className="flex items-center gap-2 px-4 py-2 rounded-lg glass hover:bg-white/5 transition-colors">
                   <Mail className="w-4 h-4 text-cyan-400" /><span className="text-sm text-white/70">agenceaetheria@gmail.com</span>
@@ -58,18 +61,18 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-white font-semibold mb-6">Légal</h4>
+              <h4 className="text-white font-semibold mb-6">Legal</h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-white/60 hover:text-cyan-400 transition-colors">Politique de confidentialité</a></li>
-                <li><a href="#" className="text-white/60 hover:text-cyan-400 transition-colors">Conditions d’utilisation</a></li>
-                <li><a href="#" className="text-white/60 hover:text-cyan-400 transition-colors">Mentions légales</a></li>
+                <li><Link href="/privacy" className="text-white/60 hover:text-cyan-400 transition-colors">Politique de confidentialite</Link></li>
+                <li><Link href="/utilisation" className="text-white/60 hover:text-cyan-400 transition-colors">Conditions d utilisation</Link></li>
+                <li><Link href="/mentions-legales" className="text-white/60 hover:text-cyan-400 transition-colors">Mentions legales</Link></li>
               </ul>
             </div>
           </div>
 
           <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-white/40 text-sm">© {currentYear} AetherIA. Tous droits réservés.</p>
-            <p className="text-white/40 text-sm">Conçu avec passion en France</p>
+            <p className="text-white/40 text-sm">(c) {currentYear} AetherIA. Tous droits reserves.</p>
+            <p className="text-white/40 text-sm">Concu avec passion en France</p>
           </div>
         </div>
       </div>
