@@ -24,7 +24,7 @@ const caseStudies = [
     problem: 'Gestion documentaire et suivi client éclatés entre plusieurs outils, avec perte de temps sur la recherche d\'informations.',
     solution: 'Mise en place d\'un RAG intelligent connecté aux documents métier pour accélérer les décisions et le pilotage des projets.',
     results: ['Synthèse financière automatisée', 'Résumé de projet instantané', 'Recherche sémantique sur toute la base documentaire'],
-    metric: { value: '4h', label: 'gagnées/semaine' }, color: 'purple',
+    metric: { value: '2h', label: 'gagnées/semaine' }, color: 'purple',
   },
 ]
 
