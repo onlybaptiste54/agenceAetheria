@@ -46,7 +46,7 @@ export default function Utilisation() {
         <p className="text-gray-600 dark:text-gray-300 mb-4">
           Pour toute question concernant ces conditions d{"'"}utilisation, contactez-nous à : <br />
           AetherIA <br />
-          <a href="mailto:agenceaetheria@gmail.com" className="text-blue-500 hover:underline">agenceaetheria@gmail.com</a>
+          <a href="mailto:Baptiste.beroual@agenceaetheria.com" className="text-blue-500 hover:underline">Baptiste.beroual@agenceaetheria.com</a>
         </p>
 
         <p className="text-gray-500 dark:text-gray-400 text-sm">
