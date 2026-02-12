@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useEffect, useRef } from 'react'
 import { ArrowRight, Sparkles, Clock, TrendingUp, Users, Database } from 'lucide-react'
@@ -47,7 +47,7 @@ export default function Hero() {
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 animate-fade-in-up">
               <Sparkles className="w-4 h-4 text-cyan-400" />
-              <span className="text-sm text-cyan-400 font-medium">Solutions d&apos;automatisation IA</span>
+              <span className="text-sm text-cyan-400 font-medium">Solutions d’automatisation IA</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
@@ -55,7 +55,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg sm:text-xl text-white/70 max-w-xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              L&apos;IA qui automatise vos tâches répétitives - pas ce qui vous définit. Systèmes IA sur mesure qui centralisent vos données et automatisent vos décisions métier.
+              L’IA qui automatise vos tâches répétitives - pas ce qui vous définit. Systèmes IA sur mesure qui centralisent vos données et automatisent vos décisions métier.
             </p>
 
             <div className="flex flex-wrap gap-6 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>

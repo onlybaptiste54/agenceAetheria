@@ -72,8 +72,8 @@ export default function AITool() {
               <ScrambleText text="moteur RAG" delay={300} className="text-cyan-400" />
             </h2>
             <p className="text-lg text-white/60">
-              Un système de recherche et d&apos;analyse intelligent qui transforme 
-              la façon dont vous accédez à vos données d&apos;entreprise.
+              Un système de recherche et d’analyse intelligent qui transforme 
+              la façon dont vous accédez à vos données d’entreprise.
             </p>
           </div>
 
@@ -81,9 +81,9 @@ export default function AITool() {
             <div className={`space-y-8 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <div className="space-y-6">
                 {[
-                  { icon: Database, title: 'Centralisation complète', desc: 'Je crée un classeur centralisé de l&apos;entreprise où tous vos documents sont organisés et accessibles instantanément.' },
-                  { icon: Search, title: 'Recherche ultra-rapide', desc: 'Moteur de recherche intelligent capable de retrouver n&apos;importe quel document et d&apos;en produire un résumé en quelques secondes.' },
-                  { icon: FileText, title: 'Synthèses intelligentes', desc: 'Génération automatique de synthèses financières et de projets (dernier compte rendu, e-mails de l&apos;équipe, tâches en cours).' },
+                  { icon: Database, title: 'Centralisation complète', desc: 'Je crée un classeur centralisé de l’entreprise où tous vos documents sont organisés et accessibles instantanément.' },
+                  { icon: Search, title: 'Recherche ultra-rapide', desc: 'Moteur de recherche intelligent capable de retrouver n’importe quel document et d’en produire un résumé en quelques secondes.' },
+                  { icon: FileText, title: 'Synthèses intelligentes', desc: 'Génération automatique de synthèses financières et de projets (dernier compte rendu, e-mails de l’équipe, tâches en cours).' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4 group">
                     <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500/20 group-hover:scale-110 transition-all duration-300">
@@ -217,7 +217,7 @@ export default function AITool() {
               onClick={scrollToAudit}
               className="bg-cyan-500 hover:bg-cyan-400 text-background font-semibold px-8 py-6 text-base group transition-all duration-300 hover:scale-105"
             >
-              Découvrir l&apos;outil en démo
+              Découvrir l’outil en démo
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>

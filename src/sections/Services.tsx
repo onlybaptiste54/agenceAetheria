@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useEffect, useRef, useState } from 'react'
 import { Bot, Workflow, BarChart3, ArrowRight, Check } from 'lucide-react'
@@ -74,11 +74,11 @@ export default function Services() {
             <span className="text-sm text-cyan-400 font-medium tracking-wide">Nos Services</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Solutions d&apos;automatisation{' '}
+            Solutions d’automatisation{' '}
             <span className="text-gradient">IA sur mesure</span>
           </h2>
           <p className="text-xl text-white/70">
-            Nous concevons des systèmes IA qui s&apos;intègrent à vos outils existants
+            Nous concevons des systèmes IA qui s’intègrent à vos outils existants
             pour éliminer les tâches chronophages et fiabiliser vos opérations.
           </p>
         </div>
@@ -144,7 +144,7 @@ export default function Services() {
         </div>
 
         <div className="text-center mt-16">
-          <p className="text-white/50 mb-4">Besoin d&apos;une solution personnalisée ?</p>
+          <p className="text-white/50 mb-4">Besoin d’une solution personnalisée ?</p>
           <Button
             size="lg"
             onClick={scrollToAudit}

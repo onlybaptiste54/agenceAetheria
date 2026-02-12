@@ -43,7 +43,7 @@ export default function FAQ() {
               <span className="text-sm text-cyan-400 font-medium">FAQ</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Foire aux <span className="text-gradient">questions</span></h2>
-            <p className="text-lg text-white/60">Voici les réponses aux questions les plus fréquentes à propos d&apos;AetherIA.</p>
+            <p className="text-lg text-white/60">Voici les réponses aux questions les plus fréquentes à propos d’AetherIA.</p>
           </div>
 
           <div className="space-y-4">

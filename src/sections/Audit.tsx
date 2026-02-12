@@ -39,7 +39,7 @@ export default function Audit() {
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">Audit gratuit de vos <span className="text-gradient">processus métier</span></h2>
-              <p className="text-lg text-white/60">En 30 minutes, nous identifions vos points de friction et vous proposons une stratégie d&apos;automatisation sur mesure.</p>
+              <p className="text-lg text-white/60">En 30 minutes, nous identifions vos points de friction et vous proposons une stratégie d’automatisation sur mesure.</p>
 
               <div className="space-y-4">
                 {benefits.map((benefit, index) => {

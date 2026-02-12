@@ -33,7 +33,7 @@ export default function Footer() {
                 <Image src="/LogoAetheriaaNoBg.png" alt="AetherIA logo" width={40} height={40} className="w-10 h-10 object-contain" />
                 <span className="text-xl font-semibold text-white">ether<span className="text-cyan-400">IA</span></span>
               </a>
-              <p className="text-white/60 max-w-md mb-6">L&apos;IA qui automatise vos tâches répétitives — pas ce qui vous définit. Solutions sur mesure pour indépendants et PME.</p>
+              <p className="text-white/60 max-w-md mb-6">L’IA qui automatise vos tâches répétitives — pas ce qui vous définit. Solutions sur mesure pour indépendants et PME.</p>
               <div className="flex items-center gap-4">
                 <a href="mailto:agenceaetheria@gmail.com" className="flex items-center gap-2 px-4 py-2 rounded-lg glass hover:bg-white/5 transition-colors">
                   <Mail className="w-4 h-4 text-cyan-400" /><span className="text-sm text-white/70">agenceaetheria@gmail.com</span>
@@ -61,7 +61,7 @@ export default function Footer() {
               <h4 className="text-white font-semibold mb-6">Légal</h4>
               <ul className="space-y-3">
                 <li><a href="#" className="text-white/60 hover:text-cyan-400 transition-colors">Politique de confidentialité</a></li>
-                <li><a href="#" className="text-white/60 hover:text-cyan-400 transition-colors">Conditions d&apos;utilisation</a></li>
+                <li><a href="#" className="text-white/60 hover:text-cyan-400 transition-colors">Conditions d’utilisation</a></li>
                 <li><a href="#" className="text-white/60 hover:text-cyan-400 transition-colors">Mentions légales</a></li>
               </ul>
             </div>

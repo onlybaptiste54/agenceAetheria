@@ -42,9 +42,9 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
             <div className={`space-y-6 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <div className="glass rounded-2xl p-8 border-glow">
-                <p className="text-lg text-white/80 leading-relaxed mb-6">Trop d&apos;entreprises utilisent encore des outils qui ne leur correspondent pas. Des logiciels rigides, peu d&apos;automatisation, des tâches répétitives, et toujours plus de paperasse.</p>
-                <p className="text-lg text-white/80 leading-relaxed mb-6">Je suis <span className="text-cyan-400 font-semibold">Baptiste Beroual</span>, fondateur d&apos;AetherIA.</p>
-                <p className="text-lg text-white/80 leading-relaxed mb-6">J&apos;aide les indépendants et les PME à automatiser leurs processus, connecter leurs outils, et gagner en efficacité.</p>
+                <p className="text-lg text-white/80 leading-relaxed mb-6">Trop d’entreprises utilisent encore des outils qui ne leur correspondent pas. Des logiciels rigides, peu d’automatisation, des tâches répétitives, et toujours plus de paperasse.</p>
+                <p className="text-lg text-white/80 leading-relaxed mb-6">Je suis <span className="text-cyan-400 font-semibold">Baptiste Beroual</span>, fondateur d’AetherIA.</p>
+                <p className="text-lg text-white/80 leading-relaxed mb-6">J’aide les indépendants et les PME à automatiser leurs processus, connecter leurs outils, et gagner en efficacité.</p>
                 <p className="text-lg text-white/80 leading-relaxed">Chaque projet est conçu sur mesure, avec une approche claire, pragmatique et transparente.</p>
               </div>
 
