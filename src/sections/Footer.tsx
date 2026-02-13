@@ -72,7 +72,6 @@ export default function Footer() {
 
           <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-white/40 text-sm">(c) {currentYear} AetherIA. Tous droits reserves.</p>
-            <p className="text-white/40 text-sm">Concu avec passion en France</p>
           </div>
         </div>
       </div>
