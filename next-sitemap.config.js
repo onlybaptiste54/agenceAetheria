@@ -1,6 +1,7 @@
 module.exports = {
   siteUrl: 'https://www.agenceaetheria.com',
   generateRobotsTxt: true,
+  exclude: ['/opengraph-image'],
   // Ensure key pages are present even if auto-discovery misses them
   additionalPaths: async (config) => {
     return [
