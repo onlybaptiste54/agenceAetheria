@@ -22,7 +22,7 @@ const caseStudies = [
   {
     icon: Briefcase, sector: 'Maîtrise d\'œuvre', company: 'Renovie (Nancy)',
     problem: 'Gestion documentaire et suivi client éclatés entre plusieurs outils, avec perte de temps sur la recherche d\'informations.',
-    solution: 'Mise en place d\'un RAG intelligent connecté aux documents métier pour accélérer les décisions et le pilotage des projets.',
+    solution: 'Mise en place d\'un assistant IA interne connecté aux documents métier pour accélérer les décisions et le pilotage des projets.',
     results: ['Synthèse financière automatisée', 'Résumé de projet instantané', 'Recherche sémantique sur toute la base documentaire'],
     metric: { value: '2h', label: 'gagnées/semaine' }, color: 'purple',
   },
@@ -68,8 +68,8 @@ export default function CaseStudies() {
               <TrendingUp className="w-4 h-4 text-cyan-400" />
               <span className="text-sm text-cyan-400 font-medium">Cas Clients</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Des résultats <span className="text-gradient">concrets</span> pour nos clients</h2>
-            <p className="text-lg text-white/60">Découvrez comment nous accompagnons des entreprises de différents secteurs dans leur transformation digitale.</p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Des résultats <span className="text-gradient">concrets</span> pour des PME de Nancy et d’ailleurs</h2>
+            <p className="text-lg text-white/60">Immobilier, commerce, maîtrise d’œuvre : découvrez comment nos agents IA font gagner des heures chaque semaine à des PME du Grand Est et de toute la France.</p>
           </div>
 
           <div className="hidden lg:block">

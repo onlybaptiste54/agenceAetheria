@@ -2,17 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { ChevronDown, HelpCircle } from 'lucide-react'
-
-const faqItems = [
-  { question: "Qu'est-ce qu'AetherIA propose concrètement ?", answer: "AetherIA conçoit et déploie des solutions d'automatisation IA sur mesure pour les indépendants et PME. Nous créons des assistants IA métier, automatisons vos processus (CRM, workflows), et développons des tableaux de bord d'analyse de données. Notre approche RAG (Retrieval-Augmented Generation) permet de connecter l'IA à vos documents internes pour des réponses précises et contextualisées." },
-  { question: "À qui s'adresse la solution AetherIA ?", answer: "Nos solutions s'adressent principalement aux indépendants, consultants, avocats, agences immobilières, commerçants, et PME qui souhaitent automatiser leurs tâches répétitives et gagner en productivité. Chaque solution est adaptée à votre secteur d'activité et à vos besoins spécifiques." },
-  { question: "Dois-je être à l'aise avec la technologie ?", answer: "Pas du tout ! Nos solutions sont conçues pour être utilisées par tous, sans compétences techniques. Nous fournissons une formation personnalisée et un accompagnement complet jusqu'à votre autonomie. L'interface est intuitive et simple d'utilisation, pensée pour les utilisateurs métiers." },
-  { question: "Quels résultats puis-je attendre d'AetherIA ?", answer: "Nos clients constatent en moyenne un gain de 5 heures par semaine sur les tâches administratives, une augmentation de 40% de leur productivité, et une réduction significative des erreurs manuelles. Les résultats varient selon votre activité et les processus automatisés. L'audit gratuit permet d'estimer précisément vos gains potentiels." },
-  { question: "Comment puis-je obtenir de l'aide si besoin ?", answer: "Nous proposons un accompagnement complet : formation initiale personnalisée, documentation détaillée, support technique par email et téléphone, et suivi post-livraison. Vous n'êtes jamais seul — nous restons disponibles pour répondre à vos questions et vous aider à optimiser l'utilisation de vos outils." },
-  { question: "Mes données sont-elles sécurisées ?", answer: "Absolument. La sécurité et la confidentialité sont nos priorités. Vos données sont anonymisées et traitées en local lorsque possible. Nous respectons strictement le RGPD et proposons des options d'hébergement sécurisé. Vous gardez le contrôle total de vos données." },
-  { question: "Combien coûte une solution AetherIA ?", answer: "Chaque projet étant sur mesure, les tarifs varient en fonction de la complexité et des besoins. Nous proposons un audit gratuit de 30 minutes pour évaluer vos besoins et vous fournir un devis détaillé. Nos solutions sont conçues pour être rentables rapidement grâce aux gains de temps générés." },
-  { question: "Combien de temps prend la mise en place ?", answer: "La durée de mise en place dépend de la complexité du projet. Une solution simple peut être déployée en 1-2 semaines, tandis qu'un projet plus complexe peut prendre 4-8 semaines. L'audit gratuit permet d'établir un calendrier réaliste adapté à vos contraintes." },
-]
+import { faqItems } from '@/data/faq'
 
 export default function FAQ() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -42,8 +32,8 @@ export default function FAQ() {
               <HelpCircle className="w-4 h-4 text-cyan-400" />
               <span className="text-sm text-cyan-400 font-medium">FAQ</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Foire aux <span className="text-gradient">questions</span></h2>
-            <p className="text-lg text-white/60">Voici les réponses aux questions les plus fréquentes à propos d’AetherIA.</p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Questions fréquentes sur nos <span className="text-gradient">agents IA</span></h2>
+            <p className="text-lg text-white/60">Voici les réponses aux questions les plus fréquentes sur nos agents IA et notre accompagnement.</p>
           </div>
 
           <div className="space-y-4">

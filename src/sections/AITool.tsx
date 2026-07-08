@@ -68,12 +68,12 @@ export default function AITool() {
               <span className="text-sm text-cyan-400 font-medium tracking-wide">Notre Outil IA</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-              Classeur centralisé avec{' '}
-              <ScrambleText text="moteur RAG" delay={300} className="text-cyan-400" />
+              Votre assistant IA interne,{' '}
+              <ScrambleText text="connecté à vos documents" delay={300} className="text-cyan-400" />
             </h2>
             <p className="text-lg text-white/60">
-              Un système de recherche et d’analyse intelligent qui transforme 
-              la façon dont vous accédez à vos données d’entreprise.
+              Posez une question, obtenez la réponse tirée de vos propres documents.
+              Votre équipe accède en quelques secondes à toute la connaissance de l’entreprise.
             </p>
           </div>
 

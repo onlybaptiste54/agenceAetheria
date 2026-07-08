@@ -7,8 +7,8 @@ import TiltCard from '@/components/TiltCard'
 
 const services = [
   {
-    icon: Bot, title: 'Assistants IA Métier', subtitle: 'RAG',
-    description: 'Création d\'agents conversationnels connectés à vos documents internes pour interroger instantanément la base de connaissances.',
+    icon: Bot, title: 'Assistants IA Métier', subtitle: 'Agents IA',
+    description: 'Création d\'agents IA connectés à vos documents internes pour interroger instantanément votre base de connaissances.',
     features: ['Cours, règlements, procédures accessibles instantanément', 'Réponses précises basées sur vos documents', 'Mise à jour automatique des connaissances', 'Interface conversationnelle intuitive'],
     color: 'cyan', gradient: 'from-cyan-500/20 to-blue-500/20'
   },
@@ -74,11 +74,11 @@ export default function Services() {
             <span className="text-sm text-cyan-400 font-medium tracking-wide">Nos Services</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Solutions d’automatisation{' '}
-            <span className="text-gradient">IA sur mesure</span>
+            Agents IA et automatisation{' '}
+            <span className="text-gradient">sur mesure pour PME</span>
           </h2>
           <p className="text-xl text-white/70">
-            Nous concevons des systèmes IA qui s’intègrent à vos outils existants
+            Nous concevons des agents IA qui s’intègrent à vos outils existants
             pour éliminer les tâches chronophages et fiabiliser vos opérations.
           </p>
         </div>
