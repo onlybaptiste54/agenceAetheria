@@ -6,16 +6,16 @@ export const CALENDLY = 'https://calendly.com/agenceaetheria/30min'
 // Bloc CTA réutilisé en milieu et fin d'article.
 export function ArticleCTA({ label = 'Réserver mon audit gratuit (30 min)' }: { label?: string }) {
   return (
-    <div className="glass rounded-2xl p-6 lg:p-8 my-10 border border-cyan-500/20 not-prose">
-      <p className="text-white font-semibold text-lg mb-4">
+    <div className="atelier-card my-10 p-6 not-prose lg:p-8">
+      <p className="font-display text-3xl leading-tight text-white">
         Envie de savoir ce qu&apos;un agent IA peut vous faire gagner ?
       </p>
-      <div className="flex flex-wrap gap-4 items-center">
+      <div className="mt-5 flex flex-wrap items-center gap-4">
         <a
           href={CALENDLY}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-background font-semibold px-7 py-3.5 rounded-lg transition-colors"
+          className="atelier-button-primary inline-flex rounded-lg px-7 py-3.5 font-semibold transition-colors"
         >
           {label}
         </a>
@@ -38,19 +38,17 @@ export function ArticleHeader({
   readingMinutes: number
 }) {
   return (
-    <header className="space-y-6 mb-12">
+    <header className="mb-12 border-b border-white/10 pb-8">
       <Link
         href="/blog"
-        className="inline-flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
+        className="text-sm font-semibold text-cyan-200 transition-colors hover:text-white"
       >
         Retour au blog
       </Link>
-      <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight">{title}</h1>
-      <div className="flex items-center gap-3 text-sm text-white/50">
+      <h1 className="atelier-title mt-6 text-[clamp(2.8rem,5.6vw,5.7rem)]">{title}</h1>
+      <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-white/50">
         <time dateTime={date}>{formatDate(date)}</time>
-        <span aria-hidden>,</span>
         <span>{readingMinutes} min de lecture</span>
-        <span aria-hidden>,</span>
         <span>AetherIA</span>
       </div>
     </header>
@@ -60,7 +58,7 @@ export function ArticleHeader({
 // Styles de contenu long, cohérents avec le reste du site (dark + cyan).
 export const proseClass = [
   'max-w-none text-white/70 leading-relaxed',
-  '[&_h2]:text-white [&_h2]:text-2xl [&_h2]:sm:text-3xl [&_h2]:font-bold [&_h2]:mt-14 [&_h2]:mb-4',
+  '[&_h2]:font-display [&_h2]:text-white [&_h2]:text-3xl [&_h2]:sm:text-4xl [&_h2]:font-normal [&_h2]:leading-tight [&_h2]:mt-14 [&_h2]:mb-4',
   '[&_h3]:text-white [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:mt-8 [&_h3]:mb-3',
   '[&_p]:mb-5 [&_p]:text-lg',
   '[&_strong]:text-white [&_strong]:font-semibold',
