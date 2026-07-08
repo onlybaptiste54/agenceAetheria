@@ -1,26 +1,26 @@
 ﻿@import "tailwindcss";
 
 :root {
-  --background: 220 25% 5%;
-  --foreground: 0 0% 98%;
-  --card: 220 20% 8%;
+  --background: 48 6% 3%;
+  --foreground: 50 35% 96%;
+  --card: 210 16% 8%;
   --card-foreground: 0 0% 98%;
-  --popover: 220 20% 8%;
+  --popover: 210 16% 8%;
   --popover-foreground: 0 0% 98%;
-  --primary: 187 85% 43%;
-  --primary-foreground: 220 25% 5%;
-  --secondary: 220 15% 15%;
+  --primary: 184 70% 55%;
+  --primary-foreground: 48 6% 3%;
+  --secondary: 210 12% 12%;
   --secondary-foreground: 0 0% 98%;
-  --muted: 220 15% 20%;
-  --muted-foreground: 220 10% 60%;
-  --accent: 187 85% 43%;
-  --accent-foreground: 220 25% 5%;
+  --muted: 210 10% 18%;
+  --muted-foreground: 48 10% 64%;
+  --accent: 184 70% 55%;
+  --accent-foreground: 48 6% 3%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-  --border: 220 15% 18%;
-  --input: 220 15% 18%;
-  --ring: 187 85% 43%;
-  --radius: 0.75rem;
+  --border: 48 8% 17%;
+  --input: 48 8% 17%;
+  --ring: 184 70% 55%;
+  --radius: 0.5rem;
 }
 
 @theme inline {
@@ -54,34 +54,54 @@ html {
 }
 
 body {
-  background: hsl(var(--background));
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.025), transparent 34rem),
+    hsl(var(--background));
   color: hsl(var(--foreground));
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.22;
+  background-image: radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.18) 1px, transparent 0);
+  background-size: 18px 18px;
+  mask-image: linear-gradient(to bottom, black, transparent 72%);
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
 .text-gradient {
-  background-image: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0e7490 100%);
+  background-image: linear-gradient(135deg, #74e5ec 0%, #22c7d5 58%, #c9f56f 130%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .glass {
-  background: rgb(255 255 255 / 0.05);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgb(255 255 255 / 0.10);
+  background: rgb(255 255 255 / 0.045);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgb(255 255 255 / 0.11);
 }
 
 .glass-dark {
   background: rgb(0 0 0 / 0.20);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgb(255 255 255 / 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgb(255 255 255 / 0.08);
 }
 
 .glow-cyan {
-  box-shadow: 0 0 30px rgb(6 182 212 / 0.30), 0 0 60px rgb(6 182 212 / 0.10);
+  box-shadow: 0 18px 70px rgb(34 199 213 / 0.16);
 }
 
 .border-glow {
@@ -156,6 +176,99 @@ body {
 }
 
 ::selection {
-  background: rgb(6 182 212 / 0.30);
+  background: rgb(34 199 213 / 0.30);
   color: #fff;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.atelier-section {
+  position: relative;
+  padding: 4.5rem 0;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .atelier-section {
+    padding: 6.5rem 0;
+  }
+}
+
+.atelier-container {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .atelier-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .atelier-container {
+    padding: 0 3rem;
+  }
+}
+
+.atelier-eyebrow {
+  color: #74e5ec;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.atelier-title {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.98;
+  color: hsl(var(--foreground));
+}
+
+.atelier-lead {
+  color: rgb(251 250 243 / 0.68);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.atelier-card {
+  border-radius: 8px;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  background: linear-gradient(145deg, rgb(255 255 255 / 0.075), rgb(255 255 255 / 0.025));
+  box-shadow: 0 24px 70px rgb(0 0 0 / 0.28);
+}
+
+.atelier-button-primary {
+  background: #74e5ec;
+  color: #050504;
+}
+
+.atelier-button-primary:hover {
+  background: #a7f0f2;
+}
+
+.atelier-button-ghost {
+  border: 1px solid rgb(255 255 255 / 0.16);
+  background: rgb(255 255 255 / 0.035);
+  color: hsl(var(--foreground));
+}
+
+article h1,
+article h2 {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400 !important;
+  letter-spacing: 0;
+  line-height: 1.05;
+}
+
+article .rounded-2xl {
+  border-radius: 8px;
 }

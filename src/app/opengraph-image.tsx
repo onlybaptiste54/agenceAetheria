@@ -38,7 +38,7 @@ export default function Image() {
 
         {/* Texte principal */}
         <h1 style={{ fontSize: 56, fontWeight: 700, marginBottom: 20 }}>
-          Agents IA sur mesure pour PME · Nancy
+          Agents IA sur mesure pour PME à Nancy
         </h1>
         <p style={{ fontSize: 30, opacity: 0.9, marginBottom: 40 }}>
           Gagnez 5h/semaine avec AetherIA

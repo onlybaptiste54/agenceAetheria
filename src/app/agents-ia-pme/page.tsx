@@ -49,12 +49,12 @@ const useCases: [string, string[]][] = [
     'Emails de suivi personnalisés après un rendez-vous ou un contact LinkedIn',
     'Qualification des demandes entrantes avant transmission au commercial',
   ]],
-  ['Support & relation client', [
+  ['Support et relation client', [
     'Réponses aux questions récurrentes à partir de vos documents',
     'Suivi des demandes et escalade des cas complexes vers un humain',
     'Notifications proactives aux clients (avancement, échéances)',
   ]],
-  ['Comptabilité & pilotage', [
+  ['Comptabilité et pilotage', [
     'Pré-comptabilité : extraction des données de factures, rapprochements',
     'Relances de factures impayées',
     'Tableaux de bord automatiques : CA, marges, trésorerie en temps réel',
@@ -72,7 +72,7 @@ export default function AgentsIaPmePage() {
           {/* Hero */}
           <header className="space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20">
-              <span className="text-sm text-cyan-400 font-medium">Guide 2026 · Agents IA</span>
+              <span className="text-sm text-cyan-400 font-medium">Guide 2026, agents IA</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
               Agents IA pour PME : le guide pour <span className="text-gradient">automatiser sans vous perdre</span>
@@ -81,7 +81,7 @@ export default function AgentsIaPmePage() {
               Un agent IA est un logiciel qui exécute des tâches à votre place : il lit vos documents, répond,
               relance, met à jour vos outils. Dans une PME, il fait typiquement gagner 2 à 6 heures par semaine
               et par personne sur les tâches répétitives. Ce guide répond aux questions concrètes : ce que c&apos;est,
-              ce que ça automatise, ce que ça coûte, et par où commencer — avec 3 cas réels chiffrés.
+              ce que ça automatise, ce que ça coûte, et par où commencer, avec 3 cas réels chiffrés.
             </p>
           </header>
 
@@ -97,8 +97,8 @@ export default function AgentsIaPmePage() {
             <p className="text-white/70 leading-relaxed">
               Concrètement, un agent IA est connecté à vos outils (boîte mail, CRM, documents, facturation) et
               suit des règles métier que vous définissez. Il travaille en continu, sans erreur de saisie, et
-              transmet à un humain tout ce qui sort de son périmètre. C&apos;est cette capacité à agir — pas
-              seulement à discuter — qui explique pourquoi les PME s&apos;équipent d&apos;agents IA plutôt que de
+              transmet à un humain tout ce qui sort de son périmètre. C&apos;est cette capacité à agir, pas
+              seulement à discuter, qui explique pourquoi les PME s&apos;équipent d&apos;agents IA plutôt que de
               simples chatbots en 2026.
             </p>
           </section>
@@ -118,7 +118,7 @@ export default function AgentsIaPmePage() {
                   <ul className="space-y-2">
                     {items.map((item) => (
                       <li key={item} className="text-white/70 text-sm leading-relaxed flex gap-2">
-                        <span className="text-cyan-400 flex-shrink-0">›</span>{item}
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -128,7 +128,7 @@ export default function AgentsIaPmePage() {
             <p className="text-white/70 leading-relaxed">
               La règle simple : si une tâche vous prend plus d&apos;une heure par semaine et suit toujours à peu
               près le même schéma, elle est probablement automatisable. Les cas d&apos;usage varient selon votre
-              métier — nous les détaillons par secteur sur{' '}
+              métier, nous les détaillons par secteur sur{' '}
               <Link href="/secteurs" className="text-cyan-400 hover:text-cyan-300">notre page dédiée aux secteurs</Link>.
             </p>
           </section>
@@ -143,10 +143,10 @@ export default function AgentsIaPmePage() {
               le budget sont toujours les mêmes :
             </p>
             <ul className="space-y-2 text-white/70">
-              <li className="flex gap-2"><span className="text-cyan-400">›</span>Le nombre d&apos;outils à connecter (boîte mail seule vs mail + CRM + facturation + documents)</li>
-              <li className="flex gap-2"><span className="text-cyan-400">›</span>Le volume et l&apos;état de vos données (documents bien organisés ou éparpillés)</li>
-              <li className="flex gap-2"><span className="text-cyan-400">›</span>Le niveau d&apos;autonomie souhaité (suggestion validée par un humain vs exécution automatique)</li>
-              <li className="flex gap-2"><span className="text-cyan-400">›</span>Les exigences de confidentialité (traitement local, hébergement dédié)</li>
+              <li>Le nombre d&apos;outils à connecter (boîte mail seule vs mail + CRM + facturation + documents)</li>
+              <li>Le volume et l&apos;état de vos données (documents bien organisés ou éparpillés)</li>
+              <li>Le niveau d&apos;autonomie souhaité (suggestion validée par un humain vs exécution automatique)</li>
+              <li>Les exigences de confidentialité (traitement local, hébergement dédié)</li>
             </ul>
             <p className="text-white/70 leading-relaxed">
               Le bon raisonnement n&apos;est pas le prix, mais le retour sur investissement : 5 heures gagnées par
@@ -176,7 +176,7 @@ export default function AgentsIaPmePage() {
             <div className="space-y-6">
               <div className="glass rounded-2xl p-6 lg:p-8 border border-cyan-500/20">
                 <p className="text-sm text-cyan-400 uppercase tracking-wider mb-2">Immobilier</p>
-                <h3 className="text-xl font-semibold text-white mb-3">Merino Immobilier — 6h gagnées par semaine</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">Merino Immobilier : 6 h gagnées par semaine</h3>
                 <p className="text-white/70 leading-relaxed">
                   L&apos;agence perdait des heures sur l&apos;administratif : emails après chaque contact LinkedIn,
                   frais kilométriques, comptes-rendus de visite. Un agent IA gère désormais ces trois flux
@@ -186,7 +186,7 @@ export default function AgentsIaPmePage() {
               </div>
               <div className="glass rounded-2xl p-6 lg:p-8 border border-emerald-500/20">
                 <p className="text-sm text-emerald-400 uppercase tracking-wider mb-2">Commerce</p>
-                <h3 className="text-xl font-semibold text-white mb-3">Marché Local — +30% de productivité</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">Marché Local : 30% de productivité en plus</h3>
                 <p className="text-white/70 leading-relaxed">
                   Ce commerce de fruits et légumes gérait manuellement stock, prix Rungis, fournisseurs et DLC.
                   Le stock est maintenant alimenté automatiquement depuis les factures, avec un tableau de bord
@@ -195,8 +195,8 @@ export default function AgentsIaPmePage() {
                 </p>
               </div>
               <div className="glass rounded-2xl p-6 lg:p-8 border border-purple-500/20">
-                <p className="text-sm text-purple-400 uppercase tracking-wider mb-2">Maîtrise d&apos;œuvre · Nancy</p>
-                <h3 className="text-xl font-semibold text-white mb-3">Renovie — 2h gagnées par semaine</h3>
+                <p className="text-sm text-purple-400 uppercase tracking-wider mb-2">Maîtrise d&apos;œuvre à Nancy</p>
+                <h3 className="text-xl font-semibold text-white mb-3">Renovie : 2 h gagnées par semaine</h3>
                 <p className="text-white/70 leading-relaxed">
                   Documents éclatés entre plusieurs outils, informations difficiles à retrouver. Un assistant IA
                   interne connecté aux documents métier fournit désormais synthèses financières, résumés de projet
@@ -205,7 +205,7 @@ export default function AgentsIaPmePage() {
                 </p>
               </div>
             </div>
-            <CTA label="Obtenir des résultats similaires — audit gratuit" />
+            <CTA label="Obtenir des résultats similaires avec un audit gratuit" />
           </section>
 
           {/* Pièges */}

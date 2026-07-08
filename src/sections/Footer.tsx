@@ -1,13 +1,13 @@
 'use client'
 
-import { Mail, Linkedin, ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Linkedin, Mail } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const navLinks = [
   { label: 'Services', href: '/#services' },
   { label: 'Outil IA', href: '/#outil-ia' },
-  { label: 'Cas Clients', href: '/#cas-clients' },
+  { label: 'Cas clients', href: '/#cas-clients' },
   { label: 'FAQ', href: '/#faq' },
   { label: 'Audit', href: '/#audit' },
 ]
@@ -16,79 +16,71 @@ const resourceLinks = [
   { label: 'Agence IA à Nancy', href: '/agence-ia-nancy' },
   { label: 'Agents IA pour PME', href: '/agents-ia-pme' },
   { label: 'Agents IA par secteur', href: '/secteurs' },
+  { label: 'Blog', href: '/blog' },
 ]
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="relative py-16 lg:py-20 overflow-hidden border-t border-white/5">
-      <div className="absolute inset-0">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-500/5 rounded-full blur-3xl" />
-      </div>
-
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 xl:px-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
-            <div className="lg:col-span-2">
-              <Link href="/" className="flex items-center gap-2 group mb-6">
-                <Image src="/LogoAetheriaaNoBg.png" alt="AetherIA logo" width={40} height={40} className="w-10 h-10 object-contain" />
-                <span className="text-xl font-semibold text-white">ether<span className="text-cyan-400">IA</span></span>
-              </Link>
-              <p className="text-white/60 max-w-md mb-6">
-                Agence IA basée à Nancy. Agents IA et automatisation sur mesure pour les PME et les indépendants, dans le Grand Est et partout en France.
-              </p>
-              <div className="flex items-center gap-4">
-                <a href="mailto:agenceaetheria@gmail.com" className="flex items-center gap-2 px-4 py-2 rounded-lg glass hover:bg-white/5 transition-colors">
-                  <Mail className="w-4 h-4 text-cyan-400" /><span className="text-sm text-white/70">agenceaetheria@gmail.com</span>
-                </a>
-                <a href="https://www.linkedin.com/in/baptiste-beroual-27865326b/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-lg glass hover:bg-white/5 transition-colors">
-                  <Linkedin className="w-4 h-4 text-cyan-400" /><span className="text-sm text-white/70">LinkedIn</span>
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-white font-semibold mb-6">Navigation</h4>
-              <ul className="space-y-3">
-                {navLinks.map((link) => (
-                  <li key={link.label}>
-                    <Link href={link.href} className="text-white/60 hover:text-cyan-400 transition-colors flex items-center gap-1 group">
-                      {link.label}<ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-white font-semibold mb-6">Ressources</h4>
-              <ul className="space-y-3">
-                {resourceLinks.map((link) => (
-                  <li key={link.label}>
-                    <Link href={link.href} className="text-white/60 hover:text-cyan-400 transition-colors flex items-center gap-1 group">
-                      {link.label}<ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-white font-semibold mb-6">Légal</h4>
-              <ul className="space-y-3">
-                <li><Link href="/privacy" className="text-white/60 hover:text-cyan-400 transition-colors">Politique de confidentialité</Link></li>
-                <li><Link href="/utilisation" className="text-white/60 hover:text-cyan-400 transition-colors">Conditions d&apos;utilisation</Link></li>
-                <li><Link href="/mentions-legales" className="text-white/60 hover:text-cyan-400 transition-colors">Mentions légales</Link></li>
-              </ul>
+    <footer className="border-t border-white/10 py-14 lg:py-18">
+      <div className="atelier-container">
+        <div className="grid gap-10 lg:grid-cols-[1.35fr_0.7fr_0.8fr_0.7fr]">
+          <div>
+            <Link href="/" className="mb-6 flex items-center gap-2">
+              <Image src="/LogoAetheriaaNoBg.png" alt="AetherIA logo" width={44} height={44} className="h-10 w-10 object-contain" />
+              <span className="text-xl font-semibold text-white">Aether<span className="text-cyan-200">IA</span></span>
+            </Link>
+            <p className="max-w-md leading-7 text-white/60">
+              Agence IA basée à Nancy. Agents IA et automatisation sur mesure pour les PME et les indépendants,
+              dans le Grand Est et partout en France.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href="mailto:agenceaetheria@gmail.com" className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.035] px-4 py-2 text-sm text-white/72 transition-colors hover:text-white">
+                <Mail className="h-4 w-4 text-cyan-200" />
+                agenceaetheria@gmail.com
+              </a>
+              <a href="https://www.linkedin.com/in/baptiste-beroual-27865326b/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.035] px-4 py-2 text-sm text-white/72 transition-colors hover:text-white">
+                <Linkedin className="h-4 w-4 text-cyan-200" />
+                LinkedIn
+              </a>
             </div>
           </div>
 
-          <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-white/40 text-sm">© {currentYear} AetherIA. Tous droits réservés.</p>
-          </div>
+          <FooterColumn title="Navigation" links={navLinks} />
+          <FooterColumn title="Ressources" links={resourceLinks} />
+          <FooterColumn
+            title="Légal"
+            links={[
+              { label: 'Confidentialité', href: '/privacy' },
+              { label: 'Conditions', href: '/utilisation' },
+              { label: 'Mentions légales', href: '/mentions-legales' },
+            ]}
+          />
+        </div>
+
+        <div className="mt-12 border-t border-white/10 pt-6 text-sm text-white/40">
+          © {currentYear} AetherIA. Tous droits réservés.
         </div>
       </div>
     </footer>
+  )
+}
+
+function FooterColumn({ title, links }: { title: string; links: Array<{ label: string; href: string }> }) {
+  return (
+    <div>
+      <h4 className="mb-5 font-semibold text-white">{title}</h4>
+      <ul className="space-y-3">
+        {links.map((link) => (
+          <li key={link.label}>
+            <Link href={link.href} className="inline-flex items-center gap-1 text-white/58 transition-colors hover:text-cyan-100">
+              {link.label}
+              <ArrowUpRight className="h-3 w-3" />
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }

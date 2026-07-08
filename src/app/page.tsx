@@ -10,7 +10,7 @@ import FAQ from '@/sections/FAQ'
 import Footer from '@/sections/Footer'
 
 export const metadata: Metadata = {
-  title: 'Agence IA à Nancy — Agents IA & Automatisation sur mesure pour PME | AetherIA',
+  title: 'Agence IA à Nancy, agents IA et automatisation sur mesure pour PME | AetherIA',
   description:
     "AetherIA, agence IA basée à Nancy, conçoit des agents IA sur mesure pour PME : automatisation, assistant IA interne, tableaux de bord. Gagnez 5h/semaine. Audit gratuit.",
   alternates: { canonical: '/' },

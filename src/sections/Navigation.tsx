@@ -1,11 +1,19 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
+
+const navLinks = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Agents IA', href: '/agents-ia-pme' },
+  { label: 'Secteurs', href: '/secteurs' },
+  { label: 'Agence IA Nancy', href: '/agence-ia-nancy' },
+  { label: 'Blog', href: '/blog' },
+]
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -14,21 +22,11 @@ export default function Navigation() {
   const router = useRouter()
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50)
+    const handleScroll = () => setIsScrolled(window.scrollY > 40)
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navLinks = [
-    { label: 'Services', href: '#services' },
-    { label: 'Outil IA', href: '#outil-ia' },
-    { label: 'Cas Clients', href: '#cas-clients' },
-    { label: 'Agents IA', href: '/agents-ia-pme' },
-    { label: 'Secteurs', href: '/secteurs' },
-    { label: 'FAQ', href: '#faq' },
-  ]
-
-  // Sur la home : smooth scroll vers l'ancre. Sur une sous-page : navigation vers /#ancre.
   const goTo = (href: string) => {
     setIsMobileMenuOpen(false)
     if (href.startsWith('#')) {
@@ -38,45 +36,62 @@ export default function Navigation() {
       } else {
         router.push(`/${href}`)
       }
-    } else {
-      router.push(href)
+      return
     }
+    router.push(href)
   }
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-background/80 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'}`}>
-      <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-20">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="flex items-center  group">
-            <Image src="/LogoAetheriaaNoBg.png" alt="AetherIA logo" width={60} height={60} className="w-8 h-8 lg:w-10 lg:h-10 object-contain" />
-            <span className="text-lg lg:text-xl font-semibold text-white">ether<span className="text-cyan-400">IA</span></span>
+    <nav className={`fixed left-0 right-0 top-0 z-50 border-b transition-all duration-300 ${isScrolled ? 'border-white/10 bg-background/82 backdrop-blur-xl' : 'border-transparent bg-background/20 backdrop-blur-sm'}`}>
+      <div className="atelier-container">
+        <div className="flex h-16 items-center justify-between lg:h-20">
+          <Link href="/" className="flex items-center gap-2">
+            <Image src="/LogoAetheriaaNoBg.png" alt="AetherIA logo" width={44} height={44} className="h-9 w-9 object-contain lg:h-10 lg:w-10" />
+            <span className="text-lg font-semibold text-white">Aether<span className="text-cyan-200">IA</span></span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <button key={link.label} onClick={() => goTo(link.href)} className="text-sm text-white/70 hover:text-white transition-colors duration-300 relative group">
-                {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300" />
-              </button>
-            ))}
+          <div className="hidden items-center gap-7 lg:flex">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={`text-sm transition-colors ${isActive ? 'text-white' : 'text-white/58 hover:text-white'}`}
+                >
+                  {link.label}
+                </Link>
+              )
+            })}
           </div>
 
           <div className="hidden lg:block">
-            <Button onClick={() => goTo('#audit')} className="bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300">Audit gratuit</Button>
+            <Button onClick={() => goTo('#audit')} className="atelier-button-ghost rounded-lg px-5 font-semibold hover:bg-white/10 hover:text-white">
+              Audit gratuit
+            </Button>
           </div>
 
-          <button className="lg:hidden p-2 text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <button className="rounded-lg p-2 text-white lg:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Ouvrir le menu">
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      <div className={`lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-white/5 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-        <div className="px-4 py-6 space-y-4">
+      <div className={`absolute left-0 right-0 top-full border-b border-white/10 bg-background/96 backdrop-blur-xl transition-all duration-300 lg:hidden ${isMobileMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'}`}>
+        <div className="space-y-2 px-4 py-5">
           {navLinks.map((link) => (
-            <button key={link.label} onClick={() => goTo(link.href)} className="block w-full text-left text-white/70 hover:text-white py-2 transition-colors">{link.label}</button>
+            <Link
+              key={link.label}
+              href={link.href}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block w-full rounded-lg px-3 py-3 text-left text-white/72 transition-colors hover:bg-white/[0.035] hover:text-white"
+            >
+              {link.label}
+            </Link>
           ))}
-          <Button onClick={() => goTo('#audit')} className="w-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 mt-4">Audit gratuit</Button>
+          <Button onClick={() => goTo('#audit')} className="atelier-button-primary mt-3 w-full rounded-lg font-semibold">
+            Audit gratuit
+          </Button>
         </div>
       </div>
     </nav>

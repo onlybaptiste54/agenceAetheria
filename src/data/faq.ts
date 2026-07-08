@@ -19,7 +19,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Intervenez-vous à Nancy et dans le Grand Est ?",
     answer:
-      "Oui. AetherIA est basée à Nancy et accompagne les PME de tout le Grand Est : Nancy, Metz, Épinal et leurs alentours. Nous intervenons aussi à distance partout en France — la majorité des déploiements se font très bien en visio, avec des points réguliers.",
+      "Oui. AetherIA est basée à Nancy et accompagne les PME de tout le Grand Est : Nancy, Metz, Épinal et leurs alentours. Nous intervenons aussi à distance partout en France, la majorité des déploiements se font très bien en visio, avec des points réguliers.",
   },
   {
     question: "Dois-je être à l'aise avec la technologie ?",
@@ -34,7 +34,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Comment puis-je obtenir de l'aide si besoin ?",
     answer:
-      "Nous proposons un accompagnement complet : formation initiale personnalisée, documentation détaillée, support technique par email et téléphone, et suivi post-livraison. Vous n'êtes jamais seul — nous restons disponibles pour répondre à vos questions et vous aider à optimiser l'utilisation de vos outils.",
+      "Nous proposons un accompagnement complet : formation initiale personnalisée, documentation détaillée, support technique par email et téléphone, et suivi post-livraison. Vous n'êtes jamais seul, nous restons disponibles pour répondre à vos questions et vous aider à optimiser l'utilisation de vos outils.",
   },
   {
     question: "Mes données sont-elles sécurisées ?",

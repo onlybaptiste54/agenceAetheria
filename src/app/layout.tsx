@@ -1,14 +1,26 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { faqItems } from '@/data/faq'
+import { Inter, Instrument_Serif } from 'next/font/google'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+})
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-display',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.agenceaetheria.com'),
-  title: 'Agence IA à Nancy — Agents IA & Automatisation sur mesure pour PME | AetherIA',
+  title: 'Agence IA à Nancy, agents IA et automatisation sur mesure pour PME | AetherIA',
   description:
     "Agence IA à Nancy : agents IA sur mesure et automatisation pour PME. Gagnez 5h/semaine sur vos tâches répétitives. Audit gratuit de 30 minutes.",
   openGraph: {
-    title: 'Agence IA à Nancy — Agents IA & Automatisation sur mesure pour PME | AetherIA',
+    title: 'Agence IA à Nancy, agents IA et automatisation sur mesure pour PME | AetherIA',
     description:
       "Agents IA sur mesure et automatisation pour PME, à Nancy et partout en France. Gagnez 5h/semaine. Audit gratuit de 30 minutes.",
     url: 'https://www.agenceaetheria.com',
@@ -59,7 +71,7 @@ const faqJsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className="dark">
-      <body className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <body className={`${inter.variable} ${instrumentSerif.variable} min-h-screen bg-background text-foreground overflow-x-hidden`}>
         {children}
         <script
           type="application/ld+json"

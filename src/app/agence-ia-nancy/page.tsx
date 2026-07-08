@@ -4,12 +4,12 @@ import Navigation from '@/sections/Navigation'
 import Footer from '@/sections/Footer'
 
 export const metadata: Metadata = {
-  title: 'Agence IA à Nancy — Agents IA & Automatisation pour PME | AetherIA',
+  title: 'Agence IA à Nancy, agents IA et automatisation pour PME | AetherIA',
   description:
     "AetherIA, agence IA à Nancy : agents IA sur mesure et automatisation pour les PME du Grand Est. Cas client nancéien, audit gratuit de 30 minutes, déploiement en 1 à 8 semaines.",
   alternates: { canonical: '/agence-ia-nancy' },
   openGraph: {
-    title: 'Agence IA à Nancy — Agents IA & Automatisation pour PME | AetherIA',
+    title: 'Agence IA à Nancy, agents IA et automatisation pour PME | AetherIA',
     description:
       "Agents IA sur mesure et automatisation pour les PME de Nancy et du Grand Est. Audit gratuit de 30 minutes.",
     url: 'https://www.agenceaetheria.com/agence-ia-nancy',
@@ -73,7 +73,7 @@ export default function AgenceIaNancyPage() {
           {/* Hero */}
           <header className="space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20">
-              <span className="text-sm text-cyan-400 font-medium">Agence IA · Nancy & Grand Est</span>
+              <span className="text-sm text-cyan-400 font-medium">Agence IA à Nancy et Grand Est</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
               Agence IA à Nancy : des <span className="text-gradient">agents IA sur mesure</span> pour les PME du Grand Est
@@ -115,7 +115,7 @@ export default function AgenceIaNancyPage() {
                 <p className="text-white/70 leading-relaxed">
                   Un assistant IA qui connaît vos contrats, procédures, devis et comptes-rendus. Vos équipes posent
                   une question en langage naturel et obtiennent la réponse tirée de vos propres documents en
-                  quelques secondes — au lieu de fouiller des dossiers pendant de longues minutes.
+                  quelques secondes, au lieu de fouiller des dossiers pendant de longues minutes.
                 </p>
               </div>
               <div className="glass rounded-2xl p-6 lg:p-8">
@@ -123,7 +123,7 @@ export default function AgenceIaNancyPage() {
                 <p className="text-white/70 leading-relaxed">
                   Fin de la double saisie, relances automatiques, synchronisation entre vos outils : les agents IA
                   exécutent les tâches répétitives à votre place. Emails post-rendez-vous, notes de frais,
-                  comptes-rendus de visite — tout ce qui vous vole des heures chaque semaine.
+                  comptes-rendus de visite, tout ce qui vous vole des heures chaque semaine.
                 </p>
               </div>
               <div className="glass rounded-2xl p-6 lg:p-8">
@@ -149,12 +149,12 @@ export default function AgenceIaNancyPage() {
                 automatisée, résumé de projet instantané, recherche sur toute la base documentaire en langage naturel.
               </p>
               <p className="text-2xl font-bold text-cyan-400">
-                Résultat : 2 heures gagnées par semaine<span className="text-white/60 text-base font-normal"> — sur la seule recherche et synthèse d&apos;informations.</span>
+                Résultat : 2 heures gagnées par semaine<span className="text-white/60 text-base font-normal"> sur la seule recherche et synthèse d&apos;informations.</span>
               </p>
             </div>
             <p className="text-white/70 leading-relaxed">
               Nous obtenons des résultats comparables ailleurs en France : 6h/semaine gagnées chez Merino Immobilier
-              (automatisation administrative), +30% de productivité chez Marché Local (gestion de stock et pilotage).{' '}
+              (automatisation administrative), 30% de productivité en plus chez Marché Local (gestion de stock et pilotage).{' '}
               <Link href="/#cas-clients" className="text-cyan-400 hover:text-cyan-300">Voir tous nos cas clients</Link>.
             </p>
           </section>
@@ -168,10 +168,10 @@ export default function AgenceIaNancyPage() {
               à tous les dirigeants de PME qui croulent sous l&apos;administratif.
             </p>
             <ul className="grid sm:grid-cols-2 gap-3 text-white/70">
-              <li><Link href="/secteurs#expert-comptable" className="text-cyan-400 hover:text-cyan-300">Experts-comptables</Link> — saisie, pré-compta, relances</li>
-              <li><Link href="/secteurs#assurance" className="text-cyan-400 hover:text-cyan-300">Assurance & courtage</Link> — analyse de contrats, demandes clients</li>
-              <li><Link href="/secteurs#immobilier" className="text-cyan-400 hover:text-cyan-300">Immobilier</Link> — administratif, comptes-rendus de visite</li>
-              <li><Link href="/secteurs#commerce" className="text-cyan-400 hover:text-cyan-300">Commerce</Link> — stock, marges, fournisseurs</li>
+              <li><Link href="/secteurs#expert-comptable" className="text-cyan-400 hover:text-cyan-300">Experts-comptables</Link> : saisie, pré-compta, relances</li>
+              <li><Link href="/secteurs#assurance" className="text-cyan-400 hover:text-cyan-300">Assurance et courtage</Link> : analyse de contrats, demandes clients</li>
+              <li><Link href="/secteurs#immobilier" className="text-cyan-400 hover:text-cyan-300">Immobilier</Link> : administratif, comptes-rendus de visite</li>
+              <li><Link href="/secteurs#commerce" className="text-cyan-400 hover:text-cyan-300">Commerce</Link> : stock, marges, fournisseurs</li>
             </ul>
           </section>
 

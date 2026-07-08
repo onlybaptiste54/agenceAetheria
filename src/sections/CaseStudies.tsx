@@ -1,150 +1,107 @@
-﻿'use client'
+'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import { Building2, ShoppingBag, Briefcase, TrendingUp, Check, ArrowRight } from 'lucide-react'
+import { ArrowRight, Briefcase, Building2, Check, ShoppingBag } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const caseStudies = [
   {
-    icon: Building2, sector: 'Agence Immobilière', company: 'Merino Immobilier',
-    problem: 'Gestion administrative chronophage : mails post-LinkedIn, frais kilométriques, comptes-rendus de visite',
-    solution: 'Automatisation complète des processus administratifs avec assistant IA',
-    results: ['Automatisation mails post-LinkedIn', 'Gestion automatique frais kilométriques', 'Génération automatique comptes-rendus visite'],
-    metric: { value: '6h', label: 'gagnées/semaine' }, color: 'cyan',
+    icon: Building2,
+    sector: 'Agence immobilière',
+    company: 'Merino Immobilier',
+    problem: 'Gestion administrative chronophage : mails post-LinkedIn, frais kilométriques, comptes-rendus de visite.',
+    results: ['Mails post-LinkedIn automatisés', 'Frais kilométriques structurés', 'Comptes-rendus générés plus vite'],
+    metric: { value: '6h', label: 'gagnées / semaine' },
   },
   {
-    icon: ShoppingBag, sector: 'Commerce Fruits & Légumes', company: 'Marché Local',
-    problem: 'Gestion manuelle complexe : stock, prix Rungis, fournisseurs, DLC',
-    solution: 'Dashboard IA complet avec gestion automatique du stock et visualisation CA/marges',
-    results: ['Stock rentré automatiquement via factures', 'Visualisation temps réel CA, marges et bénéfices', 'Optimisation prix et gestion DLC automatique'],
-    metric: { value: '30%', label: 'de productivité' }, color: 'emerald',
+    icon: ShoppingBag,
+    sector: 'Commerce fruits et légumes',
+    company: 'Marché local',
+    problem: 'Stock, prix Rungis, fournisseurs et DLC suivis trop manuellement.',
+    results: ['Stock alimenté via factures', 'CA et marges visibles', 'Suivi DLC automatisé'],
+    metric: { value: '30%', label: 'de productivité' },
   },
   {
-    icon: Briefcase, sector: 'Maîtrise d\'œuvre', company: 'Renovie (Nancy)',
-    problem: 'Gestion documentaire et suivi client éclatés entre plusieurs outils, avec perte de temps sur la recherche d\'informations.',
-    solution: 'Mise en place d\'un assistant IA interne connecté aux documents métier pour accélérer les décisions et le pilotage des projets.',
-    results: ['Synthèse financière automatisée', 'Résumé de projet instantané', 'Recherche sémantique sur toute la base documentaire'],
-    metric: { value: '2h', label: 'gagnées/semaine' }, color: 'purple',
+    icon: Briefcase,
+    sector: 'Maîtrise d’œuvre',
+    company: 'Renovie Nancy',
+    problem: 'Documents et suivi client dispersés, avec perte de temps sur la recherche d’informations.',
+    results: ['Synthèse financière', 'Résumé projet instantané', 'Recherche sémantique documentaire'],
+    metric: { value: '2h', label: 'gagnées / semaine' },
   },
 ]
 
 export default function CaseStudies() {
-  const sectionRef = useRef<HTMLDivElement>(null)
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => { if (entry.isIntersecting) setIsVisible(true) })
-    }, { threshold: 0.1 })
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    return () => observer.disconnect()
-  }, [])
-
-  const getColorClasses = (color: string) => {
-    const colors: Record<string, { bg: string; text: string; border: string }> = {
-      cyan: { bg: 'bg-cyan-500/10', text: 'text-cyan-400', border: 'border-cyan-500/20' },
-      emerald: { bg: 'bg-emerald-500/10', text: 'text-emerald-400', border: 'border-emerald-500/20' },
-      purple: { bg: 'bg-purple-500/10', text: 'text-purple-400', border: 'border-purple-500/20' },
-    }
-    return colors[color] || colors.cyan
-  }
-
   const scrollToAudit = () => {
     const element = document.querySelector('#audit')
     if (element) element.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
-    <section id="cas-clients" ref={sectionRef} className="relative py-24 lg:py-32 overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-3xl" />
-      </div>
-
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 xl:px-20">
-        <div className="max-w-7xl mx-auto">
-          <div className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-6">
-              <TrendingUp className="w-4 h-4 text-cyan-400" />
-              <span className="text-sm text-cyan-400 font-medium">Cas Clients</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Des résultats <span className="text-gradient">concrets</span> pour des PME de Nancy et d’ailleurs</h2>
-            <p className="text-lg text-white/60">Immobilier, commerce, maîtrise d’œuvre : découvrez comment nos agents IA font gagner des heures chaque semaine à des PME du Grand Est et de toute la France.</p>
+    <section id="cas-clients" className="atelier-section border-y border-white/5">
+      <div className="atelier-container">
+        <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
+          <div>
+            <p className="atelier-eyebrow">Cas clients</p>
+            <h2 className="atelier-title mt-3 text-[clamp(2.35rem,4.5vw,4.8rem)]">
+              Les résultats passent avant les effets.
+            </h2>
           </div>
+          <p className="atelier-lead max-w-2xl lg:justify-self-end">
+            Immobilier, commerce, maîtrise d’œuvre : chaque projet part d’un irritant opérationnel,
+            puis se mesure en heures gagnées, tâches supprimées ou décisions accélérées.
+          </p>
+        </div>
 
-          <div className="hidden lg:block">
-            <div className="grid lg:grid-cols-3 gap-8">
-              {caseStudies.map((study, index) => {
-                const colors = getColorClasses(study.color)
-                const Icon = study.icon
-                return (
-                  <div key={study.company} className={`group relative glass rounded-2xl overflow-hidden transition-all duration-700 hover:scale-[1.02] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${200 + index * 150}ms` }}>
-                    <div className={`p-6 ${colors.bg} border-b ${colors.border}`}>
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-10 h-10 rounded-lg bg-background/50 flex items-center justify-center"><Icon className={`w-5 h-5 ${colors.text}`} /></div>
-                        <span className={`text-xs font-medium uppercase tracking-wider ${colors.text}`}>{study.sector}</span>
-                      </div>
-                      <h3 className="text-xl font-bold text-white">{study.company}</h3>
+        <div className="mt-14 grid gap-4 lg:grid-cols-3">
+          {caseStudies.map((study) => {
+            const Icon = study.icon
+            return (
+              <article key={study.company} className="atelier-card flex min-h-[34rem] flex-col p-6">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/10 bg-white/[0.035] text-cyan-200">
+                      <Icon className="h-5 w-5" />
                     </div>
-                    <div className="p-6 space-y-6">
-                      <div><p className="text-xs text-white/40 uppercase tracking-wider mb-2">Problème initial</p><p className="text-sm text-white/70">{study.problem}</p></div>
-                      <div><p className="text-xs text-white/40 uppercase tracking-wider mb-2">Solution mise en place</p><p className="text-sm text-white/70">{study.solution}</p></div>
-                      <div>
-                        <p className="text-xs text-white/40 uppercase tracking-wider mb-2">Résultats obtenus</p>
-                        <ul className="space-y-2">
-                          {study.results.map((result, i) => (<li key={i} className="flex items-start gap-2"><Check className={`w-4 h-4 ${colors.text} flex-shrink-0 mt-0.5`} /><span className="text-sm text-white/70">{result}</span></li>))}
-                        </ul>
-                      </div>
-                      <div className={`${colors.bg} rounded-xl p-4 text-center`}>
-                        <p className={`text-3xl font-bold ${colors.text}`}>{study.metric.value}</p>
-                        <p className="text-sm text-white/50">{study.metric.label}</p>
-                      </div>
+                    <div>
+                      <p className="atelier-eyebrow">{study.sector}</p>
+                      <h3 className="mt-1 text-xl font-semibold text-white">{study.company}</h3>
                     </div>
                   </div>
-                )
-              })}
-            </div>
-          </div>
+                </div>
 
-          <div className="lg:hidden">
-            <div className="flex flex-col gap-6">
-              {caseStudies.map((study, index) => {
-                const colors = getColorClasses(study.color)
-                const Icon = study.icon
-                return (
-                  <div key={study.company} className={`glass rounded-2xl overflow-hidden transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${200 + index * 150}ms` }}>
-                    <div className={`p-4 ${colors.bg} border-b ${colors.border}`}>
-                      <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-background/50 flex items-center justify-center"><Icon className={`w-4 h-4 ${colors.text}`} /></div>
-                        <div>
-                          <span className={`text-xs font-medium uppercase tracking-wider ${colors.text}`}>{study.sector}</span>
-                          <h3 className="text-lg font-bold text-white">{study.company}</h3>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="p-4">
-                      <p className="text-sm text-white/70 mb-4">{study.problem}</p>
-                      <div className={`${colors.bg} rounded-lg p-3 text-center`}>
-                        <p className={`text-2xl font-bold ${colors.text}`}>{study.metric.value}</p>
-                        <p className="text-xs text-white/50">{study.metric.label}</p>
-                      </div>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
+                <div className="my-8 border-y border-white/10 py-8">
+                  <p className="font-display text-[5.5rem] leading-none text-cyan-100">{study.metric.value}</p>
+                  <p className="mt-2 text-sm uppercase tracking-[0.08em] text-white/45">{study.metric.label}</p>
+                </div>
 
-          <div className={`mt-16 glass rounded-2xl p-8 lg:p-12 text-center transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">Prêt à obtenir des résultats similaires ?</h3>
-            <p className="text-white/60 mb-8 max-w-xl mx-auto">Chaque métier est unique. Nous adaptons notre approche à vos spécificités pour vous offrir une solution sur mesure.</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" onClick={scrollToAudit} className="bg-cyan-500 hover:bg-cyan-400 text-background font-semibold px-8 py-6 text-base group transition-all duration-300">
-                Obtenir mon audit gratuit<ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button size="lg" variant="outline" onClick={scrollToAudit} className="border-white/20 text-white hover:bg-white/5 px-8 py-6 text-base">Voir plus de cas clients</Button>
-            </div>
-          </div>
+                <p className="leading-7 text-white/62">{study.problem}</p>
+
+                <ul className="mt-6 space-y-3">
+                  {study.results.map((result) => (
+                    <li key={result} className="flex items-start gap-3 text-sm leading-6 text-white/72">
+                      <Check className="mt-1 h-4 w-4 flex-none text-lime-200" />
+                      <span>{result}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            )
+          })}
+        </div>
+
+        <div className="mt-12 atelier-card p-6 text-center lg:p-9">
+          <h3 className="font-display text-4xl text-white lg:text-5xl">Votre métier a ses contraintes. L’agent doit les comprendre.</h3>
+          <p className="mx-auto mt-4 max-w-2xl text-white/60">
+            Le premier rendez-vous sert à identifier les tâches où l’IA peut vraiment produire un gain mesurable.
+          </p>
+          <Button
+            size="lg"
+            onClick={scrollToAudit}
+            className="atelier-button-primary mt-7 rounded-lg px-7 text-base font-semibold"
+          >
+            Obtenir mon audit gratuit
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
         </div>
       </div>
     </section>

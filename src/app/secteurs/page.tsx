@@ -26,7 +26,7 @@ function MiniCTA({ text }: { text: string }) {
       rel="noopener noreferrer"
       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
     >
-      {text} →
+      {text}
     </a>
   )
 }
@@ -49,7 +49,7 @@ export default function SecteursPage() {
             <p className="text-xl text-white/70 leading-relaxed">
               Un agent IA n&apos;est utile que s&apos;il parle votre langue : celle du cabinet comptable, du courtier,
               de l&apos;agence immobilière ou du commerce. Voici ce que l&apos;automatisation IA change concrètement
-              dans chaque métier — avec les résultats réels obtenus chez nos clients quand nous en avons.
+              dans chaque métier, avec les résultats réels obtenus chez nos clients quand nous en avons.
             </p>
             <nav className="flex flex-wrap gap-3">
               {[
@@ -71,7 +71,7 @@ export default function SecteursPage() {
             <h2 className="text-3xl font-bold text-white">IA pour experts-comptables : automatiser la saisie et les relances</h2>
             <p className="text-white/70 leading-relaxed">
               Dans un cabinet d&apos;expertise comptable, un agent IA prend en charge la saisie des pièces, la
-              pré-comptabilité et les relances — les trois postes qui consomment le plus d&apos;heures de
+              pré-comptabilité et les relances, les trois postes qui consomment le plus d&apos;heures de
               collaborateur. Cas d&apos;usage types :
             </p>
             <ul className="space-y-3">
@@ -120,7 +120,7 @@ export default function SecteursPage() {
             </p>
             <div className="glass rounded-2xl p-6 lg:p-8 border border-cyan-500/20 space-y-3">
               <p className="text-sm text-cyan-400 uppercase tracking-wider">Cas réel</p>
-              <h3 className="text-xl font-semibold text-white">Merino Immobilier — 6 heures gagnées par semaine</h3>
+              <h3 className="text-xl font-semibold text-white">Merino Immobilier : 6 heures gagnées par semaine</h3>
               <p className="text-white/70 leading-relaxed">
                 Emails automatiques après chaque contact LinkedIn, gestion des frais kilométriques sans saisie,
                 comptes-rendus de visite générés automatiquement. L&apos;équipe a récupéré 6 heures par semaine,
@@ -141,14 +141,14 @@ export default function SecteursPage() {
 
           {/* Commerce */}
           <section id="commerce" className="space-y-4 scroll-mt-28">
-            <h2 className="text-3xl font-bold text-white">IA pour commerçants : +30% de productivité chez Marché Local</h2>
+            <h2 className="text-3xl font-bold text-white">IA pour commerçants : 30% de productivité en plus chez Marché Local</h2>
             <p className="text-white/70 leading-relaxed">
               Pour un commerce, l&apos;IA la plus rentable n&apos;est pas un chatbot : c&apos;est l&apos;automatisation
               du stock et du pilotage. Cas réel à l&apos;appui :
             </p>
             <div className="glass rounded-2xl p-6 lg:p-8 border border-emerald-500/20 space-y-3">
               <p className="text-sm text-emerald-400 uppercase tracking-wider">Cas réel</p>
-              <h3 className="text-xl font-semibold text-white">Marché Local — +30% de productivité</h3>
+              <h3 className="text-xl font-semibold text-white">Marché Local : 30% de productivité en plus</h3>
               <p className="text-white/70 leading-relaxed">
                 Ce commerce de fruits et légumes jonglait entre stock, prix Rungis, fournisseurs et DLC. Le stock
                 est désormais alimenté automatiquement depuis les factures, avec visualisation temps réel du
@@ -157,7 +157,7 @@ export default function SecteursPage() {
             </div>
             <ul className="space-y-3">
               {[
-                "Entrée automatique du stock à partir des factures fournisseurs — plus de saisie manuelle.",
+                "Entrée automatique du stock à partir des factures fournisseurs, plus de saisie manuelle.",
                 "Tableau de bord temps réel : CA, marges, bénéfices par rayon ou par produit.",
                 "Alertes DLC et optimisation des prix pour réduire les pertes.",
               ].map((item) => (
@@ -175,7 +175,7 @@ export default function SecteursPage() {
               reporting arrive trop tard. Un agent IA transverse centralise vos documents et vos chiffres, puis
               répond à vos questions en langage naturel : « Où en est le projet X ? », « Quelle est ma marge ce
               mois-ci ? », « Synthèse des emails de l&apos;équipe cette semaine ». C&apos;est exactement ce que nous
-              avons déployé chez Renovie à Nancy — 2 heures gagnées chaque semaine sur la seule recherche
+              avons déployé chez Renovie à Nancy, avec 2 heures gagnées chaque semaine sur la seule recherche
               d&apos;informations.
             </p>
             <p className="text-white/70 leading-relaxed">
