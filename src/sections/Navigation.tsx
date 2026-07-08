@@ -27,6 +27,16 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    const timeout = window.setTimeout(() => {
+      navLinks.forEach((link) => {
+        if (link.href !== pathname) router.prefetch(link.href)
+      })
+    }, 600)
+
+    return () => window.clearTimeout(timeout)
+  }, [pathname, router])
+
   const goTo = (href: string) => {
     setIsMobileMenuOpen(false)
     if (href.startsWith('#')) {
@@ -57,6 +67,9 @@ export default function Navigation() {
                 <Link
                   key={link.label}
                   href={link.href}
+                  prefetch
+                  onPointerEnter={() => router.prefetch(link.href)}
+                  onFocus={() => router.prefetch(link.href)}
                   className={`text-sm transition-colors ${isActive ? 'text-white' : 'text-white/58 hover:text-white'}`}
                 >
                   {link.label}
@@ -83,7 +96,10 @@ export default function Navigation() {
             <Link
               key={link.label}
               href={link.href}
+              prefetch
               onClick={() => setIsMobileMenuOpen(false)}
+              onPointerEnter={() => router.prefetch(link.href)}
+              onFocus={() => router.prefetch(link.href)}
               className="block w-full rounded-lg px-3 py-3 text-left text-white/72 transition-colors hover:bg-white/[0.035] hover:text-white"
             >
               {link.label}
