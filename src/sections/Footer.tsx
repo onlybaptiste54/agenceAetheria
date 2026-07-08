@@ -5,20 +5,21 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const navLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'Outil IA', href: '#outil-ia' },
-  { label: 'Cas Clients', href: '#cas-clients' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Audit', href: '#audit' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Outil IA', href: '/#outil-ia' },
+  { label: 'Cas Clients', href: '/#cas-clients' },
+  { label: 'FAQ', href: '/#faq' },
+  { label: 'Audit', href: '/#audit' },
+]
+
+const resourceLinks = [
+  { label: 'Agence IA à Nancy', href: '/agence-ia-nancy' },
+  { label: 'Agents IA pour PME', href: '/agents-ia-pme' },
+  { label: 'Agents IA par secteur', href: '/secteurs' },
 ]
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
-
-  const scrollToSection = (id: string) => {
-    const element = document.querySelector(id)
-    if (element) element.scrollIntoView({ behavior: 'smooth' })
-  }
 
   return (
     <footer className="relative py-16 lg:py-20 overflow-hidden border-t border-white/5">
@@ -28,14 +29,14 @@ export default function Footer() {
 
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 xl:px-20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
             <div className="lg:col-span-2">
-              <a href="#" className="flex items-center gap-2 group mb-6">
+              <Link href="/" className="flex items-center gap-2 group mb-6">
                 <Image src="/LogoAetheriaaNoBg.png" alt="AetherIA logo" width={40} height={40} className="w-10 h-10 object-contain" />
                 <span className="text-xl font-semibold text-white">ether<span className="text-cyan-400">IA</span></span>
-              </a>
+              </Link>
               <p className="text-white/60 max-w-md mb-6">
-                L&apos;IA qui automatise vos taches repetitives - pas ce qui vous definit. Solutions sur mesure pour independants et PME.
+                Agence IA basée à Nancy. Agents IA et automatisation sur mesure pour les PME et les indépendants, dans le Grand Est et partout en France.
               </p>
               <div className="flex items-center gap-4">
                 <a href="mailto:agenceaetheria@gmail.com" className="flex items-center gap-2 px-4 py-2 rounded-lg glass hover:bg-white/5 transition-colors">
@@ -52,26 +53,39 @@ export default function Footer() {
               <ul className="space-y-3">
                 {navLinks.map((link) => (
                   <li key={link.label}>
-                    <button onClick={() => scrollToSection(link.href)} className="text-white/60 hover:text-cyan-400 transition-colors flex items-center gap-1 group">
+                    <Link href={link.href} className="text-white/60 hover:text-cyan-400 transition-colors flex items-center gap-1 group">
                       {link.label}<ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </button>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <h4 className="text-white font-semibold mb-6">Legal</h4>
+              <h4 className="text-white font-semibold mb-6">Ressources</h4>
               <ul className="space-y-3">
-                <li><Link href="/privacy" className="text-white/60 hover:text-cyan-400 transition-colors">Politique de confidentialite</Link></li>
-                <li><Link href="/utilisation" className="text-white/60 hover:text-cyan-400 transition-colors">Conditions d utilisation</Link></li>
-                <li><Link href="/mentions-legales" className="text-white/60 hover:text-cyan-400 transition-colors">Mentions legales</Link></li>
+                {resourceLinks.map((link) => (
+                  <li key={link.label}>
+                    <Link href={link.href} className="text-white/60 hover:text-cyan-400 transition-colors flex items-center gap-1 group">
+                      {link.label}<ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-white font-semibold mb-6">Légal</h4>
+              <ul className="space-y-3">
+                <li><Link href="/privacy" className="text-white/60 hover:text-cyan-400 transition-colors">Politique de confidentialité</Link></li>
+                <li><Link href="/utilisation" className="text-white/60 hover:text-cyan-400 transition-colors">Conditions d&apos;utilisation</Link></li>
+                <li><Link href="/mentions-legales" className="text-white/60 hover:text-cyan-400 transition-colors">Mentions légales</Link></li>
               </ul>
             </div>
           </div>
 
           <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-white/40 text-sm">(c) {currentYear} AetherIA. Tous droits reserves.</p>
+            <p className="text-white/40 text-sm">© {currentYear} AetherIA. Tous droits réservés.</p>
           </div>
         </div>
       </div>

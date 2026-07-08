@@ -47,15 +47,15 @@ export default function Hero() {
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 animate-fade-in-up">
               <Sparkles className="w-4 h-4 text-cyan-400" />
-              <span className="text-sm text-cyan-400 font-medium">Solutions d’automatisation IA</span>
+              <span className="text-sm text-cyan-400 font-medium">Agence IA · Nancy &amp; Grand Est</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              Gagnez <span className="text-gradient">5h/semaine</span><br />avec <span className="text-white">AetherIA</span>
+              Gagnez <span className="text-gradient">5h/semaine</span><br />avec des <span className="text-white">agents IA sur mesure</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-white/70 max-w-xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              L’IA qui automatise vos tâches répétitives - pas ce qui vous définit. Systèmes IA sur mesure qui centralisent vos données et automatisent vos décisions métier.
+              AetherIA conçoit des agents IA et des automatisations sur mesure pour les PME : vos tâches répétitives disparaissent, vos données sont centralisées, vos décisions s’accélèrent.
             </p>
 
             <div className="flex flex-wrap gap-6 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
@@ -85,8 +85,8 @@ export default function Hero() {
                 <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-cyan-600/5 backdrop-blur-sm border border-cyan-500/20 flex items-center justify-center glow-cyan">
                   <div className="text-center space-y-4">
                     <div className="w-20 h-20 mx-auto rounded-xl bg-cyan-500/20 flex items-center justify-center"><Sparkles className="w-10 h-10 text-cyan-400" /></div>
-                    <p className="text-cyan-400 font-semibold">Assistant IA</p>
-                    <p className="text-white/50 text-sm">Automatisation intelligente</p>
+                    <p className="text-cyan-400 font-semibold">Agents IA</p>
+                    <p className="text-white/50 text-sm">Automatisation sur mesure</p>
                   </div>
                 </div>
               </div>
