@@ -64,7 +64,7 @@ export default function Hero() {
         <div className="atelier-card p-5 lg:p-6">
           <div className="flex items-center gap-4 border-b border-white/10 pb-5">
             <div className="relative h-16 w-16 overflow-hidden rounded-lg border border-white/10 bg-white/5">
-              <Image src="/baptisteImage.png" alt="Baptiste Beroual, fondateur d'AetherIA" fill className="object-cover" priority />
+              <Image src="/baptisteImage.webp" alt="Baptiste Beroual, fondateur d'AetherIA" fill className="object-cover" priority />
             </div>
             <div>
               <p className="atelier-eyebrow">Diagnostic live</p>

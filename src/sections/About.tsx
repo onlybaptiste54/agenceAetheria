@@ -17,7 +17,7 @@ export default function About() {
         <div className="grid gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
           <div className="atelier-card p-5 lg:p-6">
             <div className="relative aspect-[4/5] overflow-hidden rounded-lg border border-white/10 bg-white/[0.035]">
-              <Image src="/baptisteImage.png" alt="Baptiste Beroual, fondateur d'AetherIA" fill className="object-cover" />
+              <Image src="/baptisteImage.webp" alt="Baptiste Beroual, fondateur d'AetherIA" fill className="object-cover" />
             </div>
           </div>
 
