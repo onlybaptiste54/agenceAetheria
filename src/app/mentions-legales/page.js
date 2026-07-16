@@ -17,7 +17,7 @@ export default function MentionsLegalesPage() {
           <p>
             AetherIA
             <br />
-            Email: <a className="text-cyan-400 hover:text-cyan-300" href="mailto:agenceaetheria@gmail.com">agenceaetheria@gmail.com</a>
+            Email: <a className="text-cyan-400 hover:text-cyan-300" href="mailto:contact@agenceaetheria.com">contact@agenceaetheria.com</a>
           </p>
           <p>
             Informations legales (a completer):
@@ -61,7 +61,7 @@ export default function MentionsLegalesPage() {
         <section className="space-y-3 text-foreground/80">
           <h2 className="text-xl font-semibold">Contact</h2>
           <p>
-            Pour toute demande: <a className="text-cyan-400 hover:text-cyan-300" href="mailto:agenceaetheria@gmail.com">agenceaetheria@gmail.com</a>
+            Pour toute demande: <a className="text-cyan-400 hover:text-cyan-300" href="mailto:contact@agenceaetheria.com">contact@agenceaetheria.com</a>
           </p>
         </section>
       </div>

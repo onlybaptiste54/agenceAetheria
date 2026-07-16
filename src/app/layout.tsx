@@ -35,7 +35,7 @@ const localBusinessJsonLd = {
   '@type': 'ProfessionalService',
   name: 'AetherIA',
   url: 'https://www.agenceaetheria.com',
-  email: 'agenceaetheria@gmail.com',
+  email: 'contact@agenceaetheria.com',
   description:
     "Agence IA à Nancy : conception et déploiement d'agents IA sur mesure et d'automatisations pour PME et indépendants.",
   address: {

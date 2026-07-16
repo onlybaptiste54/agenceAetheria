@@ -46,7 +46,7 @@ export default function FAQ() {
 
         <div className="mt-10 text-center">
           <p className="text-white/55">Vous ne trouvez pas la réponse à votre question ?</p>
-          <a href="mailto:agenceaetheria@gmail.com" className="mt-3 inline-flex items-center gap-2 font-semibold text-cyan-200 transition-colors hover:text-white">
+          <a href="mailto:contact@agenceaetheria.com" className="mt-3 inline-flex items-center gap-2 font-semibold text-cyan-200 transition-colors hover:text-white">
             Contactez-nous directement
             <ChevronDown className="h-4 w-4 -rotate-90" />
           </a>

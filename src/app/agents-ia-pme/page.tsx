@@ -29,8 +29,8 @@ function CTA({ label = 'Réserver mon audit gratuit (30 min)' }: { label?: strin
       >
         {label}
       </a>
-      <a href="mailto:agenceaetheria@gmail.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-        ou écrivez-nous : agenceaetheria@gmail.com
+      <a href="mailto:contact@agenceaetheria.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+        ou écrivez-nous : contact@agenceaetheria.com
       </a>
     </div>
   )

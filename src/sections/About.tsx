@@ -48,7 +48,7 @@ export default function About() {
                 <Linkedin className="h-4 w-4 text-cyan-200" />
                 LinkedIn
               </a>
-              <a href="mailto:agenceaetheria@gmail.com" className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.035] px-4 py-2 text-white/72 transition-colors hover:text-white">
+              <a href="mailto:contact@agenceaetheria.com" className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.035] px-4 py-2 text-white/72 transition-colors hover:text-white">
                 <Mail className="h-4 w-4 text-cyan-200" />
                 Email
               </a>

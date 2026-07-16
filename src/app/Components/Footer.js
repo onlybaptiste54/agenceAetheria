@@ -8,11 +8,11 @@ export default function Footer() {
         {/* Contact */}
         <div className="flex items-center space-x-6">
           <a 
-            href="mailto:agenceaetheria@gmail.com"
+            href="mailto:contact@agenceaetheria.com"
             className="flex items-center space-x-2 text-[var(--color-text)]/80 hover:text-cyan-700 transition-colors"
           >
             <Mail className="h-4 w-4" />
-            <span className="text-sm">agenceaetheria@gmail.com</span>
+            <span className="text-sm">contact@agenceaetheria.com</span>
           </a>
           <a 
             href="https://www.linkedin.com/in/baptiste-beroual-27865326b/"

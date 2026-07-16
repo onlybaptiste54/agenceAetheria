@@ -36,9 +36,9 @@ export default function Footer() {
               dans le Grand Est et partout en France.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="mailto:agenceaetheria@gmail.com" className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.035] px-4 py-2 text-sm text-white/72 transition-colors hover:text-white">
+              <a href="mailto:contact@agenceaetheria.com" className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.035] px-4 py-2 text-sm text-white/72 transition-colors hover:text-white">
                 <Mail className="h-4 w-4 text-cyan-200" />
-                agenceaetheria@gmail.com
+                contact@agenceaetheria.com
               </a>
               <a href="https://www.linkedin.com/in/baptiste-beroual-27865326b/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.035] px-4 py-2 text-sm text-white/72 transition-colors hover:text-white">
                 <Linkedin className="h-4 w-4 text-cyan-200" />

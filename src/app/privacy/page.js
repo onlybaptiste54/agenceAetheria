@@ -27,7 +27,7 @@ export default function PrivacyPage() {
           <p className="text-foreground/80">
             Responsable: AetherIA
             <br />
-            Contact: <a className="text-cyan-400 hover:text-cyan-300" href="mailto:agenceaetheria@gmail.com">agenceaetheria@gmail.com</a>
+            Contact: <a className="text-cyan-400 hover:text-cyan-300" href="mailto:contact@agenceaetheria.com">contact@agenceaetheria.com</a>
           </p>
         </section>
 
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
             de vos donnees, selon la reglementation applicable.
           </p>
           <p className="text-foreground/80">
-            Pour exercer vos droits: <a className="text-cyan-400 hover:text-cyan-300" href="mailto:agenceaetheria@gmail.com">agenceaetheria@gmail.com</a>
+            Pour exercer vos droits: <a className="text-cyan-400 hover:text-cyan-300" href="mailto:contact@agenceaetheria.com">contact@agenceaetheria.com</a>
           </p>
         </section>
 

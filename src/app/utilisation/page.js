@@ -78,7 +78,7 @@ export default function UtilisationPage() {
         <section className="space-y-3">
           <h2 className="text-xl font-semibold">8. Contact</h2>
           <p className="text-foreground/80">
-            Pour toute question: <a className="text-cyan-400 hover:text-cyan-300" href="mailto:agenceaetheria@gmail.com">agenceaetheria@gmail.com</a>
+            Pour toute question: <a className="text-cyan-400 hover:text-cyan-300" href="mailto:contact@agenceaetheria.com">contact@agenceaetheria.com</a>
           </p>
         </section>
       </div>
